@@ -1,0 +1,100 @@
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.hero-section .hero-img-container {
+  height: 40em;
+  background-color: #8c8c93;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 100px); /* Resta 50px a cada lado */
+  padding: 0 50px;
+  margin: 0 auto; /* Para centrar el contenedor horizontalmente */
+}
+.hero-section .hero-img-container .hero-titulo {
+  text-align: center;
+}
+.hero-section .hero-img-container .hero-titulo h1 {
+  font-size: 6rem;
+  text-align: center;
+}
+.hero-section .logo-whatsappa-container {
+  position: relative;
+  top: -100px;
+  left: 30%;
+}
+
+.personalizar-productos-section .personalizar-productos-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  padding: 50px 100px;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img {
+  background-color: yellow;
+  border: 1px solid black;
+  margin: 10px;
+  height: 200px;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .personalizar-productos-vacio {
+  grid-row: 1;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img button {
+  grid-row: 2;
+  text-align: left;
+  padding: 10px;
+  background-color: #efb322;
+}
+.personalizar-productos-section .personalizar-productos-container .indumentaria-escolar {
+  grid-column: 1;
+  grid-row: 1;
+}
+.personalizar-productos-section .personalizar-productos-container .indumentaria-deportiva {
+  grid-column: 2;
+  grid-row: 1;
+}
+.personalizar-productos-section .personalizar-productos-container .indumentaria-laboral {
+  grid-column: 1;
+  grid-row: 2;
+}
+.personalizar-productos-section .personalizar-productos-container .objetos-personalizados {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.home-titulos h2 {
+  color: black;
+  font-size: 35px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.redes-section {
+  padding: 50px 0;
+}
+.redes-section .iconos-redes-container {
+  display: flex;
+  justify-content: center;
+}
+.redes-section .iconos-redes-container .icono-circulo {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-size: 50px;
+  margin: 0 10px;
+}
+
+.info-tienda-container {
+  text-align: center;
+}/*# sourceMappingURL=index.css.map */
