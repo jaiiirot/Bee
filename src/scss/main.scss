@@ -1,10 +1,17 @@
+$color-primary: #efb322;
+$color-secundary: #040404;
+$color-tertiary: #fcfcfc;
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
+  font-family: Oswald, sans-serif;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-
-
-$color-primary: #EFB322;
-$color-secundary: #040404;
-$color-tertiary: #FCFCFC;
