@@ -8,6 +8,8 @@ $color-quaternary: #cecdbb;
   font-weight: normal;
   font-style: normal;
 }
+@import "~bootstrap/scss/bootstrap";
+
 * {
   font-family: Oswald, sans-serif;
   font-weight: bold;

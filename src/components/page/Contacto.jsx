@@ -2,7 +2,6 @@ import React from "react";
 import Hexagono from "../image/Hexagono";
 import Facebook from "../image/facebook";
 import Instagram from "../image/Instagram";
-import { Link } from "react-router-dom";
 export default function Contacto() {
   return (
     <>
@@ -29,7 +28,7 @@ export default function Contacto() {
       </section>
       <section className="red">
         <aside className="red-info">
-          <h2>SEGUINOS EN NUESTRAS REDES SOCIALES</h2>
+          <h2>SEGUINOS EN LAS REDES</h2>
         </aside>
         <aside className="red-options">
           <Facebook />
@@ -44,6 +43,8 @@ export default function Contacto() {
           <Hexagono className={"hexo"} localUrl={"direccion"}>
             DIRECCIÓN
           </Hexagono>
+        </ul>
+        <ul className="hexos-cont">
           <Hexagono className={"hexo"} localUrl={"telefono"}>
             TELÉFONO
           </Hexagono>

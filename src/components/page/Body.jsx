@@ -1,28 +1,29 @@
 import { Outlet, Link } from "react-router-dom";
 import Logo from "../image/Logo";
 import Whatsapp from "../image/Whatsapp";
+import NavbarMobile from "../utils/NavbarMobile";
 
 export default function Body() {
   return (
     <>
       <header className="header">
-        <Logo className={"header__Logo"} />
-        <nav className="header__nav">
-          <ul className="header__Options">
+        <Logo className={"header-logo"} />
+        <nav className="header-nav">
+          <ul className="header-options">
             <li>
               <Link to="/">INICIO</Link>
             </li>
             <li>
-              <Link to="/Nosotros">NOSOTROS</Link>
+              <Link to="/nosotros">NOSOTROS</Link>
             </li>
             <li>
-              <Link to="/Producto">PRODUCTOS</Link>
+              <Link to="/producto">PRODUCTOS</Link>
             </li>
             <li>
-              <Link to="/Ayuda">AYUDA</Link>
+              <Link to="/ayuda">AYUDA</Link>
             </li>
             <li>
-              <Link to="/Contacto">CONTACTO</Link>
+              <Link to="/contacto">CONTACTO</Link>
             </li>
             <li>
               <Link to="/www.whatsapp.com">
@@ -32,6 +33,7 @@ export default function Body() {
           </ul>
         </nav>
       </header>
+      <NavbarMobile />
       <main>
         <Outlet />
       </main>

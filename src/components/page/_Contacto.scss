@@ -73,18 +73,79 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   &-cont {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    width: 800px;
   }
   .hexo {
     width: 400px;
     overflow: hidden;
     p {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    padding: 0px 0px;
+    h1 {
+      padding: 3rem 2rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+  .form {
+    padding: 0.5rem 10px;
+    &-cont {
+      input,
+      textarea {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+      input::placeholder,
+      textarea::placeholder {
+        font-size: 0.8rem;
+      }
+      button {
+        width: 100%;
+        padding: 0.5rem 2.5rem;
+        font-size: 1rem;
+      }
+    }
+  }
+  .red {
+    padding: 2vh 0rem;
+    text-align: center;
+    &-info {
+      padding: 3rem 1rem;
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+    &-options {
+      picture {
+        img {
+          height: 60px;
+        }
+      }
+    }
+  }
+  .hexos {
+    padding: 8vh 0px;
+    &-cont {
+      padding-left: 0px;
+      margin-bottom: 0px;
+    }
+    .hexo {
+      width: 150px;
+      overflow: hidden;
+      p {
+        font-size: 1.2rem;
+      }
     }
   }
 }
