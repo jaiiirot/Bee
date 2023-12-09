@@ -1,1 +1,29 @@
-/*# sourceMappingURL=mixin-extend.css.map */
+@font-face {
+  font-family: "Oswald";
+  src: url(../../tipografias/Oswald-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url(../../tipografias/Rubik-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.flex-spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botonEnviar {
+  padding: 10px 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #E7BB43;
+  font-weight: 600;
+}/*# sourceMappingURL=mixin-extend.css.map */

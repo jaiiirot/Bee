@@ -31,8 +31,8 @@ const Home = () => {
           <SliderHeroListContainer />
         </div>
 
-        <div className="formulario-boton-container">
-          <button type="submit">ENVIAR</button>
+        <div className="formulario-boton-container-mobile">
+          <button type="submit">CONTÁCTANOS</button>
         </div>
       </section>
 
@@ -63,6 +63,39 @@ const Home = () => {
           <div className="hexagon">
             <p>DIRECCIÓN</p>
           </div>
+        </div>
+      </section>
+
+      <section className="nuestros-estampados-section-mobile">
+        <div className="home-titulos">
+          <h2>NUESTROS ESTAMPADOS</h2>
+        </div>
+        <div className="info-tienda-hexagonosFila1">
+          <div className="hexagon">
+            <p>SUBLIMACIÓN</p>
+          </div>
+          <div className="hexagon">
+            <p>TERMOVINILO</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila2">
+          <div className="hexagon">
+            <p>D.T.F</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila1">
+          <div className="hexagon">
+            <p>SERIGRAFÍA</p>
+          </div>
+          <div className="hexagon">
+            <p>BORDADO</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila2">
+          <div className="hexagon">
+            <p>TERMOVINILO IMPRESO</p>
+          </div>
+          
         </div>
       </section>
 

@@ -10,8 +10,41 @@
   font-weight: normal;
   font-style: normal;
 }
+.flex-spaceBetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.botonEnviar, .formulario-section form .formulario-boton-container button {
+  padding: 10px 15px;
+  background-color: #000000;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Rubik", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #E7BB43;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url(../../tipografias/Oswald-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url(../../tipografias/Rubik-VariableFont_wght.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 .home-titulo-mobile,
-.hero-img-container-mobile, .hero-carusel-container-mobile {
+.hero-img-container-mobile,
+.hero-carusel-container-mobile,
+.formulario-boton-container-mobile,
+.nuestros-estampados-section-mobile {
   display: none;
 }
 
@@ -170,7 +203,7 @@
 .redes-section .iconos-redes-container {
   display: flex;
   justify-content: space-evenly;
-  width: 250px;
+  width: 15.62rem;
   margin: auto;
   padding-top: 40px;
 }
@@ -221,23 +254,12 @@
 }
 .formulario-section form .formulario-boton-container button {
   margin-top: 10px;
-  padding: 10px 15px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Rubik", sans-serif;
   transition: background-color 0.3s;
   width: 30vw; /* 592px en figma */
   height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 15px;
-  letter-spacing: 2px;
-  color: #E7BB43;
-  font-weight: 600;
 }
 .formulario-section form .formulario-boton-container button:hover {
   background-color: #0056b3;
@@ -288,9 +310,9 @@
 }
 
 @media (max-width: 576px) {
-  /* .hero-section .home-titulos:nth-child(1) {
+  .nuestros-estampados-section {
     display: none;
-  } */
+  }
   .hero-section .home-titulo-mobile {
     display: block;
     text-align: center;
@@ -310,81 +332,184 @@
   }
   .hero-mobile {
     display: block;
-    height: -moz-fit-content;
-    height: fit-content;
   }
   .hero-mobile .hero-carusel-container-mobile {
     display: block;
-    height: 10vh;
-    max-width: 100%;
     margin: auto;
+    text-align: center;
+    padding: 0 16px;
   }
   .hero-mobile .hero-carusel-container-mobile img {
     height: 300px;
     text-align: center;
+    width: 100%;
   }
-  .nuestros-estampados-section {
+  .hero-mobile .formulario-boton-container-mobile {
+    padding: 30px 16px;
+    width: 100%;
+    display: flex;
+  }
+  .hero-mobile .formulario-boton-container-mobile button {
+    padding: 10px 15px;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #E7BB43;
+    font-weight: 600;
+    width: 100%;
+  }
+  .nuestros-estampados-section-mobile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0 100px;
-    background-color: red;
   }
-  .nuestros-estampados-section .hexagon {
+  .nuestros-estampados-section-mobile .hexagon {
     /* 496px en figma */
     /* 460px en figma */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15vw;
-    height: 8vw;
+    width: 30vw;
+    height: 16vw;
     background-color: #3498db;
     position: relative;
     border: 1px solid #3498db;
   }
-  .nuestros-estampados-section .hexagon p {
-    font-size: 1.5rem;
+  .nuestros-estampados-section-mobile .hexagon p {
+    font-size: 1rem;
+    margin: 0;
   }
-  .nuestros-estampados-section .hexagon:before, .nuestros-estampados-section .hexagon:after {
+  .nuestros-estampados-section-mobile .hexagon:before, .nuestros-estampados-section-mobile .hexagon:after {
     content: "";
     width: 0;
-    border-left: 7.5vw solid transparent;
-    border-right: 7.5vw solid transparent;
+    border-left: 15vw solid transparent;
+    border-right: 15vw solid transparent;
     position: absolute;
   }
-  .nuestros-estampados-section .hexagon:before {
-    top: -4vw;
-    border-bottom: 4vw solid #3498db;
+  .nuestros-estampados-section-mobile .hexagon:before {
+    top: -8vw;
+    border-bottom: 8vw solid #3498db;
   }
-  .nuestros-estampados-section .hexagon:after {
-    bottom: -4vw;
-    border-top: 4vw solid #3498db;
+  .nuestros-estampados-section-mobile .hexagon:after {
+    bottom: -8vw;
+    border-top: 8vw solid #3498db;
   }
-  .nuestros-estampados-section .info-tienda-hexagonosFila1 {
+  .nuestros-estampados-section-mobile .info-tienda-hexagonosFila1 {
     display: flex;
-    width: 31vw;
+    width: 61vw;
     justify-content: space-around;
-    margin-top: 4.5vw;
+    margin-top: 8.5vw;
   }
-  .nuestros-estampados-section .info-tienda-hexagonosFila2 {
-    margin-top: 4.5vw;
+  .nuestros-estampados-section-mobile .info-tienda-hexagonosFila2 {
+    margin-top: 8.5vw;
     display: flex;
-    width: 47vw;
+    width: 61vw;
     justify-content: space-around;
   }
   .personalizar-productos-section .personalizar-productos-container {
     display: flex;
     flex-direction: column;
     padding: 10px;
+    padding: 0 16px;
+  }
+  .personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img {
+    width: 100%;
   }
   .personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img button {
     text-align: center;
+    font-size: 1rem;
   }
   .home-titulos h2 {
     color: black;
     font-size: 25px;
     text-align: center;
     padding: 20px 0;
+  }
+  .formulario-section {
+    padding: 0 16px;
+  }
+  .formulario-section form input,
+  .formulario-section form textarea {
+    font-weight: 600;
+  }
+  .formulario-section form .formulario-boton-container {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+  .formulario-section form .formulario-boton-container button {
+    margin-top: 10px;
+    padding: 20px 15px;
+    background-color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #E7BB43;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    width: 100vw; /* 592px en figma */
+    height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  }
+  .formulario-section form .formulario-boton-container button:hover {
+    background-color: #0056b3;
+  }
+  .redes-section .iconos-redes-container img {
+    width: 15vw;
+    height: 15vw;
+  }
+  .info-tienda-container .hexagon {
+    /* 496px en figma */
+    /* 460px en figma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 16vw;
+    background-color: #3498db;
+    position: relative;
+    border: 1px solid #3498db;
+  }
+  .info-tienda-container .hexagon p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  .info-tienda-container .hexagon:before, .info-tienda-container .hexagon:after {
+    content: "";
+    width: 0;
+    border-left: 15vw solid transparent;
+    border-right: 15vw solid transparent;
+    position: absolute;
+  }
+  .info-tienda-container .hexagon:before {
+    top: -8vw;
+    border-bottom: 8vw solid #3498db;
+  }
+  .info-tienda-container .hexagon:after {
+    bottom: -8vw;
+    border-top: 8vw solid #3498db;
+  }
+  .info-tienda-container .info-tienda-hexagonosFila1 {
+    display: flex;
+    width: 61vw;
+    justify-content: space-around;
+    margin-top: 8.5vw;
+  }
+  .info-tienda-container .info-tienda-hexagonosFila2 {
+    margin-top: 8.5vw;
+    display: flex;
+    width: 61vw;
+    justify-content: space-around;
   }
 }/*# sourceMappingURL=index.css.map */

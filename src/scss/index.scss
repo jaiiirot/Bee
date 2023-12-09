@@ -3,7 +3,10 @@
 @import "utilidades/typography";
 
 .home-titulo-mobile,
-.hero-img-container-mobile, .hero-carusel-container-mobile {
+.hero-img-container-mobile,
+.hero-carusel-container-mobile,
+.formulario-boton-container-mobile,
+.nuestros-estampados-section-mobile {
   display: none;
 }
 
@@ -52,7 +55,7 @@
   }
 }
 
-.nuestros-estampados-section{
+.nuestros-estampados-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +73,7 @@
     position: relative;
     border: 1px solid #3498db;
 
-    p{
+    p {
       font-size: 1.5rem;
     }
 
@@ -98,7 +101,6 @@
     width: 31vw;
     justify-content: space-around;
     margin-top: 4.5vw;
-    
   }
   .info-tienda-hexagonosFila2 {
     margin-top: 4.5vw;
@@ -182,7 +184,7 @@
   .iconos-redes-container {
     display: flex;
     justify-content: space-evenly;
-    width: 250px;
+    width: 15.62rem;
     margin: auto;
     padding-top: 40px;
 
@@ -233,23 +235,14 @@
       justify-content: right;
       button {
         margin-top: 10px;
-        padding: 10px 15px;
-        background-color: $negro;
-        color: #fff;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: $font-family-rubik;
+        @extend .botonEnviar;
         transition: background-color 0.3s;
         width: 30vw; /* 592px en figma */
         height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 15px;
-        letter-spacing: 2px;
-        color: $botones-amarillo-dorado;
-        font-weight: 600;
+
         &:hover {
           background-color: #0056b3;
         }
@@ -269,7 +262,6 @@
     display: flex;
     width: 31vw;
     justify-content: space-around;
-    
   }
   .info-tienda-hexagonosFila2 {
     margin-top: 4.5vw;
@@ -309,9 +301,9 @@
 }
 
 @media (max-width: 576px) {
-  /* .hero-section .home-titulos:nth-child(1) {
+  .nuestros-estampados-section {
     display: none;
-  } */
+  }
 
   .hero-section {
     .home-titulo-mobile {
@@ -324,7 +316,6 @@
         font-size: 3rem;
         text-align: center;
         color: black;
-        
       }
     }
     .hero-img-container {
@@ -333,35 +324,52 @@
     .logo-whatsapp-container {
       display: none;
     }
-    
-    
   }
 
-  .hero-mobile{
+  .hero-mobile {
     display: block;
-    height: fit-content;
-    .hero-carusel-container-mobile{
-      display: block;
-      height: 10vh;
-      max-width: 100%;
-      margin: auto;
 
-      img{
+    .hero-carusel-container-mobile {
+      display: block;
+      margin: auto;
+      text-align: center;
+      padding: 0 16px;
+      img {
         height: 300px;
         text-align: center;
+        width: 100%;
+      }
+    }
+    .formulario-boton-container-mobile {
+      padding: 30px 16px;
+      width: 100%;
+      display: flex;
+      button {
+        padding: 10px 15px;
+        background-color: $negro;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-family: $font-family-rubik;
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: $botones-amarillo-dorado;
+        font-weight: 600;
+        width: 100%;
       }
     }
   }
-  .nuestros-estampados-section{
+
+  .nuestros-estampados-section-mobile {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 50px 0 100px;
-    background-color: red;
+
     .hexagon {
-      $hexagon-width: 15vw; /* 496px en figma */
-      $hexagon-height: 8vw; /* 460px en figma */
+      $hexagon-width: 30vw; /* 496px en figma */
+      $hexagon-height: 16vw; /* 460px en figma */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -370,12 +378,12 @@
       background-color: #3498db;
       position: relative;
       border: 1px solid #3498db;
-      
-  
-      p{
-        font-size: 1.5rem;
+
+      p {
+        font-size: 1rem;
+        margin: 0;
       }
-  
+
       &:before,
       &:after {
         content: "";
@@ -384,12 +392,12 @@
         border-right: $hexagon-width / 2 solid transparent;
         position: absolute;
       }
-  
+
       &:before {
         top: -($hexagon-height / 2);
         border-bottom: $hexagon-height / 2 solid #3498db;
       }
-  
+
       &:after {
         bottom: -($hexagon-height / 2);
         border-top: $hexagon-height / 2 solid #3498db;
@@ -397,15 +405,14 @@
     }
     .info-tienda-hexagonosFila1 {
       display: flex;
-      width: 31vw;
+      width: 61vw;
       justify-content: space-around;
-      margin-top: 4.5vw;
-      
+      margin-top: 8.5vw;
     }
     .info-tienda-hexagonosFila2 {
-      margin-top: 4.5vw;
+      margin-top: 8.5vw;
       display: flex;
-      width: 47vw;
+      width: 61vw;
       justify-content: space-around;
     }
   }
@@ -415,9 +422,12 @@
       display: flex;
       flex-direction: column;
       padding: 10px;
+      padding: 0 16px;
       .personalizar-productos-container-img {
+        width: 100%;
         button {
           text-align: center;
+          font-size: 1rem;
         }
       }
     }
@@ -429,6 +439,105 @@
       font-size: 25px;
       text-align: center;
       padding: 20px 0;
+    }
+  }
+
+  .formulario-section {
+    padding: 0 16px;
+
+    form {
+      input,
+      textarea {
+        font-weight: 600;
+      }
+      .formulario-boton-container {
+        width: 100%;
+        display: flex;
+        justify-content: right;
+        button {
+          margin-top: 10px;
+          padding: 20px 15px;
+          background-color: $negro;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-family: $font-family-rubik;
+          font-size: 15px;
+          letter-spacing: 2px;
+          color: $botones-amarillo-dorado;
+          font-weight: 600;
+          transition: background-color 0.3s;
+          width: 100vw; /* 592px en figma */
+          height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
+          /* display: flex;
+        justify-content: center;
+        align-items: center; */
+
+          &:hover {
+            background-color: #0056b3;
+          }
+        }
+      }
+    }
+  }
+
+  .redes-section {
+    .iconos-redes-container {
+      img {
+        width: 15vw /* 129px en figma */;
+        height: 15vw /* 129px en figma */;
+      }
+    }
+  }
+
+  .info-tienda-container {
+    .hexagon {
+      $hexagon-width: 30vw; /* 496px en figma */
+      $hexagon-height: 16vw; /* 460px en figma */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: $hexagon-width;
+      height: $hexagon-height;
+      background-color: #3498db;
+      position: relative;
+      border: 1px solid #3498db;
+
+      p {
+        font-size: 1rem;
+        margin: 0;
+      }
+
+      &:before,
+      &:after {
+        content: "";
+        width: 0;
+        border-left: $hexagon-width / 2 solid transparent;
+        border-right: $hexagon-width / 2 solid transparent;
+        position: absolute;
+      }
+
+      &:before {
+        top: -($hexagon-height / 2);
+        border-bottom: $hexagon-height / 2 solid #3498db;
+      }
+
+      &:after {
+        bottom: -($hexagon-height / 2);
+        border-top: $hexagon-height / 2 solid #3498db;
+      }
+    }
+    .info-tienda-hexagonosFila1 {
+      display: flex;
+      width: 61vw;
+      justify-content: space-around;
+      margin-top: 8.5vw;
+    }
+    .info-tienda-hexagonosFila2 {
+      margin-top: 8.5vw;
+      display: flex;
+      width: 61vw;
+      justify-content: space-around;
     }
   }
 }
