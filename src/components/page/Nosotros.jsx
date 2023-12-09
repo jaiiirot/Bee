@@ -1,27 +1,26 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
+import Logo from "../image/Logo";
 
 export default function Nosotros() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch
-      </Button>
-
-      <Offcanvas show={show} onHide={handleClose} style={{ height: "500px" }}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>Offcanvas</Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas>
+      <section>
+        <Logo />
+      </section>
+      <section>
+        <aside>
+          <h2>¿QUIÉNES SOMOS?</h2>
+        </aside>
+        <aside>
+          <div>
+            <img src="" alt="" />
+            <h3>NUESTROS ESTAMPADOS</h3>
+          </div>
+          <div>
+            <img src="" alt="" />
+            <h3>NUESTROS CLIENTES</h3>
+          </div>
+        </aside>
+      </section>
     </>
   );
 }

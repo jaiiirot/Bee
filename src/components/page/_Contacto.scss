@@ -33,7 +33,6 @@
     textarea:focus {
       outline: 4px solid $color-primary;
       font-weight: normal;
-      letter-spacing: 0.05rem;
     }
 
     textarea {
@@ -103,7 +102,7 @@
       input,
       textarea {
         padding: 0.5rem 1rem;
-        font-size: 1rem;
+        font-size: 0.8rem;
       }
       input::placeholder,
       textarea::placeholder {
