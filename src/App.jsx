@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
 import Body from "./components/page/Body";
-import "./style/main.css";
+import "./main.css";
 
 function App() {
   return (

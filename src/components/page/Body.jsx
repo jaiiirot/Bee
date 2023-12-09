@@ -1,5 +1,6 @@
 import { Outlet, Link } from "react-router-dom";
 import Logo from "../image/Logo";
+import Whatsapp from "../image/Whatsapp";
 
 export default function Body() {
   return (
@@ -9,16 +10,24 @@ export default function Body() {
         <nav className="header__nav">
           <ul className="header__Options">
             <li>
-              <Link to="/Nosotros">Nosotros</Link>
+              <Link to="/">INICIO</Link>
             </li>
             <li>
-              <Link to="/Producto">Producto</Link>
+              <Link to="/Nosotros">NOSOTROS</Link>
             </li>
             <li>
-              <Link to="/Ayuda">Ayuda</Link>
+              <Link to="/Producto">PRODUCTOS</Link>
             </li>
             <li>
-              <Link to="/Contacto">Contacto</Link>
+              <Link to="/Ayuda">AYUDA</Link>
+            </li>
+            <li>
+              <Link to="/Contacto">CONTACTO</Link>
+            </li>
+            <li>
+              <Link to="/www.whatsapp.com">
+                <Whatsapp />
+              </Link>
             </li>
           </ul>
         </nav>

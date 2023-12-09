@@ -1,0 +1,90 @@
+.welcome {
+  padding: 10vh 0rem;
+  text-align: center;
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+.form {
+  height: min-content;
+  width: 100%;
+  padding: 0.5rem 5rem;
+  &-cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: 1rem;
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      border: 2px solid $color-quaternary;
+      background-color: $color-quaternary;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: rgb(56, 56, 56);
+      font-size: 1.2rem;
+    }
+    input:focus,
+    textarea:focus {
+      outline: 4px solid $color-primary;
+      font-weight: normal;
+      letter-spacing: 0.05rem;
+    }
+
+    textarea {
+      height: 20vh;
+      resize: none;
+    }
+    button {
+      padding: 0.5rem 2.5rem;
+      font-size: 1.5rem;
+      background: $color-secundary;
+      color: $color-primary;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+  }
+}
+.red {
+  padding: 2vh 0rem;
+  text-align: center;
+  &-info {
+    padding: 5rem 0rem;
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  &-options {
+    picture {
+      img {
+        height: 200px;
+      }
+    }
+  }
+}
+.hexos {
+  padding: 20vh 0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  &-cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+  }
+  .hexo {
+    width: 400px;
+    overflow: hidden;
+    p {
+      font-size: 1.5rem;
+    }
+  }
+}
