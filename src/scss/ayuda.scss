@@ -1,0 +1,57 @@
+.ayuda-container {
+  width: 100%;
+  height: 100vh;
+
+  .titulo-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 28vh;
+  }
+
+  .info-tienda-hexagonosFila1 {
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    width: 48vw;
+    height: fit-content;
+    padding-top: 20vh;
+    margin: auto;
+  }
+
+  .hexagon {
+    $hexagon-width: 15vw; /* 496px en figma */
+    $hexagon-height: 8vw; /* 460px en figma */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $hexagon-width;
+    height: $hexagon-height;
+    background-color: #3498db;
+    position: relative;
+    border: 1px solid #3498db;
+
+    &:before,
+    &:after {
+      content: "";
+      width: 0;
+      border-left: $hexagon-width / 2 solid transparent;
+      border-right: $hexagon-width / 2 solid transparent;
+      position: absolute;
+    }
+
+    &:before {
+      top: -($hexagon-height / 2);
+      border-bottom: $hexagon-height / 2 solid #3498db;
+    }
+
+    &:after {
+      bottom: -($hexagon-height / 2);
+      border-top: $hexagon-height / 2 solid #3498db;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

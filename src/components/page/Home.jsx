@@ -6,10 +6,16 @@ import IconoInstagram from "../../iconos/icono-instagram.svg";
 import IconoFacebook from "../../iconos/icono-facebook.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SliderHeroListContainer from "../carousel/SliderHeroListContainer";
+import { NavLink, Link } from "react-router-dom";
+import Ayuda from "./Ayuda";
 
 const Home = () => {
   return (
     <>
+    <NavLink to= "/Ayuda">
+      <button>ir a AYUDA</button>
+    </NavLink>
+    
       <section className="hero-section">
         <div className="home-titulo-mobile">
           <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
