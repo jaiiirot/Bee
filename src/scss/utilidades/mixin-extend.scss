@@ -1,0 +1,9 @@
+// MIXIN //
+
+@mixin propiedades-botones-productos-personalizados ($color-fondo, $padding, $font-size,$font-family) {
+    background-color: $color-fondo;
+    padding: $padding;
+    font-size: $font-size;
+    font-family: $font-family;
+    
+}

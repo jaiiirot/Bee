@@ -1,20 +1,16 @@
 import React from "react";
 import "../../style/index.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faSquareFacebook,
-  faSquareInstagram,
-  faWhatsapp,
-} from "@fortawesome/free-brands-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import IconoInstagram from "../../iconos/icono-instagram.svg";
+import IconoFacebook from "../../iconos/icono-facebook.svg";
+import "bootstrap/dist/css/bootstrap.min.css";
+import SliderHeroListContainer from "../carousel/SliderHeroListContainer";
 
 const Home = () => {
   return (
     <>
       <section className="hero-section">
-        <div className="home-titulos">
-          <h2>TITULO1</h2>
-        </div>
-
         <div className="home-titulo-mobile">
           <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
         </div>
@@ -28,8 +24,46 @@ const Home = () => {
         <div className="logo-whatsapp-container">
           <FontAwesomeIcon className="icono-whatsapp" icon={faWhatsapp} />
         </div>
+      </section>
 
-        <div className="hero-img-container-mobile"></div>
+      <section className="hero-mobile">
+        <div className="hero-carusel-container-mobile">
+          <SliderHeroListContainer />
+        </div>
+
+        <div className="formulario-boton-container">
+          <button type="submit">ENVIAR</button>
+        </div>
+      </section>
+
+      <section className="nuestros-estampados-section">
+        <div className="info-tienda-hexagonosFila1">
+          <div className="hexagon">
+            <p>SUBLIMACIÓN</p>
+          </div>
+          <div className="hexagon">
+            <p>TERMOVINILO</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila2">
+          <div className="hexagon">
+            <p>D.T.F</p>
+          </div>
+          <div className="hexagon home-titulos">
+            <h2>NUESTROS ESTAMPADOS</h2>
+          </div>
+          <div className="hexagon">
+            <p>SEFIGRAFÍA</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila1">
+          <div className="hexagon">
+            <p>BORDADO</p>
+          </div>
+          <div className="hexagon">
+            <p>DIRECCIÓN</p>
+          </div>
+        </div>
       </section>
 
       <section className="personalizar-productos-section">
@@ -67,7 +101,7 @@ const Home = () => {
             type="text"
             id="nombre"
             name="nombre"
-            placeholder="NOMBRE"
+            placeholder="Nombre"
             required
           ></input>
 
@@ -98,7 +132,7 @@ const Home = () => {
             required
           ></textarea>
           <div className="formulario-boton-container">
-            <button type="submit">Enviar</button>
+            <button type="submit">ENVIAR</button>
           </div>
         </form>
       </section>
@@ -107,26 +141,24 @@ const Home = () => {
           <h2>Seguinos en las redes</h2>
         </div>
         <div className="iconos-redes-container">
-          <div className="icono-circulo">
-            <FontAwesomeIcon icon={faSquareInstagram} />
-          </div>
-          <div className="icono-circulo">
-            <FontAwesomeIcon icon={faSquareFacebook} />
-          </div>
+          <img src={IconoFacebook} alt="icono-facebook" />
+          <img src={IconoInstagram} alt="icono-instagram" />
         </div>
       </section>
       <section className="info-tienda-container">
-        <ul className="iconos-tienda-container">
-          <li className="icono-hexagono">
-            <i>Direccion</i>
-          </li>
-          <li className="icono-hexagono">
-            <i>Horario</i>
-          </li>
-          <li className="icono-hexagono">
-            <i>Telefono</i>
-          </li>
-        </ul>
+        <div className="info-tienda-hexagonosFila1">
+          <div className="hexagon">
+            <p>HORARIO</p>
+          </div>
+          <div className="hexagon">
+            <p>DIRECCIÓN</p>
+          </div>
+        </div>
+        <div className="info-tienda-hexagonosFila2">
+          <div className="hexagon">
+            <p>TELÉFONO</p>
+          </div>
+        </div>
       </section>
     </>
   );
