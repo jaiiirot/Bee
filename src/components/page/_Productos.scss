@@ -1,0 +1,46 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 75vh;
+  &-info {
+    padding: 3rem 0rem;
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+  &-hexos {
+    div {
+      .hexo {
+        height: 300px;
+        overflow: hidden;
+        text-align: center;
+        p {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    &-hexos {
+      display: flex;
+      overflow: hidden;
+      max-width: 300px;
+      div {
+        width: max-content;
+        height: 300px;
+        overflow-x: scroll;
+        display: flex;
+        .hexos {
+          width: 250px;
+          p {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

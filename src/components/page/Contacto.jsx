@@ -36,19 +36,19 @@ export default function Contacto() {
         </aside>
       </section>
       <section className="hexos">
-        <ul className="hexos-cont">
+        <div className="hexos-cont">
           <Hexagono className={"hexo"} localUrl={"horario"}>
             HORARIO
           </Hexagono>
           <Hexagono className={"hexo"} localUrl={"direccion"}>
             DIRECCIÓN
           </Hexagono>
-        </ul>
-        <ul className="hexos-cont">
+        </div>
+        <div className="hexos-cont">
           <Hexagono className={"hexo"} localUrl={"telefono"}>
             TELÉFONO
           </Hexagono>
-        </ul>
+        </div>
       </section>
     </>
   );
