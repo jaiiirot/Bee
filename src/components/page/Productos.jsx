@@ -9,16 +9,16 @@ export default function Productos() {
       </aside>
       <aside className="product-hexos">
         <div>
-          <Hexagono className={"hexo"} localUrl={"telefono"}>
+          <Hexagono className={"hexo"} localUrl={"escolar-y-egresados"}>
             INDUMENTARIA ESCOLAR Y EGRESADOS
           </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"telefono"}>
-            INDUMENTARIA DEPOTIVA
+          <Hexagono className={"hexo"} localUrl={"deportiva"}>
+            INDUMENTARIA DEPORTIVA
           </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"telefono"}>
+          <Hexagono className={"hexo"} localUrl={"laboral"}>
             INDUMENTARIA LABORAL
           </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"telefono"}>
+          <Hexagono className={"hexo"} localUrl={"objetos-  zpersonalizados"}>
             OBJETOS PERSONALIZADOS
           </Hexagono>
         </div>
