@@ -18,7 +18,7 @@ export default function Productos() {
           <Hexagono className={"hexo"} localUrl={"laboral"}>
             INDUMENTARIA LABORAL
           </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"objetos-  zpersonalizados"}>
+          <Hexagono className={"hexo"} localUrl={"objetos-personalizados"}>
             OBJETOS PERSONALIZADOS
           </Hexagono>
         </div>
