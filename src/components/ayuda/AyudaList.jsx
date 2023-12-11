@@ -1,25 +1,27 @@
-import React from 'react'
+import React from "react";
+
+import { Link } from "react-router-dom";
 import "../../style/ayuda.css";
 
 const AyudaList = () => {
   return (
-    <div className='ayuda-container'>
+    <div className="ayuda-container">
       <div className="titulo-container">
         <h1>AYUDA</h1>
       </div>
       <div className="info-tienda-hexagonosFila1">
         <div className="hexagon">
-          <p>PREGUNTAS FRECUENTES</p>
+          <Link to="/Preguntas-Frecuentes">PREGUNTAS FRECUENTES</Link>
         </div>
         <div className="hexagon">
-          <p>TÉRMINOS Y CONDICIONES</p>
+          <Link to="/Términos-y-condiciones">TÉRMINOS Y CONDICIONES</Link>
         </div>
-        <div className="hexagon">
-          <p>¿CÓMO COMPRAR?</p>
+        <div className="hexagon hexagon-comprar">
+        <Link to="/Cómo-comprar">¿CÓMO COMPRAR?</Link>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AyudaList
+export default AyudaList;

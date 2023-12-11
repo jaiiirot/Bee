@@ -111,19 +111,19 @@ const Home = () => {
         </div>
         <div className="personalizar-productos-container">
           <div className="indumentaria-escolar personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio"></div>
+            <div className="personalizar-productos-vacio indumentaria-escolar-card"></div>
             <button>INDUMENTARIA ESCOLAR Y EGRESADOS</button>
           </div>
           <div className="indumentaria-deportiva personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio"></div>
+            <div className="personalizar-productos-vacio indumentaria-deportiva-card"></div>
             <button>INDUMENTARIA DEPORTIVA</button>
           </div>
           <div className="indumentaria-laboral personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio"></div>
+            <div className="personalizar-productos-vacio indumentaria-laboral-card"></div>
             <button>INDUMENTARIA LABORAL</button>
           </div>
           <div className="objetos-personalizados personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio"></div>
+            <div className="personalizar-productos-vacio objetos-personalizados-card"></div>
             <button>OBJETOS PERSONALIZADOS</button>
           </div>
         </div>

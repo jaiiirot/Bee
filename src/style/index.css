@@ -108,6 +108,7 @@
 }
 .nuestros-estampados-section .hexagon p {
   font-size: 1.5rem;
+  margin: 0;
 }
 .nuestros-estampados-section .hexagon:before, .nuestros-estampados-section .hexagon:after {
   content: "";
@@ -141,23 +142,21 @@
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
-  padding: 50px 9.5vw;
+  padding: 50px 0;
   width: 100%;
   height: -moz-fit-content;
   height: fit-content;
+  width: 82%;
+  margin: auto;
 }
 .personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img {
-  background-color: yellow;
   border: 1px solid black;
-  margin: 10px;
+  margin: 10px auto;
   display: grid;
   grid-template-rows: 78% 22%;
   width: 38.89vw;
   height: 36.9vh;
   border: none;
-}
-.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .personalizar-productos-vacio {
-  grid-row: 1;
 }
 .personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img button {
   grid-row: 2;
@@ -168,8 +167,43 @@
   font-weight: 600;
   background-color: #E7BB43;
   padding: 0.83% 2.2%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: "Oswald", sans-serif;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .personalizar-productos-vacio {
+  grid-row: 1;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .indumentaria-escolar-card {
+  background-image: url("../components/imagenes/indumentaria-escolar-card.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .indumentaria-deportiva-card {
+  background-image: url("../components/imagenes/indumentaria-deportiva-card.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .indumentaria-laboral-card {
+  background-image: url("../components/imagenes/indumentaria-laboral.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+.personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img .objetos-personalizados-card {
+  background-image: url("../components/imagenes/objetos-personalizados.png");
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 .personalizar-productos-section .personalizar-productos-container .indumentaria-escolar {
   grid-column: 1;
@@ -272,6 +306,7 @@
   align-items: center;
   height: -moz-fit-content;
   height: fit-content;
+  padding-bottom: 100px;
 }
 .info-tienda-container .info-tienda-hexagonosFila1 {
   display: flex;
@@ -383,7 +418,7 @@
   }
   .nuestros-estampados-section-mobile .hexagon p {
     font-size: 1rem;
-    margin: 0;
+    margin: auto;
   }
   .nuestros-estampados-section-mobile .hexagon:before, .nuestros-estampados-section-mobile .hexagon:after {
     content: "";
@@ -415,8 +450,8 @@
   .personalizar-productos-section .personalizar-productos-container {
     display: flex;
     flex-direction: column;
-    padding: 10px;
-    padding: 0 16px;
+    /* padding: 10px;
+    padding: 0 16px; */
   }
   .personalizar-productos-section .personalizar-productos-container .personalizar-productos-container-img {
     width: 100%;
