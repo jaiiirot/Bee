@@ -22,14 +22,14 @@ function App() {
           <Route path="ayuda/">
             <Route index element={<Ayuda />} />
             <Route
-              path="PreguntasFrecuentes/"
+              path="preguntas-frecuentes/"
               element={<PreguntasFrecuentes />}
             />
-            <Route path="Terminos/" element={<Terminos />} />
-            <Route path="ComoComprar/" element={<ComoComprar />} />
+            <Route path="terminos/" element={<Terminos />} />
+            <Route path="como-comprar/" element={<ComoComprar />} />
           </Route>
 
-          <Route path="Contacto/" element={<Contacto />} />
+          <Route path="contacto/" element={<Contacto />} />
         </Route>
       </Routes>
     </BrowserRouter>
