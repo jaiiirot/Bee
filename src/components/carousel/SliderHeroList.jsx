@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import ImagenPrueba from "../../assets/img/hombreAbeja.jpg";
-// import "../../style/index.css";
 
 function SliderHeroList() {
   const [index, setIndex] = useState(0);

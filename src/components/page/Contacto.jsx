@@ -1,5 +1,5 @@
 import React from "react";
-import Hexagon from "../hexagon/Hexagon";
+import Hexagon from "../hexagon/HexagonVacio";
 import Facebook from "../image/facebook";
 import Instagram from "../image/Instagram";
 import Formulario from "../formulario/Formulario";

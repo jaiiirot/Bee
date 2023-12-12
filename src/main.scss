@@ -1,17 +1,14 @@
+/*UTILIDADES*/
+@import "./utils/Mixin-Extend";
+@import "./utils/Typography";
+@import "~bootstrap/scss/bootstrap";
 $color-primary: #efb322;
 $color-secundary: #040404;
 $color-tertiary: #f8f8f8;
 $color-quaternary: #cecdbb;
-@font-face {
-  font-family: "Oswald";
-  src: url("../src/assets/font/Oswald-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-@import "~bootstrap/scss/bootstrap";
 
 * {
-  font-family: Oswald, sans-serif;
+  font-family: $font-family-project;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -25,19 +22,12 @@ body {
   font-size: 1.2rem;
 }
 
-* .hex-cont {
-  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-}
-
-/*UTILIDADES*/
-@import "./utils/Mixin-Extend";
-@import "./utils/Typography";
-
 /*COMPONENTES*/
-@import "./components/Hexagono/Hexagon";
-@import "./components/Navbar/NavbarDesktop";
-@import "./components/Navbar/NavbarMobile";
-@import "./components/Footer/Footer";
+@import "./components/hexagon/HexagonImg";
+@import "./components/hexagon/HexagonVacio";
+@import "./components/navbar/NavbarDesktop";
+@import "./components/navbar/NavbarMobile";
+@import "./components/footer/Footer";
 @import "./components/formulario/Formulario";
 
 /*PAGES*/
