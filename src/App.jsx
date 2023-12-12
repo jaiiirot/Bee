@@ -16,17 +16,20 @@ function App() {
       <Routes>
         <Route path="/" element={<Body />}>
           <Route index element={<Home />} />
-          <Route path="/Nosotros" element={<Nosotros />} />
-          <Route path="/Productos" element={<Productos />} />
-          <Route path="/Ayuda" element={<Ayuda />} />
-          <Route
-            path="/Ayuda/PreguntasFrecuentes"
-            element={<PreguntasFrecuentes />}
-          />
-          <Route path="/Ayuda/Terminos" element={<Terminos />} />
-          <Route path="/Ayuda/ComoComprar" element={<ComoComprar />} />
+          <Route path="nosotros/" element={<Nosotros />} />
+          <Route path="productos/" element={<Productos />} />
 
-          <Route path="/Contacto" element={<Contacto />} />
+          <Route path="ayuda/">
+            <Route index element={<Ayuda />} />
+            <Route
+              path="PreguntasFrecuentes/"
+              element={<PreguntasFrecuentes />}
+            />
+            <Route path="Terminos/" element={<Terminos />} />
+            <Route path="ComoComprar/" element={<ComoComprar />} />
+          </Route>
+
+          <Route path="Contacto/" element={<Contacto />} />
         </Route>
       </Routes>
     </BrowserRouter>
