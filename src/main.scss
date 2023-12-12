@@ -1,0 +1,46 @@
+$color-primary: #efb322;
+$color-secundary: #040404;
+$color-tertiary: #f8f8f8;
+$color-quaternary: #cecdbb;
+@font-face {
+  font-family: "Oswald";
+  src: url("../src/assets/font/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@import "~bootstrap/scss/bootstrap";
+
+* {
+  font-family: Oswald, sans-serif;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $color-secundary;
+}
+body {
+  background-color: $color-tertiary;
+  font-size: 1.2rem;
+}
+
+* .hex-cont {
+  clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+}
+
+/*UTILIDADES*/
+@import "./components/utilidades/";
+
+/*COMPONENTES*/
+@import "./components/Hexagono/Hexagon";
+@import "./components/Footer/Footer";
+
+/*PAGES*/
+@import "./components/page/Body";
+@import "./components/page/Index";
+@import "./components/page/Nosotros";
+@import "./components/page/Productos";
+@import "./components/page/Contacto";
+@import "./components/page/Ayuda";
+@import "./components/page/SeccionesDeAyuda";

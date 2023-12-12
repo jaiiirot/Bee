@@ -1,21 +1,21 @@
 import React from "react";
 import "../../style/index.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import IconoInstagram from "../../iconos/icono-instagram.svg";
 import IconoFacebook from "../../iconos/icono-facebook.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SliderHeroListContainer from "../carousel/SliderHeroListContainer";
 import { NavLink, Link } from "react-router-dom";
-import Ayuda from "./Ayuda";
+// import Ayuda from "./Ayuda";
 
 const Home = () => {
   return (
     <>
-    <NavLink to= "/Ayuda">
-      <button>ir a AYUDA</button>
-    </NavLink>
-    
+      <NavLink to="/Ayuda">
+        <button>ir a AYUDA</button>
+      </NavLink>
+
       <section className="hero-section">
         <div className="home-titulo-mobile">
           <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
@@ -28,7 +28,7 @@ const Home = () => {
         </div>
 
         <div className="logo-whatsapp-container">
-          <FontAwesomeIcon className="icono-whatsapp" icon={faWhatsapp} />
+          {/* <FontAwesomeIcon className="icono-whatsapp" icon={faWhatsapp} /> */}
         </div>
       </section>
 
@@ -101,7 +101,6 @@ const Home = () => {
           <div className="hexagon">
             <p>TERMOVINILO IMPRESO</p>
           </div>
-          
         </div>
       </section>
 
