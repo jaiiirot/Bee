@@ -1,11 +1,11 @@
 import React from "react";
-import imgLogo from "../../assets/icon.png";
+import imgLogo from "../../assets/icon/icon.png";
 
-function Logo({ className }) {
+function Logo({ className, height, width }) {
   return (
-    <figure className={className}>
-      <img src={imgLogo} alt="Logo de Bee" height={"100px"} width={"100px"} />
-    </figure>
+    <picture className={className}>
+      <img src={imgLogo} alt="Logo de Bee" height={height} width={width} />
+    </picture>
   );
 }
 

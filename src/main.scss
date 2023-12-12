@@ -1,0 +1,41 @@
+/*UTILIDADES*/
+@import "./utils/Colors";
+@import "./utils/Mixin-Extend";
+@import "./utils/Typography";
+@import "~bootstrap/scss/bootstrap";
+$color-primary: #efb322;
+$color-secundary: #040404;
+$color-tertiary: #f8f8f8;
+$color-quaternary: #cecdbb;
+
+* {
+  font-family: $font-family-project;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: $color-secundary;
+}
+body {
+  background-color: $color-tertiary;
+  font-size: 1.2rem;
+}
+
+/*COMPONENTES*/
+@import "./components/hexagon/HexagonImg";
+@import "./components/hexagon/HexagonVacio";
+@import "./components/navbar/NavbarDesktop";
+@import "./components/navbar/NavbarMobile";
+@import "./components/footer/Footer";
+@import "./components/formulario/Formulario";
+
+/*PAGES*/
+@import "./components/page/Body";
+@import "./components/page/Home";
+@import "./components/page/Nosotros";
+@import "./components/page/Productos";
+@import "./components/page/Contacto";
+@import "./components/page/Ayuda";
+@import "./components/page/SeccionesDeAyuda";

@@ -1,8 +1,4 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
-import "../../style/ayuda.css";
-
 const AyudaList = () => {
   return (
     <div className="ayuda-container">
@@ -17,7 +13,7 @@ const AyudaList = () => {
           <Link to="/Términos-y-condiciones">TÉRMINOS Y CONDICIONES</Link>
         </div>
         <div className="hexagon hexagon-comprar">
-        <Link to="/Cómo-comprar">¿CÓMO COMPRAR?</Link>
+          <Link to="/Cómo-comprar">¿CÓMO COMPRAR?</Link>
         </div>
       </div>
     </div>

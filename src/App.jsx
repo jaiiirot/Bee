@@ -1,32 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Body from "./components/page/Body";
 import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
-import Body from "./components/page/Body";
 import Home from "./components/page/Home";
 import Ayuda from "./components/page/Ayuda";
 import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
 import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
-import FooterList from "./components/footer/FooterList";
-import "./style/main.css";
+import Productos from "./components/page/Productos";
+import "./main.css";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ayuda" element={<Ayuda />} />
-        <Route path="/Preguntas-Frecuentes" element={<PreguntasFrecuentes />} />
-        <Route path="/Términos-y-condiciones" element={<Terminos />} />
-        <Route path="/Cómo-comprar" element={<ComoComprar />} />
-        <Route path="Contacto" element={<Contacto />} />
-        <Route path="/Nosotros" element={<Nosotros />} />
-        <Route path="/Producto" element={<Nosotros />} />
-        <Route path="/Contacto" element={<Contacto />} />
-      </Routes>
+        <Route path="/" element={<Body />}>
+          <Route index element={<Home />} />
+          <Route path="/Nosotros" element={<Nosotros />} />
+          <Route path="/Productos" element={<Productos />} />
+          <Route path="/Ayuda" element={<Ayuda />} />
+          <Route
+            path="/Ayuda/PreguntasFrecuentes"
+            element={<PreguntasFrecuentes />}
+          />
+          <Route path="/Ayuda/Terminos" element={<Terminos />} />
+          <Route path="/Ayuda/ComoComprar" element={<ComoComprar />} />
 
-      <FooterList />
-    </>
+          <Route path="/Contacto" element={<Contacto />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

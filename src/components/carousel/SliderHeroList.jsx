@@ -1,7 +1,6 @@
-import { useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import ImagenPrueba from '../imagenes/carrusel/hombreAbeja.jpg'
-import "../../style/index.css";
+import { useState } from "react";
+import Carousel from "react-bootstrap/Carousel";
+import ImagenPrueba from "../../assets/img/hombreAbeja.jpg";
 
 function SliderHeroList() {
   const [index, setIndex] = useState(0);
@@ -20,14 +19,14 @@ function SliderHeroList() {
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={ImagenPrueba} alt="second slide" />
+        <img src={ImagenPrueba} alt="second slide" />
         <Carousel.Caption>
           <h3>Second slide label</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-      <img src={ImagenPrueba} alt="third slide" />
+        <img src={ImagenPrueba} alt="third slide" />
         <Carousel.Caption>
           <h3>Third slide label</h3>
           <p>

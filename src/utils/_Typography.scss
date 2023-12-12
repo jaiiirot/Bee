@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/font/Oswald-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik";
+  src: url("./assets/font/Rubik-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+$font-family-project: "Oswald", sans-serif;
+$font-family-rubik: "Rubik", sans-serif;
+
+$font-size-titulo-principal: 120px;
+$font-size-subtitulos-h2: 60px;
+$font-size-inputs: 29px;
+
+$font-size-botones-productos-personalizados: 1rem;
+$font-weight-botones-productos-personalizados: 500;
