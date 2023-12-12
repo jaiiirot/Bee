@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Body from "./components/page/Body";
+import Body from "./components/page/Body";
 import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
 import Home from "./components/page/Home";
@@ -9,10 +10,12 @@ import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import "./main.css";
+import Productos from "./components/page/Productos";
+import "./main.css";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouterBrowserRouter>
       <Routes>
         <Route path="/" element={<Body />}>
           <Route index element={<Home />} />
@@ -29,6 +32,7 @@ function App() {
           <Route path="/Contacto" element={<Contacto />} />
         </Route>
       </Routes>
+    </BrowserRouter>
     </BrowserRouter>
   );
 }
