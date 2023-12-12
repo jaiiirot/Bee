@@ -1,39 +1,13 @@
-import { Outlet, Link } from "react-router-dom";
-import Logo from "../image/Logo";
-import Whatsapp from "../image/Whatsapp";
-import NavbarMobile from "../utils/NavbarMobile";
+import { Outlet } from "react-router-dom";
+import NavbarMobile from "../Navbar/NavbarMobile";
+import NavbarDesktop from "../Navbar/NavbarDesktop";
 
+let pages = ["Inicio", "Nosotros", "Productos", "Ayuda", "Contacto"];
 export default function Body() {
   return (
     <>
-      <header className="header">
-        <Logo className={"header-logo"} />
-        <nav className="header-nav">
-          <ul className="header-options">
-            <li>
-              <Link to="/">INICIO</Link>
-            </li>
-            <li>
-              <Link to="/nosotros">NOSOTROS</Link>
-            </li>
-            <li>
-              <Link to="/producto">PRODUCTOS</Link>
-            </li>
-            <li>
-              <Link to="/ayuda">AYUDA</Link>
-            </li>
-            <li>
-              <Link to="/contacto">CONTACTO</Link>
-            </li>
-            <li>
-              <Link to="/www.whatsapp.com">
-                <Whatsapp />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <NavbarMobile />
+      <NavbarDesktop pages={pages} />
+      <NavbarMobile pages={pages} />
       <main>
         <Outlet />
       </main>

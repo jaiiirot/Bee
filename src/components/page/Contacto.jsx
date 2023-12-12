@@ -1,5 +1,5 @@
 import React from "react";
-import Hexagono from "../image/Hexagono";
+import Hexagon from "../Hexagono/Hexagon";
 import Facebook from "../image/facebook";
 import Instagram from "../image/Instagram";
 export default function Contacto() {
@@ -35,19 +35,20 @@ export default function Contacto() {
           <Instagram />
         </aside>
       </section>
+
       <section className="hexos">
         <div className="hexos-cont">
-          <Hexagono className={"hexo"} localUrl={"horario"}>
+          <Hexagon className={"hexo"} localUrl={"horario"}>
             HORARIO
-          </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"direccion"}>
+          </Hexagon>
+          <Hexagon className={"hexo"} localUrl={"direccion"}>
             DIRECCIÓN
-          </Hexagono>
+          </Hexagon>
         </div>
         <div className="hexos-cont">
-          <Hexagono className={"hexo"} localUrl={"telefono"}>
+          <Hexagon className={"hexo"} localUrl={"telefono"}>
             TELÉFONO
-          </Hexagono>
+          </Hexagon>
         </div>
       </section>
     </>

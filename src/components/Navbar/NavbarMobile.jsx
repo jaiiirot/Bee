@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 import Whatsapp from "../image/Whatsapp";
 import Logo from "../image/Logo";
 
-export default function NavbarMobile() {
+export default function NavbarMobile({ pages }) {
+  const [page, setPage] = useState(pages);
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -44,21 +45,14 @@ export default function NavbarMobile() {
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="header-movil-options">
-            <li>
-              <Link to="/">INICIO</Link>
-            </li>
-            <li>
-              <Link to="/nosotros">NOSOTROS</Link>
-            </li>
-            <li>
-              <Link to="/producto">PRODUCTOS</Link>
-            </li>
-            <li>
-              <Link to="/ayuda">AYUDA</Link>
-            </li>
-            <li>
-              <Link to="/contacto">CONTACTO</Link>
-            </li>
+            {page.map((p, e) => {
+              const url = p;
+              return (
+                <li key={e}>
+                  <Link to={`/${url.toLowerCase()}`}>{p}</Link>
+                </li>
+              );
+            })}
           </ul>
         </Offcanvas.Body>
       </Offcanvas>

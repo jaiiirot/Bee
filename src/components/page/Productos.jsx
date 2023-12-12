@@ -1,5 +1,5 @@
 import React from "react";
-import Hexagono from "../image/Hexagono";
+import Hexagon from "../Hexagono/Hexagon";
 
 export default function Productos() {
   return (
@@ -8,20 +8,18 @@ export default function Productos() {
         <h1>PRODUCTOS PERSONALIZADOS</h1>
       </aside>
       <aside className="product-hexos">
-        <div>
-          <Hexagono className={"hexo"} localUrl={"escolar-y-egresados"}>
-            INDUMENTARIA ESCOLAR Y EGRESADOS
-          </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"deportiva"}>
-            INDUMENTARIA DEPORTIVA
-          </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"laboral"}>
-            INDUMENTARIA LABORAL
-          </Hexagono>
-          <Hexagono className={"hexo"} localUrl={"objetos-personalizados"}>
-            OBJETOS PERSONALIZADOS
-          </Hexagono>
-        </div>
+        <Hexagon className={"hexo"} localUrl={"escolar-y-egresados"}>
+          INDUMENTARIA ESCOLAR Y EGRESADOS
+        </Hexagon>
+        <Hexagon className={"hexo"} localUrl={"deportiva"}>
+          INDUMENTARIA DEPORTIVA
+        </Hexagon>
+        <Hexagon className={"hexo"} localUrl={"laboral"}>
+          INDUMENTARIA LABORAL
+        </Hexagon>
+        <Hexagon className={"hexo"} localUrl={"objetos-personalizados"}>
+          OBJETOS PERSONALIZADOS
+        </Hexagon>
       </aside>
     </section>
   );

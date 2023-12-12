@@ -10,14 +10,14 @@
     }
   }
   &-hexos {
-    div {
-      .hexo {
-        width: 250px;
-        overflow: hidden;
-        text-align: center;
-        p {
-          font-size: 1.2rem;
-        }
+    display: flex;
+    gap: 1rem;
+    .hexo {
+      width: 200px;
+      overflow: hidden;
+      text-align: center;
+      p {
+        font-size: 1.2rem;
       }
     }
   }
