@@ -20,8 +20,9 @@ const FooterList = () => {
         <div className="footer-menu-nosotros">
           <h2>NOSOTROS</h2>
           <p>Quienes somos</p>
-          <p>Horario</p>
-          <div>
+          <p>Nuestros estampados</p>
+          <p>Nuestros clientes</p>
+          <div className="footer-menu-redes">
             <img src={IconoFacebook} alt="icono-facebook" />
             <img src={IconoInstagram} alt="icono-instagram" />
           </div>

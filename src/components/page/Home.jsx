@@ -1,4 +1,5 @@
 import React from "react";
+import { useRef } from "react";
 import IconoInstagram from "../../assets/icon/icono-instagram.svg";
 import IconoFacebook from "../../assets/icon/icono-facebook.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,6 +8,17 @@ import { NavLink, Link } from "react-router-dom";
 import Formulario from "../formulario/Formulario";
 
 const Home = () => {
+
+  const sectionRef1 = useRef(null);
+  
+
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
   return (
     <>
       <section className="hero-section">
@@ -17,6 +29,9 @@ const Home = () => {
         <div className="hero-img-container">
           <div className="hero-titulo">
             <h1>HACEMOS REALIDAD LO QUE SOÑASTE</h1>
+          </div>
+          <div className="hero-boton-contacto">
+            <button onClick={() => scrollToSection(sectionRef1)} >CONTÁCTANOS</button>
           </div>
         </div>
       </section>
@@ -117,12 +132,13 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="formulario-section">
-        <div className="home-titulos">
+      <section ref={sectionRef1} className="formulario-section">
+        {/* <div className="home-titulos">
           <h2>ENVIANOS TU CONSULTA</h2>
-        </div>
+        </div> */}
         <Formulario />
       </section>
+
       <section className="redes-section">
         <div className="home-titulos">
           <h2>Seguinos en las redes</h2>
@@ -132,7 +148,7 @@ const Home = () => {
           <img src={IconoInstagram} alt="icono-instagram" />
         </div>
       </section>
-      <section className="info-tienda-container">
+      {/* <section className="info-tienda-container">
         <div className="info-tienda-hexagonosFila1">
           <div className="hexagon">
             <p>HORARIO</p>
@@ -146,7 +162,7 @@ const Home = () => {
             <p>TELÉFONO</p>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

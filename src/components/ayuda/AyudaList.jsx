@@ -7,13 +7,13 @@ const AyudaList = () => {
       </div>
       <div className="info-tienda-hexagonosFila1">
         <div className="hexagon">
-          <Link to="/Preguntas-Frecuentes">PREGUNTAS FRECUENTES</Link>
+          <Link to="/ayuda/preguntas-frecuentes">PREGUNTAS FRECUENTES</Link>
         </div>
         <div className="hexagon">
-          <Link to="/Términos-y-condiciones">TÉRMINOS Y CONDICIONES</Link>
+          <Link to="/ayuda/terminos-condiciones">TÉRMINOS Y CONDICIONES</Link>
         </div>
         <div className="hexagon hexagon-comprar">
-          <Link to="/Cómo-comprar">¿CÓMO COMPRAR?</Link>
+          <Link to="/ayuda/como-comprar">¿CÓMO COMPRAR?</Link>
         </div>
       </div>
     </div>

@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Body from "./components/page/Body";
-import Body from "./components/page/Body";
 import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
 import Home from "./components/page/Home";
@@ -10,29 +9,29 @@ import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import "./main.css";
-import Productos from "./components/page/Productos";
-import "./main.css";
 
 function App() {
   return (
-    <BrowserRouterBrowserRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Body />}>
           <Route index element={<Home />} />
-          <Route path="/Nosotros" element={<Nosotros />} />
-          <Route path="/Productos" element={<Productos />} />
-          <Route path="/Ayuda" element={<Ayuda />} />
-          <Route
-            path="/Ayuda/PreguntasFrecuentes"
-            element={<PreguntasFrecuentes />}
-          />
-          <Route path="/Ayuda/Terminos" element={<Terminos />} />
-          <Route path="/Ayuda/ComoComprar" element={<ComoComprar />} />
+          <Route path="nosotros/" element={<Nosotros />} />
+          <Route path="productos/" element={<Productos />} />
 
-          <Route path="/Contacto" element={<Contacto />} />
+          <Route path="ayuda/">
+            <Route index element={<Ayuda />} />
+            <Route
+              path="preguntas-frecuentes/"
+              element={<PreguntasFrecuentes />}
+            />
+            <Route path="terminos-condiciones/" element={<Terminos />} />
+            <Route path="como-comprar/" element={<ComoComprar />} />
+          </Route>
+
+          <Route path="contacto/" element={<Contacto />} />
         </Route>
       </Routes>
-    </BrowserRouter>
     </BrowserRouter>
   );
 }
