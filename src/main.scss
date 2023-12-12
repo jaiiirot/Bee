@@ -30,11 +30,15 @@ body {
 }
 
 /*UTILIDADES*/
-@import "./components/utilidades/";
+@import "./utils/Mixin-Extend";
+@import "./utils/Typography";
 
 /*COMPONENTES*/
 @import "./components/Hexagono/Hexagon";
+@import "./components/Navbar/NavbarDesktop";
+@import "./components/Navbar/NavbarMobile";
 @import "./components/Footer/Footer";
+@import "./components/formulario/Formulario";
 
 /*PAGES*/
 @import "./components/page/Body";

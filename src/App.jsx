@@ -7,8 +7,8 @@ import Ayuda from "./components/page/Ayuda";
 import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
 import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
-// import FooterList from "./components/footer/FooterList";
-import "./style/main.css";
+import Productos from "./components/page/Productos";
+import "./main.css";
 
 function App() {
   return (
@@ -17,16 +17,15 @@ function App() {
         <Route path="/" element={<Body />}>
           <Route index element={<Home />} />
           <Route path="/Nosotros" element={<Nosotros />} />
-          <Route path="/Producto" element={<Productos />} />
-          <Route path="/Ayuda" element={<Body />}>
-            <Route index element={<Ayuda />} />
-            <Route
-              path="/PreguntasFrecuentes"
-              element={<PreguntasFrecuentes />}
-            />
-            <Route path="/Terminos" element={<Terminos />} />
-            <Route path="/ComoComprar" element={<ComoComprar />} />
-          </Route>
+          <Route path="/Productos" element={<Productos />} />
+          <Route path="/Ayuda" element={<Ayuda />} />
+          <Route
+            path="/Ayuda/PreguntasFrecuentes"
+            element={<PreguntasFrecuentes />}
+          />
+          <Route path="/Ayuda/Terminos" element={<Terminos />} />
+          <Route path="/Ayuda/ComoComprar" element={<ComoComprar />} />
+
           <Route path="/Contacto" element={<Contacto />} />
         </Route>
       </Routes>

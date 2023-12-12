@@ -1,6 +1,3 @@
-import React from "react";
-import "../../style/seccionesDeAyuda.css";
-
 const Terminos = () => {
   return (
     <div className="ayuda-section-container">

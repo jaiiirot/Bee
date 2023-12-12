@@ -7,7 +7,7 @@
     justify-content: center;
     padding-top: 20px;
 
-    h1{
+    h1 {
       font-size: 3rem;
       color: black;
     }
@@ -58,19 +58,15 @@
       margin: 0;
       font-size: 1.2rem;
     }
-    a{
+    a {
       text-decoration: none;
       color: black;
     }
   }
 }
 
-
-
-@media (max-width: 576px){
-
-  .ayuda-container{
-    
+@media (max-width: 576px) {
+  .ayuda-container {
     .info-tienda-hexagonosFila1 {
       display: flex;
       flex-wrap: wrap;
@@ -89,7 +85,7 @@
       position: relative;
       border: 1px solid #3498db;
       margin: 0px;
-  
+
       &:before,
       &:after {
         content: "";
@@ -98,25 +94,24 @@
         border-right: $hexagon-width / 2 solid transparent;
         position: absolute;
       }
-  
+
       &:before {
         top: -($hexagon-height / 2);
         border-bottom: $hexagon-height / 2 solid #3498db;
       }
-  
+
       &:after {
         bottom: -($hexagon-height / 2);
         border-top: $hexagon-height / 2 solid #3498db;
       }
-  
+
       p {
         margin: 0;
         font-size: 1.2rem;
       }
     }
-    .hexagon-comprar{
+    .hexagon-comprar {
       margin-top: 50px;
     }
   }
-  
 }

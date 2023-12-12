@@ -1,7 +1,3 @@
-@import "utilidades/mixin-extend";
-@import "utilidades/colors";
-@import "utilidades/typography";
-
 .home-titulo-mobile,
 .hero-img-container-mobile,
 .hero-carusel-container-mobile,
@@ -139,20 +135,19 @@
         /* padding: 10px;
         background-color: #efb322; */
         font-weight: 600;
-        @include propiedades-botones-productos-personalizados(
-          $botones-amarillo-dorado,
-          0.83% 2.2%,
-          $font-size-botones-productos-personalizados,
-          $font-family-project
-        );
+        // @include propiedades-botones-productos-personalizados(
+        //   $botones-amarillo-dorado,
+        //   0.83% 2.2%,
+        //   $font-size-botones-productos-personalizados,
+        //   $font-family-project
+        // );
       }
 
       .personalizar-productos-vacio {
         grid-row: 1;
-        
       }
       .indumentaria-escolar-card {
-        background-image: url("../components/imagenes/indumentaria-escolar-card.png");
+        background-image: url("./assets/img/indumentaria-escolar-card.png");
         background-position: center;
         background-repeat: none;
         background-size: cover;
@@ -160,7 +155,7 @@
         width: 100%;
       }
       .indumentaria-deportiva-card {
-        background-image: url("../components/imagenes/indumentaria-deportiva-card.png");
+        background-image: url("./assets/img/indumentaria-deportiva-card.png");
         background-position: center;
         background-repeat: none;
         background-size: cover;
@@ -168,7 +163,7 @@
         width: 100%;
       }
       .indumentaria-laboral-card {
-        background-image: url("../components/imagenes/indumentaria-laboral.png");
+        background-image: url("./assets/img/indumentaria-laboral.png");
         background-position: center;
         background-repeat: none;
         background-size: cover;
@@ -176,14 +171,13 @@
         width: 100%;
       }
       .objetos-personalizados-card {
-        background-image: url("../components/imagenes/objetos-personalizados.png");
+        background-image: url("./assets/img/objetos-personalizados.png");
         background-position: center;
         background-repeat: none;
         background-size: cover;
         height: 100%;
         width: 100%;
       }
-      
     }
     .indumentaria-escolar {
       grid-column: 1;
@@ -228,62 +222,6 @@
     img {
       width: 6.7vw /* 129px en figma */;
       height: 6.7vw /* 129px en figma */;
-    }
-  }
-}
-
-.formulario-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-  padding: 20px;
-
-  form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-
-    label {
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    input,
-    textarea {
-      margin-top: 5px;
-      padding: 8px;
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      background-color: $inputs-formulario-gris;
-      font-family: $font-family-project;
-
-      &::placeholder {
-        color: #333; // Tono oscuro para el texto de marcador de posición
-      }
-    }
-
-    .formulario-boton-container {
-      width: 100%;
-      display: flex;
-      justify-content: right;
-      button {
-        margin-top: 10px;
-        @extend .botonEnviar;
-        transition: background-color 0.3s;
-        width: 30vw; /* 592px en figma */
-        height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &:hover {
-          background-color: #0056b3;
-        }
-      }
     }
   }
 }
@@ -378,24 +316,6 @@
         width: 100%;
       }
     }
-    .formulario-boton-container-mobile {
-      padding: 30px 16px;
-      width: 100%;
-      display: flex;
-      button {
-        padding: 10px 15px;
-        background-color: $negro;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-family: $font-family-rubik;
-        font-size: 15px;
-        letter-spacing: 2px;
-        color: $botones-amarillo-dorado;
-        font-weight: 600;
-        width: 100%;
-      }
-    }
   }
 
   .nuestros-estampados-section-mobile {
@@ -461,7 +381,7 @@
       flex-direction: column;
       /* padding: 10px;
       padding: 0 16px; */
-      
+
       .personalizar-productos-container-img {
         width: 100%;
 
@@ -479,45 +399,6 @@
       font-size: 25px;
       text-align: center;
       padding: 20px 0;
-    }
-  }
-
-  .formulario-section {
-    padding: 0 16px;
-
-    form {
-      input,
-      textarea {
-        font-weight: 600;
-      }
-      .formulario-boton-container {
-        width: 100%;
-        display: flex;
-        justify-content: right;
-        button {
-          margin-top: 10px;
-          padding: 20px 15px;
-          background-color: $negro;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-          font-family: $font-family-rubik;
-          font-size: 15px;
-          letter-spacing: 2px;
-          color: $botones-amarillo-dorado;
-          font-weight: 600;
-          transition: background-color 0.3s;
-          width: 100vw; /* 592px en figma */
-          height: 5.1vw; /* 104px en figma, relacion de aspecto con el width */
-          /* display: flex;
-        justify-content: center;
-        align-items: center; */
-
-          &:hover {
-            background-color: #0056b3;
-          }
-        }
-      }
     }
   }
 

@@ -11,10 +11,11 @@ export default function NavbarDesktop({ pages }) {
       <nav className="header-nav">
         <ul className="header-options">
           {page.map((p, e) => {
-            const url = p;
+            let url = p;
+            p === "Inicio" ? (url = "/") : (url = `/${url.toLowerCase()}`);
             return (
               <li key={e}>
-                <Link to={`/${url.toLowerCase()}`}>{p}</Link>
+                <Link to={url}>{p}</Link>
               </li>
             );
           })}

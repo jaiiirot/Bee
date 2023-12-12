@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import NavbarMobile from "../Navbar/NavbarMobile";
-import NavbarDesktop from "../Navbar/NavbarDesktop";
-
+import NavbarMobile from "../navbar/NavbarMobile";
+import NavbarDesktop from "../navbar/NavbarDesktop";
+import FooterList from "../footer/FooterList";
 let pages = ["Inicio", "Nosotros", "Productos", "Ayuda", "Contacto"];
 export default function Body() {
   return (
@@ -11,9 +11,7 @@ export default function Body() {
       <main>
         <Outlet />
       </main>
-      <footer className="footer">
-        <p>Bee® Todos los derechos reservados 2023</p>
-      </footer>
+      <FooterList />
     </>
   );
 }

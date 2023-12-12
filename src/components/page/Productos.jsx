@@ -1,5 +1,5 @@
 import React from "react";
-import Hexagon from "../Hexagono/Hexagon";
+import Hexagon from "../hexagon/Hexagon";
 
 export default function Productos() {
   return (
