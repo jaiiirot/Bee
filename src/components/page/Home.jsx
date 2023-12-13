@@ -6,37 +6,38 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import SliderHeroListContainer from "../carousel/SliderHeroListContainer";
 import { NavLink, Link } from "react-router-dom";
 import Formulario from "../formulario/Formulario";
+import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 
 const Home = () => {
-
   const sectionRef1 = useRef(null);
-  
 
   const scrollToSection = (ref) => {
     ref.current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
+      behavior: "smooth",
+      block: "start",
     });
   };
 
   return (
     <>
       <section className="hero-section">
-        <div className="home-titulo-mobile">
+        {/* <div className="home-titulo-mobile">
           <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
-        </div>
+        </div> */}
 
         <div className="hero-img-container">
           <div className="hero-titulo">
-            <h1>HACEMOS REALIDAD LO QUE SOÑASTE</h1>
+            <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
           </div>
           <div className="hero-boton-contacto">
-            <button onClick={() => scrollToSection(sectionRef1)} >CONTÁCTANOS</button>
+            <button onClick={() => scrollToSection(sectionRef1)}>
+              CONTÁCTANOS
+            </button>
           </div>
         </div>
       </section>
 
-      <section className="hero-mobile">
+      {/* <section className="hero-mobile">
         <div className="hero-carusel-container-mobile">
           <SliderHeroListContainer />
         </div>
@@ -44,72 +45,116 @@ const Home = () => {
         <div className="formulario-boton-container-mobile">
           <button type="submit">CONTÁCTANOS</button>
         </div>
-      </section>
+      </section> */}
 
       <section className="nuestros-estampados-section">
         <div className="info-tienda-hexagonosFila1">
-          <div className="hexagon">
-            <p>SUBLIMACIÓN</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-sublimacion.jpg"
+              titulo="SUBLIMACIÓN"
+            />
           </div>
-          <div className="hexagon">
-            <p>TERMOVINILO</p>
+
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-termovinilo.jpg"
+              titulo="TERMOVINILO"
+            />
           </div>
         </div>
         <div className="info-tienda-hexagonosFila2">
-          <div className="hexagon">
-            <p>D.T.F</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-dtf.jpg"
+              titulo="D.T.F."
+            />
           </div>
-          <div className="hexagon home-titulos">
-            <h2>NUESTROS ESTAMPADOS</h2>
+          <div className="home-titulos">
+            <ModeloHexagono imgFondo="" titulo="NUESTROS ESTAMPADOS" />
           </div>
-          <div className="hexagon">
-            <p>SEFIGRAFÍA</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-termovinilo-impreso.jpg"
+              titulo="TERMOVINILO IMPRESO"
+            />
           </div>
         </div>
         <div className="info-tienda-hexagonosFila1">
-          <div className="hexagon">
-            <p>BORDADO</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-serigrafia.jpg"
+              titulo="SERIGRAFÍA"
+            />
           </div>
-          <div className="hexagon">
-            <p>DIRECCIÓN</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-bordado.jpg"
+              titulo="BORDADO"
+            />
           </div>
         </div>
       </section>
 
+      {/* <section className="estampados">
+        <div className="hexagono"></div>
+      </section> */}
+
       <section className="nuestros-estampados-section-mobile">
+        {/* <div className="home-titulos">
+        <ModeloHexagono imgFondo="" titulo="NUESTROS ESTAMPADOS" />
+        </div> */}
         <div className="home-titulos">
           <h2>NUESTROS ESTAMPADOS</h2>
         </div>
         <div className="info-tienda-hexagonosFila1">
-          <div className="hexagon">
-            <p>SUBLIMACIÓN</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-sublimacion.jpg"
+              titulo="SUBLIMACIÓN"
+            />
           </div>
-          <div className="hexagon">
-            <p>TERMOVINILO</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-termovinilo.jpg"
+              titulo="TERMOVINILO"
+            />
           </div>
         </div>
         <div className="info-tienda-hexagonosFila2">
-          <div className="hexagon">
-            <p>D.T.F</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-dtf.jpg"
+              titulo="D.T.F."
+            />
           </div>
         </div>
         <div className="info-tienda-hexagonosFila1">
-          <div className="hexagon">
-            <p>SERIGRAFÍA</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-serigrafia.jpg"
+              titulo="SERIGRAFÍA"
+            />
           </div>
-          <div className="hexagon">
-            <p>BORDADO</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-bordado.jpg"
+              titulo="BORDADO"
+            />
           </div>
         </div>
         <div className="info-tienda-hexagonosFila2">
-          <div className="hexagon">
-            <p>TERMOVINILO IMPRESO</p>
+          <div>
+            <ModeloHexagono
+              imgFondo="nuestros-estampados-termovinilo-impreso.jpg"
+              titulo="TERMOVINILO IMPRESO"
+            />
           </div>
         </div>
       </section>
 
       <section className="personalizar-productos-section">
-        <div className="home-titulos">
+        <div className="home-titulos productos-personalizados-titulo">
           <h2>PRODUCTOS PERSONALIZADOS</h2>
         </div>
         <div className="personalizar-productos-container">
@@ -139,7 +184,7 @@ const Home = () => {
         <Formulario />
       </section>
 
-      <section className="redes-section">
+      {/* <section className="redes-section">
         <div className="home-titulos">
           <h2>Seguinos en las redes</h2>
         </div>
@@ -147,7 +192,8 @@ const Home = () => {
           <img src={IconoFacebook} alt="icono-facebook" />
           <img src={IconoInstagram} alt="icono-instagram" />
         </div>
-      </section>
+      </section> */}
+
       {/* <section className="info-tienda-container">
         <div className="info-tienda-hexagonosFila1">
           <div className="hexagon">
