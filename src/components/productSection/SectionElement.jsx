@@ -1,3 +1,10 @@
+import { useParams } from "react-router-dom";
+
 export default function SectionElement() {
-  return <div>SectionElement</div>;
+  const { element } = useParams();
+  return (
+    <div>
+      <h1>{element}</h1>
+    </div>
+  );
 }

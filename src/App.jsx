@@ -24,11 +24,11 @@ function App() {
             <Route path="nosotros/" element={<Nosotros />} />
             <Route path="productos/">
               <Route index element={<Productos />} />
-              <Route path=":section/" element={<Section />}>
+              <Route path=":section/">
+                <Route index element={<Section />} />
                 <Route path=":element/" element={<SectionElement />} />
               </Route>
             </Route>
-
             <Route path="ayuda/">
               <Route index element={<Ayuda />} />
               <Route
