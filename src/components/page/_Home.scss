@@ -362,7 +362,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0px 0 100px;
+    padding: 0px 0 50px;
 
     .hexagon {
       $hexagon-width: 30vw; /* 496px en figma */
@@ -402,15 +402,15 @@
     }
     .info-tienda-hexagonosFila1 {
       display: flex;
-      width: 72vw;
+      width: 82.5vw;
       justify-content: space-around;
-      margin-top: -7.5vw;
+      margin-top: -8.5vw;
       /* padding-top: 100px; */
     }
     .info-tienda-hexagonosFila2 {
-      margin-top: -7.5vw;
+      margin-top: -8.5vw;
       display: flex;
-      width: 72vw;
+      width: 82.5vw;
       justify-content: space-around;
     }
     .home-titulos{

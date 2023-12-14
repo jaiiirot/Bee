@@ -31,6 +31,7 @@ body {
 @import "./components/footer/Footer";
 @import "./components/formulario/Formulario";
 @import "./components/modelo-hexagono/ModeloHeagono";
+@import "./components/overlayAnimation/OverlayAnimation";
 
 /*PAGES*/
 @import "./components/page/Body";
@@ -48,3 +49,7 @@ $color-primary: #efb322;
 $color-secundary: #040404;
 $color-tertiary: #f8f8f8;
 $color-quaternary: #cecdbb;
+
+/* .tooltip-inner{
+  background-color: blue;
+} */
