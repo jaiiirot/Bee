@@ -21,6 +21,9 @@ body {
   background-color: $color-tertiary;
   font-size: 1.2rem;
 }
+*.particles-cont {
+  z-index: -50;
+}
 
 /*COMPONENTES*/
 @import "./components/hexagon/HexagonImg";
@@ -29,6 +32,7 @@ body {
 @import "./components/navbar/NavbarMobile";
 @import "./components/footer/Footer";
 @import "./components/formulario/Formulario";
+@import "./components/texto/Texto";
 
 /*PAGES*/
 @import "./components/page/Body";

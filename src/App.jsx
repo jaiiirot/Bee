@@ -9,30 +9,34 @@ import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import "./main.css";
+import { ParticlesBackground } from "./components/config/ParticlesBackground";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Body />}>
-          <Route index element={<Home />} />
-          <Route path="nosotros/" element={<Nosotros />} />
-          <Route path="productos/" element={<Productos />} />
+    <>
+      <ParticlesBackground />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Body />}>
+            <Route index element={<Home />} />
+            <Route path="nosotros/" element={<Nosotros />} />
+            <Route path="productos/" element={<Productos />} />
 
-          <Route path="ayuda/">
-            <Route index element={<Ayuda />} />
-            <Route
-              path="preguntas-frecuentes/"
-              element={<PreguntasFrecuentes />}
-            />
-            <Route path="terminos/" element={<Terminos />} />
-            <Route path="como-comprar/" element={<ComoComprar />} />
+            <Route path="ayuda/">
+              <Route index element={<Ayuda />} />
+              <Route
+                path="preguntas-frecuentes/"
+                element={<PreguntasFrecuentes />}
+              />
+              <Route path="terminos/" element={<Terminos />} />
+              <Route path="como-comprar/" element={<ComoComprar />} />
+            </Route>
+
+            <Route path="contacto/" element={<Contacto />} />
           </Route>
-
-          <Route path="contacto/" element={<Contacto />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

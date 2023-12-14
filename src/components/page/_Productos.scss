@@ -2,47 +2,74 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 75vh;
+  justify-content: space-evenly;
+  height: 90vh;
   &-info {
-    padding: 3rem 0rem;
-    h2 {
-      font-size: 2.5rem;
+    text-align: center;
+    width: 75%;
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+  }
+  &-cont {
+    height: max-content;
+    width: 100%;
+    overflow-x: scroll;
+    display: flex;
+    &::-webkit-scrollbar {
+      width: 0px; /* Tamaño del scroll en vertical */
+      height: 0px; /* Tamaño del scroll en horizontal */
+      display: none; /* Ocultar scroll */
     }
   }
   &-hexos {
     display: flex;
+    width: max-content;
+    height: 100%;
+    margin: 0px auto;
     gap: 1rem;
-    .hexo {
-      width: 200px;
-      overflow: hidden;
-      text-align: center;
+    .heximg {
+      width: 280px;
+      height: 310px;
+    }
+    .heximg-cont {
+      width: 280px;
+      height: 310px;
+    }
+    .heximg-text {
       p {
-        font-size: 1.2rem;
+        font-weight: 300;
       }
+    }
+  }
+}
+
+@media (max-width: 1024) {
+  .product {
+    &-hexos {
+      width: 100%;
     }
   }
 }
 
 @media (max-width: 768px) {
   .product {
+    &-cont {
+      width: 90%;
+    }
     &-hexos {
-      display: flex;
-      overflow: hidden;
-      max-width: 300px;
-      div {
-        width: max-content;
-        height: 300px;
-        overflow-x: scroll;
-        display: flex;
-        .hexo {
-          width: 250px;
-          img {
-            width: 250px;
-          }
-          p {
-            font-size: 1rem;
-            padding: 0px 15px;
-          }
+      .heximg {
+        width: 200px;
+        height: 233px;
+      }
+      .heximg-cont {
+        width: 200px;
+        height: 233px;
+      }
+      .heximg-text {
+        p {
+          font-size: 0.8rem;
         }
       }
     }

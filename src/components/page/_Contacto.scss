@@ -1,100 +1,13 @@
-.red {
-  padding: 2rem 0rem;
-  text-align: center;
-  &-info {
-    padding: 2rem 0rem;
-    h2 {
-      font-size: 2.5rem;
-    }
-  }
-  &-options {
-    picture {
-      img {
-        height: 100px;
-      }
-    }
+.contacto {
+  width: 75%;
+  padding: 3rem 0px;
+  margin: 0px auto;
+  .form-info {
+    padding-bottom: 3rem;
   }
 }
-.hexos {
-  padding: 5vh 0px 10vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  &-cont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-left: 0px;
-    margin-bottom: 0px;
-    &:first-child {
-      transform: translateY(5.5rem);
-    }
-  }
-  .hexo {
-    width: 350px;
-    overflow: hidden;
-    p {
-      font-size: 1.8rem;
-    }
-  }
-}
-
 @media (max-width: 768px) {
-  .red {
-    padding: 1vh 0rem;
-    text-align: center;
-    &-info {
-      padding: 3rem 1rem;
-      h2 {
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-    }
-    &-options {
-      picture {
-        img {
-          height: 60px;
-        }
-      }
-    }
-  }
-  .hexos {
-    padding: 2vh 0px;
-    &-cont {
-      &:first-child {
-        transform: translateY(3rem);
-      }
-    }
-    .hexo {
-      width: 200px;
-      p {
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-
-@media (max-width: 476px) {
-  .red {
-    padding: 1vh 0rem;
-    text-align: center;
-  }
-  .hexos {
-    padding: 2vh 0px;
-    &-cont {
-      &:first-child {
-        transform: translateY(1.5rem);
-      }
-    }
-    .hexo {
-      width: 150px;
-      p {
-        font-size: 1rem;
-      }
-    }
+  .contacto {
+    width: 95%;
   }
 }
