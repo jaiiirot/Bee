@@ -8,8 +8,8 @@ import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
 import Terminos from "./components/page/Terminos";
 import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
+import ParticlesBackground from "./components/config/ParticlesBackground";
 import "./main.css";
-import { ParticlesBackground } from "./components/config/ParticlesBackground";
 
 function App() {
   return (

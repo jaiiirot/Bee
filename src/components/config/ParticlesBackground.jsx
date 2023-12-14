@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
-export const ParticlesBackground = () => {
+export default function ParticlesBackground() {
   const particlesInit = useCallback((engine) => {
     loadFull(engine);
   }, []);
@@ -15,14 +15,14 @@ export const ParticlesBackground = () => {
         options={{
           particles: {
             number: {
-              value: 5,
+              value: 8,
               density: {
                 enable: true,
                 value_area: 800,
               },
             },
             color: {
-              value: "#1d232a",
+              value: "#efb321",
             },
             shape: {
               type: "polygon",
@@ -40,17 +40,17 @@ export const ParticlesBackground = () => {
               },
             },
             opacity: {
-              value: 1,
+              value: 0.36076771369474264,
               random: true,
               anim: {
                 enable: false,
                 speed: 1,
-                opacity_min: 0.3,
+                opacity_min: 0.1,
                 sync: false,
               },
             },
             size: {
-              value: 160,
+              value: 92.19619349976756,
               random: false,
               anim: {
                 enable: true,
@@ -102,10 +102,10 @@ export const ParticlesBackground = () => {
                 },
               },
               bubble: {
-                distance: 400,
-                size: 40,
+                distance: 255.80432187492372,
+                size: 28.42270243054708,
                 duration: 2,
-                opacity: 8,
+                opacity: 0.3735555176586188,
                 speed: 3,
               },
               repulse: {
@@ -120,9 +120,9 @@ export const ParticlesBackground = () => {
               },
             },
           },
-          retina_detect: true,
+          retina_detect: false,
         }}
       />
     </div>
   );
-};
+}
