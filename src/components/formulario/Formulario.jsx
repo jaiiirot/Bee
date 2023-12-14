@@ -18,7 +18,6 @@ export default function Formulario() {
     OtraPestaña.focus();
     location.reload();
   };
-  useEffect(() => {}, [form]);
   return (
     <section className="form">
       <div className="form-info">
