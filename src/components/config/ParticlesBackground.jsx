@@ -15,7 +15,7 @@ export default function ParticlesBackground() {
         options={{
           particles: {
             number: {
-              value: 8,
+              value: 10,
               density: {
                 enable: true,
                 value_area: 800,
@@ -50,7 +50,7 @@ export default function ParticlesBackground() {
               },
             },
             size: {
-              value: 92.19619349976756,
+              value: 60,
               random: false,
               anim: {
                 enable: true,
@@ -68,7 +68,7 @@ export default function ParticlesBackground() {
             },
             move: {
               enable: true,
-              speed: 8,
+              speed: 2,
               direction: "none",
               random: false,
               straight: false,
