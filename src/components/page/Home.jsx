@@ -8,6 +8,7 @@ import { NavLink, Link } from "react-router-dom";
 import Formulario from "../formulario/Formulario";
 import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 
+
 const Home = () => {
   const sectionRef1 = useRef(null);
 
@@ -17,6 +18,8 @@ const Home = () => {
       block: "start",
     });
   };
+
+  
 
   return (
     <>
@@ -49,10 +52,12 @@ const Home = () => {
 
       <section className="nuestros-estampados-section">
         <div className="info-tienda-hexagonosFila1">
+  
           <div>
             <ModeloHexagono
               imgFondo="nuestros-estampados-sublimacion.jpg"
               titulo="SUBLIMACIÓN"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
 
@@ -60,6 +65,7 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-termovinilo.jpg"
               titulo="TERMOVINILO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -68,15 +74,21 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-dtf.jpg"
               titulo="D.T.F."
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
           <div className="home-titulos">
-            <ModeloHexagono imgFondo="" titulo="NUESTROS ESTAMPADOS" />
+            <ModeloHexagono
+              imgFondo=""
+              titulo="NUESTROS ESTAMPADOS"
+              claseHexagono="hexagono-sin-imagen"
+            />
           </div>
           <div>
             <ModeloHexagono
               imgFondo="nuestros-estampados-termovinilo-impreso.jpg"
               titulo="TERMOVINILO IMPRESO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -85,12 +97,14 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-serigrafia.jpg"
               titulo="SERIGRAFÍA"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
           <div>
             <ModeloHexagono
               imgFondo="nuestros-estampados-bordado.jpg"
               titulo="BORDADO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -112,12 +126,14 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-sublimacion.jpg"
               titulo="SUBLIMACIÓN"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
           <div>
             <ModeloHexagono
               imgFondo="nuestros-estampados-termovinilo.jpg"
               titulo="TERMOVINILO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -126,6 +142,7 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-dtf.jpg"
               titulo="D.T.F."
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -134,12 +151,14 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-serigrafia.jpg"
               titulo="SERIGRAFÍA"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
           <div>
             <ModeloHexagono
               imgFondo="nuestros-estampados-bordado.jpg"
               titulo="BORDADO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
@@ -148,6 +167,7 @@ const Home = () => {
             <ModeloHexagono
               imgFondo="nuestros-estampados-termovinilo-impreso.jpg"
               titulo="TERMOVINILO IMPRESO"
+              claseHexagono="hexagono-con-imagen"
             />
           </div>
         </div>
