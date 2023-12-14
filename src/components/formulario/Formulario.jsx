@@ -13,10 +13,7 @@ export default function Formulario() {
   };
   const pushform = () => {
     const { nombre, correo, telefono, mensaje } = form;
-    console.log(
-      `mi nombre es ${nombre}, mi correo es ${correo}, mi telefono es ${telefono} y mi mensaje es ${mensaje}`
-    );
-    location.href = `https://wa.me/5491141430021?text=Mi%20nombre%20es%20${nombre}%0Ami%20correo%20es%20${correo}%0Ami%20telefono%20es%20${telefono}%0Ami%20mensaje%20es%20%0A${mensaje}`;
+    location.href = `https://wa.me/5491141430021?text=nombre%3A%20${nombre}%0Acorreo%3A%20${correo}%0Atelefono%3A%20${telefono}%0Amensaje%3A%20%22${mensaje}%22`;
   };
   useEffect(() => {}, [form]);
   return (
