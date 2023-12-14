@@ -10,6 +10,8 @@ import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import ParticlesBackground from "./components/config/ParticlesBackground";
 import "./main.css";
+import Section from "./components/productSection/section";
+import SectionElement from "./components/productSection/SectionElement";
 
 function App() {
   return (
@@ -20,7 +22,12 @@ function App() {
           <Route path="/" element={<Body />}>
             <Route index element={<Home />} />
             <Route path="nosotros/" element={<Nosotros />} />
-            <Route path="productos/" element={<Productos />} />
+            <Route path="productos/">
+              <Route index element={<Productos />} />
+              <Route path=":section/" element={<Section />}>
+                <Route path=":element/" element={<SectionElement />} />
+              </Route>
+            </Route>
 
             <Route path="ayuda/">
               <Route index element={<Ayuda />} />
@@ -31,7 +38,6 @@ function App() {
               <Route path="terminos/" element={<Terminos />} />
               <Route path="como-comprar/" element={<ComoComprar />} />
             </Route>
-
             <Route path="contacto/" element={<Contacto />} />
           </Route>
         </Routes>

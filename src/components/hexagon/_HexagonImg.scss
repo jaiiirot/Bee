@@ -28,5 +28,21 @@
     justify-content: center;
     text-align: center;
     padding: 0px 0.75rem;
+    p {
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    .heximg-image {
+      filter: opacity(1);
+    }
+    .heximg-text {
+      p {
+        display: block;
+        width: 100%;
+        background-color: $color-tertiary;
+        backdrop-filter: blur(5px);
+      }
+    }
   }
 }
