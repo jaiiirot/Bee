@@ -13,7 +13,10 @@ export default function Formulario() {
   };
   const pushform = () => {
     const { nombre, correo, telefono, mensaje } = form;
-    location.href = `https://wa.me/5491141430021?text=nombre%3A%20${nombre}%0Acorreo%3A%20${correo}%0Atelefono%3A%20${telefono}%0Amensaje%3A%20%22${mensaje}%22`;
+    const mensajeUrl = `https://wa.me/5491141430021?text=nombre%3A%20${nombre}%0Acorreo%3A%20${correo}%0Atelefono%3A%20${telefono}%0Amensaje%3A%20%22${mensaje}%22`;
+    const OtraPestaña = window.open(mensajeUrl, "_blank");
+    OtraPestaña.focus();
+    location.reload();
   };
   useEffect(() => {}, [form]);
   return (
