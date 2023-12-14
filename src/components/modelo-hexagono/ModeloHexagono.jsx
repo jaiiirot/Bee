@@ -13,18 +13,18 @@ const ModeloHexagono = ({ imgFondo, titulo, claseHexagono }) => {
   return (
     <div>
       <section className="estampados">
-        <OverlayTrigger
+       {/*  <OverlayTrigger
           placement="bottom"
           delay={{ show: 250, hide: 400 }}
           overlay={renderTooltip}
-        >
+        > */}
           <div
             className={claseHexagono}
             style={{ backgroundImage: `url("src/assets/img/${imgFondo}")` }}
           >
             <h2>{titulo} </h2>
           </div>
-        </OverlayTrigger>
+       {/*  </OverlayTrigger> */}
 
         
       </section>
