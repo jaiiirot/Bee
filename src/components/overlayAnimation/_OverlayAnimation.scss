@@ -1,0 +1,25 @@
+
+.tooltip{
+  max-width: 1000px;
+  width: 400px;
+
+ 
+  
+    .tooltip-inner{
+      background-color: $inputs-formulario-gris;
+      color: black;
+      text-align: left;
+      
+      max-width: 500px;
+    }
+    ul{
+      padding: 0;
+      margin: 0;
+      padding: 20px;
+      li{
+        list-style: disc;
+        font-weight: 100;
+      }
+    }
+  
+}

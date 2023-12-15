@@ -10,7 +10,7 @@ const AyudaList = () => {
           <Link to="/ayuda/preguntas-frecuentes">PREGUNTAS FRECUENTES</Link>
         </div>
         <div className="hexagon">
-          <Link to="/ayuda/terminos">TÉRMINOS Y CONDICIONES</Link>
+          <Link to="/ayuda/terminos-condiciones">TÉRMINOS Y CONDICIONES</Link>
         </div>
         <div className="hexagon hexagon-comprar">
           <Link to="/ayuda/como-comprar">¿CÓMO COMPRAR?</Link>

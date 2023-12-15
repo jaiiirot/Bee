@@ -1,6 +1,9 @@
 .footer-container-mobile {
   display: none;
+.footer-container-mobile {
+  display: none;
 }
+
 
 .footer-container {
   display: grid;
@@ -10,7 +13,21 @@
   width: 100%;
   height: 100%;
   padding: 30px 50px 15px;
+  padding: 30px 50px 15px;
 
+  h2 {
+    font-size: 15px;
+    font-weight: 600;
+  }
+  p {
+    margin: 0;
+    font-weight: normal;
+    padding: 5px 0;
+    font-size: 12px;
+    word-spacing: 2px;
+    cursor: pointer;
+    width: fit-content;
+  }
   h2 {
     font-size: 15px;
     font-weight: 600;
@@ -56,6 +73,16 @@
             margin-left: 5px;
           }
         }
+      .footer-menu-redes {
+        padding: 15px 0;
+        img {
+          width: 30px;
+          cursor: pointer;
+
+          &:nth-child(2) {
+            margin-left: 5px;
+          }
+        }
       }
     }
     .footer-menu-productos {
@@ -68,6 +95,69 @@
   .footer-direccion {
     grid-column: 1/-1;
     grid-row: 2;
+    margin: auto 0;
+
+    p {
+      padding-top: 15px;
+      cursor: auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    display: none;
+  }
+
+  .footer-container-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: $color-quaternary;
+    width: 100%;
+    text-align: center;
+    padding: 30px 50px 15px;
+
+    .footer-logo-container {
+      margin: auto;
+      padding-bottom: 20px;
+      img {
+        width: 70px;
+      }
+    }
+
+    .footer-menu-container {
+      h2 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0;
+        padding: 5px 0;
+      }
+      p {
+        margin: 0;
+        font-weight: normal;
+        padding: 5px 0;
+        font-size: 12px;
+        word-spacing: 2px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .footer-menu-redes{
+        display: flex;
+        justify-content: space-around;
+        width: 60px;
+        margin: auto;
+        padding: 10px 0;
+
+        img{
+          width: 25px;
+        }
+      }
+    }
+
+
+    
     margin: auto;
 
     p {
