@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Formulario from "../formulario/Formulario";
 import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 import OverlayAnimation from "../overlayAnimation/OverlayAnimation";
+import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
 
 const Home = () => {
   const dataSublimacionYTermovinilo = [
@@ -49,7 +50,6 @@ const Home = () => {
     },
   ];
 
-
   const dataSerigrafiaYBordado = [
     {
       imgFondo: "nuestros-estampados-serigrafia.jpg",
@@ -75,6 +75,13 @@ const Home = () => {
       block: "start",
     });
   };
+
+  const opciones = [
+    "Frisa deportiva",
+    "Deportivo sin frisa",
+    "Rústico de algodón",
+    "Ketten",
+  ];
 
   return (
     <>
@@ -151,7 +158,7 @@ const Home = () => {
           <h2>NUESTROS ESTAMPADOS</h2>
         </div>
         <div className="info-tienda-hexagonosFila1">
-        {dataSublimacionYTermovinilo.map((data, index) => (
+          {dataSublimacionYTermovinilo.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
               <div key={data.titulo}>
                 <ModeloHexagono
@@ -162,11 +169,9 @@ const Home = () => {
               </div>
             </OverlayAnimation>
           ))}
-          
         </div>
         <div className="info-tienda-hexagonosFila2">
-
-        {dataDtf_titulo_TermoImpreso.slice(0,1).map((data, index) => (
+          {dataDtf_titulo_TermoImpreso.slice(0, 1).map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
               <div key={data.titulo}>
                 <ModeloHexagono
@@ -177,10 +182,9 @@ const Home = () => {
               </div>
             </OverlayAnimation>
           ))}
-          
         </div>
         <div className="info-tienda-hexagonosFila1">
-        {dataSerigrafiaYBordado.map((data, index) => (
+          {dataSerigrafiaYBordado.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
               <div key={data.titulo}>
                 <ModeloHexagono
@@ -193,7 +197,7 @@ const Home = () => {
           ))}
         </div>
         <div className="info-tienda-hexagonosFila2">
-        {dataDtf_titulo_TermoImpreso.slice(2,3).map((data, index) => (
+          {dataDtf_titulo_TermoImpreso.slice(2, 3).map((data, index) => (
             <div key={index}>
               {data.shouldAnimate ? (
                 <OverlayAnimation key={index} message={data.message}>
@@ -245,6 +249,8 @@ const Home = () => {
       <section ref={sectionRef1} className="formulario-section">
         <Formulario />
       </section>
+
+      <PedidoCompraList opciones={opciones} />
     </>
   );
 };
