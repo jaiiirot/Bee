@@ -1,9 +1,80 @@
 .section-presupuesto {
   width: 60%;
   margin: auto;
+  padding: 20px 0;
+
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  input,
+  label {
+    font-weight: 100;
+  }
+  textarea {
+    background-color: $inputs-formulario-gris;
+    min-height: 75px;
+    width: 100%;
+    resize: none;
+    color: black;
+    font-weight: 100;
+    padding: 5px 10px;
+  }
+  textarea::placeholder {
+    color: rgb(56, 56, 56);
+    font-weight: 100;
+  }
+  textarea::focus {
+    padding: 5px 10px;
+  }
+  .form {
+    .form-cont {
+      gap: 1rem;
+      height: 206px;
+      max-height: 206px !important;
+
+      .contenedor-input {
+        display: flex;
+        width: 100%;
+        position: relative;
+
+        input {
+          width: 100%;
+          z-index: 4;
+        }
+      }
+    }
+    .form-cont2 {
+      gap: 1rem;
+      height: 206px !important;
+    }
+
+    .icono-exclamacion {
+      display: flex;
+      right: 0;
+      width: fit-content;
+      position: absolute;
+      padding-top: 15px;
+      padding-right: 20px;
+      font-size: 1.2rem;
+      z-index: 5;
+      margin: auto 0;
+      svg {
+        path {
+          color: red;
+        }
+      }
+    }
+  }
 
   .form,
-  .sectin-tela,
+  .section-tela,
   .disenio,
   .cantidad-prendas,
   .medios-pago,
@@ -29,6 +100,40 @@
 
     .menu-disenio {
       display: flex;
+      flex-direction: column;
+
+      .opciones-menu {
+        .icono-exclamacion {
+          display: flex;
+          justify-content: right;
+          width: 100%;
+          margin: auto 0;
+          padding-right: 20px;
+          font-size: 1.2rem;
+          svg {
+            path {
+              color: red;
+            }
+          }
+        }
+      }
+
+      .disenio-propio {
+        .icono-exclamacion {
+          display: flex;
+          justify-content: right;
+          width: 100%;
+          position: relative;
+          top: 50px;
+          padding-right: 20px;
+          font-size: 1.2rem;
+          svg {
+            path {
+              color: red;
+            }
+          }
+        }
+      }
     }
   }
 
@@ -37,7 +142,7 @@
 
     .circulos-menu {
       padding: 10px 0px;
-      min-width: 215px;
+      min-width: 210px;
       &:nth-child(1) {
         padding-left: 0;
       }
@@ -45,8 +150,54 @@
         
       }
  */
-      label{
+      label {
         padding-left: 5px;
+      }
+    }
+  }
+
+  .menu-tela {
+    label {
+      text-decoration: underline;
+    }
+  }
+
+  .boton-enviar {
+    display: flex;
+    justify-content: right;
+
+    button {
+      padding: 20px 50px;
+      background-color: $negro;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: $font-family-rubik;
+      font-size: 15px;
+
+      color: $botones-amarillo-dorado;
+      font-weight: 100;
+    }
+  }
+
+  .campos-obligatorios {
+    .icono-exclamacion {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      font-size: 1.2rem;
+      svg {
+        path {
+          color: red;
+        }
+      }
+      p {
+        margin: 0;
+        font-weight: normal;
+        padding-left: 10px;
+        color: red;
+        font-size: 1rem;
       }
     }
   }

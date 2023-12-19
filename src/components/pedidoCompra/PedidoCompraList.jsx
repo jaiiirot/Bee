@@ -1,12 +1,10 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const PedidoCompraList = ({ opciones }) => {
-
-  const [datosCompra, setDatosCompra]=useState({})
-
-
-
+  const [datosCompra, setDatosCompra] = useState({});
 
   const opcionesPago = [
     "Efectivo",
@@ -20,104 +18,159 @@ const PedidoCompraList = ({ opciones }) => {
     "A domicilio (a cargo del comprador)",
   ];
 
-  const [form, setForm] = useState({});
-  const onSumitForm = ({ target }) => {
-    setForm({
-      ...form,
-      [target.name]: target.value,
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const getUserData = (event) => {
+    setUserData({
+      ...userData,
+      [event.target.name]: event.target.value,
     });
   };
   const onSubmit = (event) => {
     event.preventDefault();
   };
 
-
-
   const [tela, setTela] = useState("");
   const [medioPago, setMedioPago] = useState("");
   const [metodoEnvio, setMetodoEnvio] = useState("");
 
   const seleccionarTela = (e) => {
-    console.log(e.target.value);
     setTela(e.target.value);
   };
   const seleccionarMedioPago = (e) => {
-    console.log(e.target.value);
     setMedioPago(e.target.value);
   };
   const seleccionarMetodoEnvio = (e) => {
-    console.log(e.target.value);
     setMetodoEnvio(e.target.value);
   };
 
   const [disenio, setDisenio] = useState("");
   const [descripcionDisenio, setDescripcionDisenio] = useState("");
   const [prendas, setPrendas] = useState("");
-  const [showDescipcionTela, setShowDescipcionTela] = useState(false);
+  /* const [showDescipcionTela, setShowDescipcionTela] = useState(false); */
 
   const seleccionarDisenio = (e) => {
-    console.log(e.target.value);
     setDisenio(e.target.value);
-    setShowDescipcionTela(!showDescipcionTela);
+    /* setShowDescipcionTela(!showDescipcionTela); */
   };
 
   const descripcionDisenioTela = (e) => {
-    console.log(e.target.value);
     setDescripcionDisenio(e.target.value);
   };
   const cantidadPrendras = (e) => {
-    console.log(e.target.value);
     setPrendas(e.target.value);
   };
 
+  const [permitirEnviarSolicitud, setPermitirEnviarSolicitud] = useState(false);
 
-  const enviarSolicitud=()=>{
-    setDatosCompra ( {
+  /*  const aprobarSolicitud=()=>{
+    if (disenio !=="" && descripcionDisenio !==""){
+
+    }
+  } */
+
+  const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
+
+  const validacion = () => {};
+
+  const handleClick = () => {
+    if (
+      userData.name == "" &&
+      userData.email == "" &&
+      userData.phone == "" &&
+      disenio == "" &&
+      descripcionDisenio == ""
+    ) {
+      setShowIconoExclamacion(true);
+    } else if (
+      userData.name.length > 0 &&
+      userData.email.length > 0 &&
+      userData.phone.length > 0 &&
+      disenio.length > 0 &&
+      descripcionDisenio.length > 0
+    ) {
+      enviarInformacion();
+    } else {
+      setShowIconoExclamacion(true);
+    }
+  };
+  const enviarInformacion = () => {
+    setDatosCompra({
+      usuario: userData.name,
+      email: userData.email,
+      phone: userData.phone,
       tela: tela,
       disenioPropio: disenio,
       descripcionDisenio: descripcionDisenio,
       cantidadDePrendas: prendas,
-      medioDePago:medioPago,
-      metodoDeEnvio:metodoEnvio,
-    })
-  
-    
-  }
-  console.log(datosCompra)
+      medioDePago: medioPago,
+      metodoDeEnvio: metodoEnvio,
+    });
+    console.log(datosCompra);
+  };
 
   return (
     <div className="section-presupuesto">
-      <h2>¡Hacé tu pedido!</h2>
+      <h1>¡Pide tu presupuesto!</h1>
 
       <section className="form">
         <form className="form-cont" onSubmit={onSubmit}>
-          <input
-            type="text"
-            id="nombre"
-            name="nombre"
-            placeholder="NOMBRE"
-            onChange={onSumitForm}
-          />
-          <input
-            type="email"
-            id="correo"
-            name="correo"
-            placeholder="CORREO"
-            onChange={onSumitForm}
-          />
-          <input
-            type="tel"
-            id="telefono"
-            name="telefono"
-            placeholder="TELEFONO"
-            onChange={onSumitForm}
-          />
+          <div className="contenedor-input">
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="NOMBRE"
+              onChange={getUserData}
+            />
+
+            {showIconoExclamacion && userData.name == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+          </div>
+
+          <div className="contenedor-input">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="CORREO"
+              onChange={getUserData}
+            />
+
+            {showIconoExclamacion && userData.email == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+          </div>
+
+          <div className="contenedor-input">
+            <input
+              type="tel"
+              id="phone"
+              name="phoneo"
+              placeholder="TELEFONO"
+              onChange={getUserData}
+            />
+
+            {showIconoExclamacion && userData.phone == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+          </div>
         </form>
       </section>
 
       <section className="section-tela">
         <div>
-          <h3>Tela</h3>
+          <h2>Tela</h2>
         </div>
         <div className="opciones-menu menu-tela">
           {opciones.map((palabra, index) => (
@@ -140,30 +193,52 @@ const PedidoCompraList = ({ opciones }) => {
         <div>
           <h2>¿Tienes tu propio diseño?</h2>
         </div>
-        <div className="opciones-menu menu-disenio" required>
-          <div className="circulos-menu opcion-diseño" >
-            <input
-              type="radio"
-              id="conDisenio"
-              name="drone"
-              value="Sí"
-              onClick={seleccionarDisenio}
-            />
-            <label htmlFor="conDisenio">Sí </label>
+        <div className="menu-disenio">
+          <div className="opciones-menu">
+            <div className="circulos-menu opcion-diseño">
+              <input
+                type="radio"
+                id="conDisenio"
+                name="drone"
+                value="Sí"
+                onClick={seleccionarDisenio}
+              />
+              <label htmlFor="conDisenio">Sí </label>
+            </div>
+            <div className="circulos-menu opcion-diseño">
+              <input
+                type="radio"
+                id="sinDisenio"
+                name="drone"
+                value="No"
+                onClick={seleccionarDisenio}
+              />
+              <label htmlFor="sinDisenio">No </label>
+            </div>
+            {showIconoExclamacion && disenio == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
           </div>
 
-          <div className="circulos-menu opcion-diseño">
-            <input
-              type="radio"
-              id="sinDisenio"
-              name="drone"
-              value="No"
-              onClick={seleccionarDisenio}
-            />
-            <label htmlFor="sinDisenio">No </label>
+          <div className="disenio-propio">
+            {showIconoExclamacion && descripcionDisenio == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+
+            <textarea
+              name="mensaje"
+              id="mensaje2"
+              placeholder="Breve descripción: diseño, colores,  etc."
+              onChange={descripcionDisenioTela}
+              required
+            ></textarea>
           </div>
 
-          {showDescipcionTela ? (
+          {/* {showDescipcionTela ? (
             <div className="disenio-propio">
               <textarea
                 name="mensaje"
@@ -173,7 +248,7 @@ const PedidoCompraList = ({ opciones }) => {
                 required
               ></textarea>
             </div>
-          ) : null}
+          ) : null} */}
         </div>
       </section>
 
@@ -234,8 +309,19 @@ const PedidoCompraList = ({ opciones }) => {
         </div>
       </section>
 
+      <section className="campos-obligatorios">
+        {showIconoExclamacion ? (
+          <div className="icono-exclamacion">
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            <p>Campos Obligatorios</p>
+          </div>
+        ) : null}
+      </section>
+
       <section className="boton-enviar">
-        <button onClick={enviarSolicitud}>ENVIAR SOLICITUD</button>
+        <button type="submit" onClick={handleClick}>
+          ENVIAR SOLICITUD
+        </button>
       </section>
     </div>
   );
