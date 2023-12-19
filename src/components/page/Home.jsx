@@ -81,6 +81,7 @@ const Home = () => {
     "Deportivo sin frisa",
     "Rústico de algodón",
     "Ketten",
+    "Aún no me decido"
   ];
 
   return (

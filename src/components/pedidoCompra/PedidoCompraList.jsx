@@ -267,7 +267,7 @@ const PedidoCompraList = ({ opciones }) => {
         </div>
       </section>
 
-      <section className="opciones-menu medios-pago">
+      <section className="medios-pago">
         <div>
           <h2>Medio de pago</h2>
         </div>

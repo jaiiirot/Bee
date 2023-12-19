@@ -10,7 +10,7 @@
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 2rem;
     font-weight: 600;
   }
   input,
@@ -139,10 +139,12 @@
 
   .opciones-menu {
     display: flex;
+    flex-wrap: wrap;
 
     .circulos-menu {
+      
       padding: 10px 0px;
-      min-width: 210px;
+      min-width: 180px;
       &:nth-child(1) {
         padding-left: 0;
       }
@@ -201,4 +203,26 @@
       }
     }
   }
+}
+
+
+
+@media (max-width: 576px){
+
+.section-presupuesto{
+  width: 90%;
+
+  h2{
+    font-size: 1.5rem;
+  }
+  
+}
+
+
+
+
+
+
+
+
 }
