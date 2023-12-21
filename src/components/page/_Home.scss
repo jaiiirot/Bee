@@ -14,24 +14,36 @@
   width: 100%;
 
   .hero-img-container {
-    height: 100vh;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     width: calc(100% - 100px); /* Resta 50px a cada lado */
+    width: 60%;
     padding: 0 50px;
-    padding-top: 120px;
+    padding-top: 70px;
     margin: 0; /* Para centrar el contenedor horizontalmente */
 
+    .hero-lema{
+      text-align: center;
+
+      p{
+        margin: 0;
+        padding: 50px 0;
+        text-transform: uppercase;
+      }
+    }
+
     .hero-boton-contacto {
-      padding-bottom: 100px;
-      margin: auto;
+      padding-bottom: 40px;
+      margin: 0 auto;
+      
 
       button {
-        padding: 20px 80px;
+        padding: 10px 50px;
         background-color: black;
         color: $botones-amarillo-dorado;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-family: $font-family-rubik;
         border: none;
       }
@@ -41,8 +53,9 @@
       text-align: center;
 
       h1 {
-        font-size: 5rem;
+        font-size: 4.0rem;
         text-align: center;
+        margin: 0;
       }
     }
   }
@@ -143,7 +156,7 @@
     padding: 50px 0;
     width: 100%;
     height: fit-content;
-    width: 82%;
+    width: 70%;
     margin: auto;
 
     .personalizar-productos-container-img {
@@ -152,7 +165,7 @@
 
       display: grid;
       grid-template-rows: 78% 22%;
-      width: 38.89vw;
+      width: 32vw;
       height: 36.9vh;
       border: none;
 
@@ -228,6 +241,8 @@
 }
 .formulario-section {
   padding-bottom: 100px;
+  width: 68%;
+  margin: 0 auto;
 }
 
 .home-titulos {

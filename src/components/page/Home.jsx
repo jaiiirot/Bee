@@ -91,6 +91,9 @@ const Home = () => {
           <div className="hero-titulo">
             <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
           </div>
+          <div className="hero-lema">
+            <p>Realizamos la personalización de objetos e Indumentaria colegial, laboral y deportiva</p>
+          </div>
           <div className="hero-boton-contacto">
             <button onClick={() => scrollToSection(sectionRef1)}>
               CONTÁCTANOS

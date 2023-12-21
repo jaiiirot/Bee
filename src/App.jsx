@@ -10,7 +10,7 @@ import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import ParticlesBackground from "./components/config/ParticlesBackground";
 import "./main.css";
-import Section from "./components/productSection/section";
+import Section from "./components/productSection/Section";
 import SectionElement from "./components/productSection/SectionElement";
 
 function App() {

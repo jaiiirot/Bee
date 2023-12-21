@@ -64,14 +64,6 @@ const PedidoCompraList = ({ opciones }) => {
     setPrendas(e.target.value);
   };
 
-  const [permitirEnviarSolicitud, setPermitirEnviarSolicitud] = useState(false);
-
-  /*  const aprobarSolicitud=()=>{
-    if (disenio !=="" && descripcionDisenio !==""){
-
-    }
-  } */
-
   const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
 
   const validacion = () => {};
