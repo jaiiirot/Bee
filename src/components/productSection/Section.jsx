@@ -45,7 +45,7 @@ const PAGINATION = [
       "pins",
       "tazas",
       "lapiceras",
-      "logos",
+      "logos  ",
     ],
   },
 ];
