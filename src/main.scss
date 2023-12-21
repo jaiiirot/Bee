@@ -22,6 +22,14 @@ body {
   background-color: $color-tertiary;
   font-size: 1.2rem;
 }
+*.particles-cont {
+  position: absolute;
+  top: 0;
+  z-index: -50;
+  canvas {
+    z-index: -50 !important;
+  }
+}
 
 /*COMPONENTES*/
 @import "./components/hexagon/HexagonImg";
@@ -35,6 +43,8 @@ body {
 @import "./components/productSection/SectionElement";
 @import "./components/modelo-hexagono/ModeloHeagono";
 @import "./components/overlayAnimation/OverlayAnimation";
+@import "./components/productSection/Section";
+@import "./components/productSection/SectionElement";
 @import "./components/pedidoCompra/PedidoCompra";
 
 /*PAGES*/
@@ -45,10 +55,6 @@ body {
 @import "./components/page/Contacto";
 @import "./components/page/Ayuda";
 @import "./components/page/SeccionesDeAyuda";
-/*UTILIDADES*/
-@import "./utils/Mixin-Extend";
-@import "./utils/Typography";
-@import "~bootstrap/scss/bootstrap";
 $color-primary: #efb322;
 $color-secundary: #040404;
 $color-tertiary: #f8f8f8;
