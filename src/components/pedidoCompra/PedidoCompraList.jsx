@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const PedidoCompraList = ({ opciones }) => {
   const [datosCompra, setDatosCompra] = useState({});
@@ -102,6 +103,8 @@ const PedidoCompraList = ({ opciones }) => {
       metodoDeEnvio: metodoEnvio,
     });
     console.log(datosCompra);
+    window.open(enlaceWhatsApp);
+  
   };
 
   return (
@@ -311,6 +314,7 @@ const PedidoCompraList = ({ opciones }) => {
       </section>
 
       <section className="boton-enviar">
+        
         <button type="submit" onClick={handleClick}>
           ENVIAR SOLICITUD
         </button>
