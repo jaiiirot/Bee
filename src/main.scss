@@ -1,4 +1,5 @@
 /*UTILIDADES*/
+@import "./utils/Colors";
 @import "./utils/Mixin-Extend";
 @import "./utils/Typography";
 @import "~bootstrap/scss/bootstrap";
@@ -18,7 +19,6 @@ $color-quaternary: #cecdbb;
   color: $color-secundary;
 }
 body {
-  position: relative;
   background-color: $color-tertiary;
   font-size: 1.2rem;
 }
@@ -38,14 +38,24 @@ body {
 @import "./components/navbar/NavbarMobile";
 @import "./components/footer/Footer";
 @import "./components/formulario/Formulario";
-@import "./components/texto/Texto";
+@import "./components/modelo-hexagono/ModeloHeagono";
+@import "./components/overlayAnimation/OverlayAnimation";
 @import "./components/productSection/Section";
 @import "./components/productSection/SectionElement";
+
 /*PAGES*/
 @import "./components/page/Body";
-@import "./components/page/Index";
+@import "./components/page/Home";
 @import "./components/page/Nosotros";
 @import "./components/page/Productos";
 @import "./components/page/Contacto";
 @import "./components/page/Ayuda";
 @import "./components/page/SeccionesDeAyuda";
+$color-primary: #efb322;
+$color-secundary: #040404;
+$color-tertiary: #f8f8f8;
+$color-quaternary: #cecdbb;
+
+/* .tooltip-inner{
+  background-color: blue;
+} */
