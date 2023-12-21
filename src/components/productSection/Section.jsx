@@ -6,10 +6,49 @@ import imgBuzosCamperas from "../../assets/img/buzos-camperas.jpg";
 import imgEgresadosEgresaditos from "../../assets/img/egresados-egresaditos.jpg";
 import imgShort from "../../assets/img/shorts.jpg";
 import imgPantalon from "../../assets/img/pantalones.jpg";
-// import imgRemerasChombas from "../../assets/img/remeras-chombas.jpg";
-// import imgRemerasChombas from "../../assets/img/remeras-chombas.jpg";
-// import imgRemerasChombas from "../../assets/img/remeras-chombas.jpg";
-
+const PAGINATION = [
+  {
+    id: "escolar-egresados",
+    name: "INDUMENTARIA ESCOLARES Y EGRESADOS",
+    pages: [
+      "remeras-y-chombas",
+      "buzos-y-camperas",
+      "egresados-y-egresaditos",
+      "shorts",
+      "pantalones",
+    ],
+  },
+  {
+    id: "deportiva",
+    name: "INDUMENTARIA DEPORTIVA",
+    pages: [
+      "camisetas",
+      "conjuntos-de-verano",
+      "conjunto-invierno",
+      "buzos-y-camperas",
+      "shorts",
+      "pantalones",
+    ],
+  },
+  {
+    id: "laboral",
+    name: "INDUMENTARIA LABORAL",
+    pages: ["conjuntos", "remeras-y-chombas", "chaquetas", "delantales"],
+  },
+  {
+    id: "objetos-personalizados",
+    name: "OBJETOS",
+    pages: [
+      "llaveros",
+      "banderas-y-fly-banners",
+      "gorras",
+      "pins",
+      "tazas",
+      "lapiceras",
+      "logos",
+    ],
+  },
+];
 export default function Section() {
   const { section } = useParams();
   const nombreTitle = useRef(section);
