@@ -16,7 +16,7 @@ import SectionElement from "./components/productSection/SectionElement";
 function App() {
   return (
     <>
-      {/* <ParticlesBackground /> */}
+      <ParticlesBackground />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Body />}>
