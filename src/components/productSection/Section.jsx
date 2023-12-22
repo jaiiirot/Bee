@@ -6,6 +6,8 @@ import imgBuzosCamperas from "../../assets/img/buzos-camperas.jpg";
 import imgEgresadosEgresaditos from "../../assets/img/egresados-egresaditos.jpg";
 import imgShort from "../../assets/img/shorts.jpg";
 import imgPantalon from "../../assets/img/pantalones.jpg";
+
+
 const PAGINATION = [
   {
     id: "escolar-egresados",
@@ -63,7 +65,7 @@ export default function Section() {
         <div className="hexoArbol-rama1 rama">
           <span className="rama-hoja">
             <HexagonImg
-              url={`/productos/${section}/remeras-chombas/`}
+              url={`/productos/${section}/remeras-chombas`}
               img={imgRemerasChombas}
             >
               REMERAS Y CHOMBAS

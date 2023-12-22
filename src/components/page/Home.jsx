@@ -76,14 +76,7 @@ const Home = () => {
     });
   };
 
-  const opciones = [
-    "Frisa deportiva",
-    "Deportivo sin frisa",
-    "Rústico de algodón",
-    "Ketten",
-    "Aún no me decido"
-  ];
-
+  
   return (
     <>
       <section className="hero-section">
@@ -254,7 +247,7 @@ const Home = () => {
         <Formulario />
       </section>
 
-      <PedidoCompraList opciones={opciones} />
+      
     </>
   );
 };

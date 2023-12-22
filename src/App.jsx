@@ -12,6 +12,8 @@ import ParticlesBackground from "./components/config/ParticlesBackground";
 import "./main.css";
 import Section from "./components/productSection/Section";
 import SectionElement from "./components/productSection/SectionElement";
+import RemerasChombas from "./components/page/RemerasChombas";
+import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
 
 function App() {
   return (
@@ -21,12 +23,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />}>
             <Route index element={<Home />} />
+            <Route path="/estampados" element={<SeccionEstampados />} />
             <Route path="nosotros/" element={<Nosotros />} />
             <Route path="productos/">
               <Route index element={<Productos />} />
               <Route path=":section/">
                 <Route index element={<Section />} />
                 <Route path=":element/" element={<SectionElement />} />
+                <Route path="remeras-chombas" element={<RemerasChombas />} />
               </Route>
             </Route>
             <Route path="ayuda/">

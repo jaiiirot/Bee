@@ -1,7 +1,7 @@
 .section-presupuesto {
-  width: 60%;
-  margin: auto;
-  padding: 20px 0;
+  width: 100%;
+  margin: 0;
+  padding: 20px 150px;
 
   h1 {
     text-align: center;
@@ -140,6 +140,7 @@
   .opciones-menu {
     display: flex;
     flex-wrap: wrap;
+    
 
     .circulos-menu {
       

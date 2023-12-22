@@ -1,0 +1,19 @@
+.guia-talles-contenedor {
+  padding: 70px 150px;
+  .guia-talles-titulo {
+    h2 {
+      text-align: center;
+      padding-bottom: 70px;
+      text-transform: uppercase;
+    }
+  }
+
+  .guia-talles-imagen {
+    width: 100%;
+    img {
+      
+      width: 100%;
+      height: auto;
+    }
+  }
+}
