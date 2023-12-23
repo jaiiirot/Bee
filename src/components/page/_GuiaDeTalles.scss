@@ -1,3 +1,7 @@
+.guia-talles-imagen-adulto-mobile {
+  display: none;
+}
+
 .guia-talles-contenedor {
   padding: 70px 150px;
   .guia-talles-titulo {
@@ -11,9 +15,34 @@
   .guia-talles-imagen {
     width: 100%;
     img {
-      
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .guia-talles-imagen {
+    display: none;
+  }
+
+  .guia-talles-contenedor {
+    padding: 0;
+
+    .guia-talles-titulo{
+      h2{
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .guia-talles-imagen-adulto-mobile{
+      display: block;
+      padding: 30px 20px;
+
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
   }
 }

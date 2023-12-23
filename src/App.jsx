@@ -14,6 +14,7 @@ import Section from "./components/productSection/Section";
 import SectionElement from "./components/productSection/SectionElement";
 import RemerasChombas from "./components/page/RemerasChombas";
 import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (

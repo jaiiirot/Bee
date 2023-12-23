@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CaruselList from "../../carusel-imagenes/CaruselList";
 
 const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
   const scrollToPedidoCompraList = () => {
     // Calcula la posición del componente PedidoCompraList
-    const pedidoCompraListPosition = document.getElementById("pedidoCompraList")
-      .offsetTop;
+    const pedidoCompraListPosition =
+      document.getElementById("pedidoCompraList").offsetTop;
 
     // Realiza el desplazamiento suave
     window.scrollTo({
@@ -13,6 +14,10 @@ const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
       behavior: "smooth",
     });
   };
+
+  /* const imagenesParaCarusel = imagenes.map((imagen) => ({
+    objetoImagenes: [imagen],
+  })); */
 
   return (
     <div className="secciones-productos-container">
@@ -25,6 +30,16 @@ const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
             <img src={imagen} alt={`Imagen ${index + 1}`} />
           </div>
         ))}
+      </div>
+      <div className="secciones-productos-imagenes-mobile">
+        <div className="secciones-productos-imagen">
+          {/* <CaruselList objetoImagenes={imagenes} /> */}
+          <div className="product-cont">
+            {imagenes.map((imagen) => (
+              <img src={imagen} alt={imagen} />
+            ))}
+          </div>
+        </div>
       </div>
 
       <div className="secciones-productos-informacion">

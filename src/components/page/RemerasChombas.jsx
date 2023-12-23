@@ -6,12 +6,21 @@ import img2RemerasChombas from "../../assets/img/remeras-y-chombas2.jpeg";
 import GuiaDeTalles from "./GuiaDeTalles";
 
 const RemerasChombas = () => {
-  const opciones = [
+  /* const opciones = [
     "Frisa deportiva",
     "Deportivo sin frisa",
     "Rústico de algodón",
     "Ketten",
     "Aún no me decido",
+  ]; */
+
+  const opciones = [
+    "Piqué",
+    "Jersey de algodón",
+    "Piqué sublimable",
+    "Jersey deportivo",
+    "Spum",
+    "Modal",
   ];
 
   const informacionProducto = [

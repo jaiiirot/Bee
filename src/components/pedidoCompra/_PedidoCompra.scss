@@ -145,7 +145,7 @@
     .circulos-menu {
       
       padding: 10px 0px;
-      min-width: 180px;
+      min-width: 200px;
       &:nth-child(1) {
         padding-left: 0;
       }
@@ -211,10 +211,28 @@
 @media (max-width: 576px){
 
 .section-presupuesto{
-  width: 90%;
+  width: 100%;
+  padding: 0 20px;
 
   h2{
     font-size: 1.5rem;
+  }
+
+  .opciones-menu{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    
+    
+  }
+  .menu-metodos-envio{
+    display: flex;
+    flex-direction: column;
+  }
+  .boton-enviar{
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
   }
   
 }
