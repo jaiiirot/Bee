@@ -55,7 +55,7 @@ const RemerasChombas = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        desktopImagenesCarrusel= "false"
+        caruselEnDesktop= "no"
       />
 
       <GuiaDeTalles />
