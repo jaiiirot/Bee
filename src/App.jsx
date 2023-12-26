@@ -14,6 +14,8 @@ import Section from "./components/productSection/Section";
 import SectionElement from "./components/productSection/SectionElement";
 import RemerasChombas from "./components/page/RemerasChombas";
 import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
+import BuzosCamperas from "./components/page/BuzosCamperas";
+import EgresadosEgresaditos from "./components/page/EgresadosEgresaditos";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
                 <Route index element={<Section />} />
                 <Route path=":element/" element={<SectionElement />} />
                 <Route path="remeras-chombas" element={<RemerasChombas />} />
+                <Route path="buzos-camperas" element={<BuzosCamperas />} />
+                <Route path="egresados-egresaditos" element={<EgresadosEgresaditos />} />
               </Route>
             </Route>
             <Route path="ayuda/">

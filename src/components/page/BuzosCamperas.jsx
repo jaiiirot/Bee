@@ -1,38 +1,36 @@
 import React from "react";
 import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import img1RemerasChombas from "../../assets/img/remeras-y-chombas1.jpeg";
-import img2RemerasChombas from "../../assets/img/remeras-y-chombas2.jpeg";
 import GuiaDeTalles from "./GuiaDeTalles";
+import img1BuzosCamperas from "../../assets/img/buzos-camperas1.jpg";
+import img2BuzosCamperas from "../../assets/img/buzos-camperas2.png";
 
-const RemerasChombas = () => {
- 
+const BuzosCamperas = () => {
   const opciones = [
-    "Piqué",
-    "Jersey de algodón",
-    "Piqué sublimable",
-    "Jersey deportivo",
-    "Spum",
-    "Modal",
+    "Frisa deportiva",
+    "Deportivo sin frisa",
+    "Rústico de algodón",
+    "Ketten",
+    "Aún no me decido",
   ];
 
   const informacionProducto = [
     {
-      titulo: "REMERAS Y CHOMBAS",
+      titulo: "BUZOS Y CAMPERAS",
       imagenes: {
-        imagen1: img1RemerasChombas,
-        imagen2: img2RemerasChombas,
+        imagen1: img1BuzosCamperas,
+        imagen2: img2BuzosCamperas,
       },
       descripcion: [
         {
           type: "p",
           content:
-            "Nuestras remeras y chombas de mangas cortas se confeccionan con telas de alta calidad, brindando comodidad y estilo en toda ocasión.",
+            "Nuestros abrigos se confeccionan con telas de alta calidad, brindando comodidad, resguardo y estilo en toda ocasión.",
         },
         {
           type: "span",
           content: [
-            "Disponibles en diversos colores y talles para ajustarse a tus preferencias, estas prendas ofrecen la opción de ",
+            "Disponibles en variados colores y talles para ajustarse a tus preferencias, estas prendas ofrecen la opción de ",
             {
               type: "link",
               to: "/estampados",
@@ -55,7 +53,7 @@ const RemerasChombas = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        desktopImagenesCarrusel= "false"
+        caruselEnDesktop= "no"
       />
 
       <GuiaDeTalles />
@@ -66,4 +64,4 @@ const RemerasChombas = () => {
   );
 };
 
-export default RemerasChombas;
+export default BuzosCamperas;

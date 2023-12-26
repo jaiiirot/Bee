@@ -1,8 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import CaruselList from "../../carusel-imagenes/CaruselList";
+import CaruselList from "../carusel-imagenes/CaruselList";
 
-const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
+const CreadorSecciones = ({
+  titulo,
+  imagenes,
+  descripcion,
+  caruselEnDesktop,
+}) => {
   const scrollToPedidoCompraList = () => {
     // Calcula la posición del componente PedidoCompraList
     const pedidoCompraListPosition =
@@ -24,19 +29,27 @@ const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
       <div className="secciones-productos-titulo">
         <h1>{titulo}</h1>
       </div>
-      <div className="secciones-productos-imagenes">
-        {imagenes.map((imagen, index) => (
-          <div className="secciones-productos-imagen" key={index}>
-            <img src={imagen} alt={`Imagen ${index + 1}`} />
+      <>
+        {caruselEnDesktop === 'si' ? (
+          <CaruselList imagenes={imagenes} />
+        ) : (
+          <div className="secciones-productos-imagenes">
+            <div className="secciones-productos-imagen">
+              <div className="product-cont">
+                {imagenes.map((imagen, index) => (
+                  <img key={index} src={imagen} alt={imagen} />
+                ))}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+        )}
+      </>
+
       <div className="secciones-productos-imagenes-mobile">
         <div className="secciones-productos-imagen">
-          {/* <CaruselList objetoImagenes={imagenes} /> */}
           <div className="product-cont">
-            {imagenes.map((imagen) => (
-              <img src={imagen} alt={imagen} />
+            {imagenes.map((imagen, index) => (
+              <img key={index} src={imagen} alt={imagen} />
             ))}
           </div>
         </div>
@@ -74,3 +87,11 @@ const CreadorSecciones = ({ titulo, imagenes, descripcion }) => {
 };
 
 export default CreadorSecciones;
+
+{/* <div className="secciones-productos-imagenes">
+          {imagenes.map((imagen, index) => (
+            <div className="secciones-productos-imagen" key={index}>
+              <img src={imagen} alt={`Imagen ${index + 1}`} />
+            </div>
+          ))}
+        </div> */}

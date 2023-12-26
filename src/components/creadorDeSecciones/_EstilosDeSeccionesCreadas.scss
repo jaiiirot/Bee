@@ -3,6 +3,8 @@
 }
 .secciones-productos-container {
   padding: 0 150px;
+  overflow-x: hidden;
+  
   .secciones-productos-titulo {
     text-align: center;
     h1 {
@@ -17,12 +19,42 @@
 
     .secciones-productos-imagen {
       padding: 0 20px;
+
+      .product-cont {
+        height: auto;
+        width: 100%;
+        overflow-y: visible;
+        display: flex;
+        
+      }
+      img {
+        width: auto;
+        height: 300px;
+        padding: 0 10px;
+      }
+    }
+  }
+  /* .secciones-productos-imagenes-carusel {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+
+    .secciones-productos-imagen {
+      padding: 0 20px;
+
+      .product-cont {
+        height: 200px;
+        width: 100%;
+        overflow-x: hidden;
+        display: flex;
+        
+      }
       img {
         width: auto;
         height: 300px;
       }
     }
-  }
+  } */
 
   .secciones-productos-informacion {
     display: grid;
@@ -46,16 +78,18 @@
     }
     .secciones-informacion-boton {
       grid-column: 2;
+      
 
       button {
         @extend .botonEnviar;
+        text-transform: uppercase;
       }
     }
   }
 }
 
 @media (max-width: 576px) {
-  .secciones-productos-imagenes {
+  .secciones-productos-imagenes, .slider-container {
     display: none;
   }
 
@@ -73,8 +107,8 @@
     .secciones-productos-imagenes-mobile {
       display: block;
       justify-content: center;
-
       padding: 30px 0;
+
       .secciones-productos-imagen {
         padding: 0px;
 
@@ -83,6 +117,16 @@
           width: 100%;
           overflow-x: scroll;
           display: flex;
+          /* justify-content: space-evenly; */
+
+          img {
+            margin: 0 5px;
+
+            &:nth-child(1) {
+              margin-left: 0;
+            }
+          }
+
           &::-webkit-scrollbar {
             width: 0px; /* Tamaño del scroll en vertical */
             height: 0px; /* Tamaño del scroll en horizontal */
@@ -90,7 +134,7 @@
           }
         }
 
-        .carousel {
+        /* .carousel {
           .carousel-inner {
             .carousel-item {
               width: 60vw;
@@ -98,10 +142,11 @@
               img {
                 width: 100vw;
                 height: 200px;
+                
               }
             }
           }
-        }
+        } */
       }
     }
     .secciones-productos-informacion {

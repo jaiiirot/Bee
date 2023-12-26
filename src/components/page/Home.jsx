@@ -5,6 +5,7 @@ import Formulario from "../formulario/Formulario";
 import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 import OverlayAnimation from "../overlayAnimation/OverlayAnimation";
 import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
+import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestrosEstampados/HexagonosNuestrosEstampadosListContainer";
 
 const Home = () => {
   const dataSublimacionYTermovinilo = [
@@ -96,7 +97,7 @@ const Home = () => {
       </section>
 
       <section className="nuestros-estampados-section">
-        <div className="info-tienda-hexagonosFila1">
+        {/* <div className="info-tienda-hexagonosFila1">
           {dataSublimacionYTermovinilo.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
               <div key={data.titulo}>
@@ -147,13 +148,16 @@ const Home = () => {
               </div>
             </OverlayAnimation>
           ))}
-        </div>
+        </div> */}
+
+        <HexagonosNuestrosEstampadosListContainer/>
       </section>
 
-      <section className="nuestros-estampados-section-mobile">
-        <div className="home-titulos">
+      <section className="mobile-nuestros-estampados-section">
+        {/* <div className="home-titulos">
           <h2>NUESTROS ESTAMPADOS</h2>
         </div>
+
         <div className="info-tienda-hexagonosFila1">
           {dataSublimacionYTermovinilo.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
@@ -216,7 +220,8 @@ const Home = () => {
               )}
             </div>
           ))}
-        </div>
+        </div> */}
+        <HexagonosNuestrosEstampadosListContainer/>
       </section>
 
       <section className="personalizar-productos-section">
