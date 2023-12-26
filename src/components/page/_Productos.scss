@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  height: 90vh;
+  justify-content: center;
+  height: 75vh;
   &-info {
     text-align: center;
     width: 75%;
+    margin-bottom: 2rem;
     h1 {
       font-size: 2rem;
       font-weight: 600;
@@ -50,6 +51,7 @@
 
 @media (max-width: 768px) {
   .product {
+    height: 80vh;
     &-cont {
       width: 90%;
     }
