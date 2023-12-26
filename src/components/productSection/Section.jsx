@@ -60,7 +60,7 @@ const PAGINATION = [
     id: "laboral",
     name: "INDUMENTARIA LABORAL",
     desktop: [4],
-    mobile: [2, 1, 2],
+    mobile: [2, 1, 1],
     pages: [
       { name: "conjuntos", img: Laboral },
       { name: "remeras-y-chombas", img: RemerasChombasLaboral },
@@ -72,7 +72,7 @@ const PAGINATION = [
     id: "objetos-personalizados",
     name: "OBJETOS",
     desktop: [4, 3],
-    mobile: [2, 1, 2, 1, 2],
+    mobile: [2, 1, 2, 1, 1],
     pages: [
       { name: "gorros", img: Gorros },
       { name: "llaveros", img: Llaveros },
@@ -87,7 +87,6 @@ const PAGINATION = [
 // /productos/${section}/remeras-chombas/
 export default function Section() {
   const { section } = useParams();
-  const nombreTitle = useRef(section);
   return (
     <>
       <aside className="sectionhex-title">
@@ -103,19 +102,21 @@ export default function Section() {
         <aside className="hexoArbol">
           {PAGINATION.map((item) => {
             if (item.id === section) {
+              let ite = 0;
               return item.desktop.map((count, a) => {
-                let ite = count;
                 return (
                   <div className={`hexoArbol-rama${a + 1} rama`}>
-                    {item.pages.map((page, i) => {
+                    {item.pages.map((page, i, array) => {
+                      let prod = array[ite];
                       if (i < count) {
+                        ite++;
                         return (
                           <HexagonImg
-                            key={page.name}
-                            img={page.img}
-                            url={`/productos/${section}/${page.name}/`}
+                            key={prod.name}
+                            img={prod.img}
+                            url={`/productos/${section}/${prod.name}/`}
                           >
-                            {page.name}
+                            {prod.name}
                           </HexagonImg>
                         );
                       }
