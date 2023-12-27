@@ -60,19 +60,20 @@ const PAGINATION = [
     id: "laboral",
     name: "INDUMENTARIA LABORAL",
     desktop: [4],
-    mobile: [2, 1, 1],
+    mobile: [2, 1, 2],
     pages: [
       { name: "conjuntos", img: Laboral },
       { name: "remeras-y-chombas", img: RemerasChombasLaboral },
       { name: "chaquetas", img: BuzosCamperas },
       { name: "delantales", img: Delanrales },
+      { name: "", img: "" },
     ],
   },
   {
     id: "objetos-personalizados",
     name: "OBJETOS",
     desktop: [4, 3],
-    mobile: [2, 1, 2, 1, 1],
+    mobile: [2, 1, 2, 1, 2],
     pages: [
       { name: "gorros", img: Gorros },
       { name: "llaveros", img: Llaveros },
@@ -81,6 +82,7 @@ const PAGINATION = [
       { name: "tazas", img: Tazas },
       { name: "lapiceras", img: Lapiceras },
       { name: "logos", img: NuestrosClientes },
+      { name: "", img: "" },
     ],
   },
 ];
