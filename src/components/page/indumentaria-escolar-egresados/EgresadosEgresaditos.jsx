@@ -1,20 +1,20 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "./GuiaDeTalles";
-import img1EgresadosEgresaditos from "../../assets/img/regresados-egresaditos1.jpg";
-import img2EgresadosEgresaditos from "../../assets/img/regresados-egresaditos2.jpg";
-import img3EgresadosEgresaditos from "../../assets/img/regresados-egresaditos3.jpg";
-import img4EgresadosEgresaditos from "../../assets/img/regresados-egresaditos4.jpg";
-import img5EgresadosEgresaditos from "../../assets/img/regresados-egresaditos5.jpeg";
-import img6EgresadosEgresaditos from "../../assets/img/regresados-egresaditos6.jpg";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import GuiaDeTalles from "../GuiaDeTalles";
+import img1EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos1.jpg";
+import img2EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos2.jpg";
+import img3EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos3.jpg";
+import img4EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos4.jpg";
+import img5EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos5.jpeg";
+import img6EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos6.jpg";
 
 const EgresadosEgresaditos = () => {
   const opciones = [
     "Frisa deportiva",
     "Ketten",
     "Rústico de algodón",
-    "Aún no me decido",
+    /*"Aún no me decido",*/
   ];
 
   const informacionProducto = [

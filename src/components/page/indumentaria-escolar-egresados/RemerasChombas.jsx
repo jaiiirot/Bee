@@ -1,37 +1,38 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "./GuiaDeTalles";
-import img1Camisetas from "../../assets/img/camisetas1.jpg";
-import img2Camisetas from "../../assets/img/camisetas2.jpg";
-import img3Camisetas from "../../assets/img/camisetas3.jpg";
-import img4Camisetas from "../../assets/img/camisetas4.jpg";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpeg";
+import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpeg";
+import GuiaDeTalles from "../GuiaDeTalles";
 
-const Camisetas = () => {
+const RemerasChombas = () => {
+ 
   const opciones = [
-    
+    "Piqué",
+    "Jersey de algodón",
+    "Piqué sublimable",
+    "Jersey deportivo",
+    "Spum",
+    "Modal",
   ];
 
   const informacionProducto = [
     {
-      titulo: "CAMISETAS",
+      titulo: "REMERAS Y CHOMBAS",
       imagenes: {
-        imagen1: img1Camisetas,
-        imagen2: img2Camisetas,
-        imagen3: img3Camisetas,
-        imagen4: img4Camisetas,
-        
+        imagen1: img1RemerasChombas,
+        imagen2: img2RemerasChombas,
       },
       descripcion: [
         {
           type: "p",
           content:
-            "Nuestras camisetas están confeccionadas con jersey deportivo, una tela suave, liviana, transpirable y de secado rápido, ideal para mantenerte cómodo durante la actividad física.",
+            "Nuestras remeras y chombas de mangas cortas se confeccionan con telas de alta calidad, brindando comodidad y estilo en toda ocasión.",
         },
         {
           type: "span",
           content: [
-            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de",
+            "Disponibles en diversos colores y talles para ajustarse a tus preferencias, estas prendas ofrecen la opción de ",
             {
               type: "link",
               to: "/estampados",
@@ -54,7 +55,7 @@ const Camisetas = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        caruselEnDesktop="si"
+        caruselEnDesktop= "no"
       />
 
       <GuiaDeTalles />
@@ -65,4 +66,4 @@ const Camisetas = () => {
   );
 };
 
-export default Camisetas;
+export default RemerasChombas;

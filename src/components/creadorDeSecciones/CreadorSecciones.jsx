@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CaruselList from "../carusel-imagenes/CaruselList";
+import CaruselListRemerasChombasLaboral from "../carusel-imagenes/CaruselListRemerasChombasLaboral";
 
 const CreadorSecciones = ({
   titulo,
@@ -20,9 +21,7 @@ const CreadorSecciones = ({
     });
   };
 
-  /* const imagenesParaCarusel = imagenes.map((imagen) => ({
-    objetoImagenes: [imagen],
-  })); */
+  /* Agregué una nueva condicion para que lleve a la seccion de remeras y chombas en laboral a un nuevo componente ya que son muchas imgenes, en el nuevo componente he agregado un left mas largo */
 
   return (
     <div className="secciones-productos-container">
@@ -30,27 +29,31 @@ const CreadorSecciones = ({
         <h1>{titulo}</h1>
       </div>
       <>
-        {caruselEnDesktop === 'si' ? (
-          <CaruselList imagenes={imagenes} />
-        ) : (
-          <div className="secciones-productos-imagenes">
-            <div className="secciones-productos-imagen">
-              <div className="product-cont">
-                {imagenes.map((imagen, index) => (
-                  <img key={index} src={imagen} alt={imagen} />
-                ))}
+      {caruselEnDesktop === 'si' ? (
+        <CaruselList imagenes={imagenes} />
+      ) : caruselEnDesktop === 'RemerasChombasLaboral' ? (
+        <CaruselListRemerasChombasLaboral imagenes={imagenes} />
+      ) : (
+        <div className="secciones-productos-imagenes">
+          <div className="secciones-productos-imagen">
+            <div className="product-cont">
+              {imagenes.map((imagen, index) => (
+                <img key={index} src={imagen} alt={imagen} />
+              ))}
               </div>
             </div>
           </div>
         )}
       </>
 
-      <div className="secciones-productos-imagenes-mobile">
+      <div className={imagenes.length===0 ? ("secciones-productos-imagenes-mobile-oculto"): "secciones-productos-imagenes-mobile"} >
         <div className="secciones-productos-imagen">
-          <div className="product-cont">
+          
+          <div className= {imagenes.length<2 ? ("product-cont-mobile"):"product-cont"} >
             {imagenes.map((imagen, index) => (
               <img key={index} src={imagen} alt={imagen} />
             ))}
+
           </div>
         </div>
       </div>

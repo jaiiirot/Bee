@@ -4,7 +4,7 @@ import Banderas from "../../assets/img/banderas.jpg";
 import BuzosCamperas from "../../assets/img/buzos-camperas.jpg";
 import BuzosCamperasDeportivo from "../../assets/img/buzos-y-camperas-deportivo.jpg";
 import Camisetas from "../../assets/img/camisetas.jpg";
-import Delanrales from "../../assets/img/delantales.jpg";
+import Delantales from "../../assets/img/delantales.jpg";
 import Deportivo from "../../assets/img/deportivo.jpg";
 import EgresadosEgresaditos from "../../assets/img/egresados-egresaditos.jpg";
 import Gorros from "../../assets/img/gorros.jpg";
@@ -30,8 +30,8 @@ const PAGINATION = [
       { name: "remeras-y-chombas", img: RemerasChombas },
       { name: "buzos-y-camperas", img: BuzosCamperas },
       { name: "egresados-y-egresaditos", img: EgresadosEgresaditos },
-      { name: "shorts", img: Shorts },
       { name: "pantalones", img: Pantalones },
+      { name: "shorts", img: Shorts },
     ],
   },
   {
@@ -42,10 +42,10 @@ const PAGINATION = [
     pages: [
       { name: "Camisetas", img: Camisetas },
       { name: "conjuntos-de-verano", img: Deportivo },
-      { name: "conjunto-invierno", img: BuzosCamperasDeportivo },
-      { name: "buzos-y-camperas", img: BuzosCamperasDeportivo },
-      { name: "shorts", img: ShortsDeportivos },
-      { name: "pantalones", img: Pantalones },
+      { name: "conjuntos-de-invierno", img: BuzosCamperasDeportivo },
+      { name: "buzos-y-camperas-deportivas", img: BuzosCamperasDeportivo },
+      { name: "shorts-deportivos", img: ShortsDeportivos },
+      { name: "pantalones-deportivos", img: Pantalones },
     ],
   },
   {
@@ -54,10 +54,10 @@ const PAGINATION = [
     desktop: [4],
     mobile: [2, 1, 2],
     pages: [
-      { name: "conjuntos", img: Laboral },
-      { name: "remeras-y-chombas", img: RemerasChombasLaboral },
-      { name: "chaquetas", img: BuzosCamperas },
-      { name: "delantales", img: Delanrales },
+      { name: "laboral-remeras-y-chombas", img: RemerasChombasLaboral },
+      { name: "chaquetas-ambos-y-guardapolvos", img: BuzosCamperas },
+      { name: "delantales", img: Delantales },
+      { name: "conjuntos-pantalones-y-remeras", img: Laboral },
       { name: "", img: "" },
     ],
   },

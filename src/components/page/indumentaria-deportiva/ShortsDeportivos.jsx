@@ -1,36 +1,34 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "./GuiaDeTalles";
-import img1BuzosCamperas from "../../assets/img/buzos-camperas1.jpg";
-import img2BuzosCamperas from "../../assets/img/buzos-camperas2.png";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import GuiaDeTalles from "../GuiaDeTalles";
+import img1Shorts from "../../../assets/img/shorts1.jpg";
+import img2Shorts from "../../../assets/img/shorts2.jpg";
 
-const BuzosCamperas = () => {
+const ShortsDeportivos = () => {
   const opciones = [
-    "Frisa deportiva",
-    "Deportivo sin frisa",
+    "Jersey deportivo",
     "Rústico de algodón",
-    "Ketten",
-    "Aún no me decido",
+    "Lycra",
+    /*"Aún no me decido",*/
   ];
-
   const informacionProducto = [
     {
-      titulo: "BUZOS Y CAMPERAS",
+      titulo: "SHORTS",
       imagenes: {
-        imagen1: img1BuzosCamperas,
-        imagen2: img2BuzosCamperas,
+        imagen1: img1Shorts,
+        imagen2: img2Shorts,
       },
       descripcion: [
         {
           type: "p",
           content:
-            "Nuestros abrigos se confeccionan con telas de alta calidad, brindando comodidad, resguardo y estilo en toda ocasión.",
+            "Nuestros shorts están confeccionados con telas de alta calidad, transpirables y resistentes, ideales para mantenerte cómodo durante la actividad física.",
         },
         {
           type: "span",
           content: [
-            "Disponibles en variados colores y talles para ajustarse a tus preferencias, estas prendas ofrecen la opción de ",
+            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de ",
             {
               type: "link",
               to: "/estampados",
@@ -53,7 +51,7 @@ const BuzosCamperas = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        caruselEnDesktop= "no"
+        caruselEnDesktop="no"
       />
 
       <GuiaDeTalles />
@@ -64,4 +62,4 @@ const BuzosCamperas = () => {
   );
 };
 
-export default BuzosCamperas;
+export default ShortsDeportivos;

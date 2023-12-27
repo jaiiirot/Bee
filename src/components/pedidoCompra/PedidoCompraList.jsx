@@ -104,7 +104,6 @@ const PedidoCompraList = ({ opciones }) => {
     });
     console.log(datosCompra);
     window.open(enlaceWhatsApp);
-  
   };
 
   return (
@@ -164,9 +163,11 @@ const PedidoCompraList = ({ opciones }) => {
       </section>
 
       <section className="section-tela">
-        <div>
-          <h2>Tela</h2>
-        </div>
+        { opciones.length>0 ?
+          (<div>
+            <h2>Tela</h2>
+          </div>) : null
+        }
         <div className="opciones-menu menu-tela">
           {opciones.map((palabra, index) => (
             <div key={index} className="circulos-menu opcion-tela">
@@ -314,7 +315,6 @@ const PedidoCompraList = ({ opciones }) => {
       </section>
 
       <section className="boton-enviar">
-        
         <button type="submit" onClick={handleClick}>
           ENVIAR SOLICITUD
         </button>

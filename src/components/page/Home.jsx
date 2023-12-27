@@ -8,7 +8,7 @@ import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
 import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestrosEstampados/HexagonosNuestrosEstampadosListContainer";
 
 const Home = () => {
-  const dataSublimacionYTermovinilo = [
+ /*  const dataSublimacionYTermovinilo = [
     {
       imgFondo: "nuestros-estampados-sublimacion.jpg",
       titulo: "SUBLIMACIÓN",
@@ -66,7 +66,7 @@ const Home = () => {
       message:
         "Técnica realizada mediante bordadora con matriz digitalizada. \n Apta para todo tipo de telas; diseño vectorial. \n Muy duradero; costo basado en cantidad de puntadas y cambios de colores.",
     },
-  ];
+  ]; */
 
   const sectionRef1 = useRef(null);
 
