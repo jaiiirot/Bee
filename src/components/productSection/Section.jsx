@@ -86,7 +86,6 @@ const PAGINATION = [
     ],
   },
 ];
-// /productos/${section}/remeras-chombas/
 export default function Section() {
   const { section } = useParams();
   return (
