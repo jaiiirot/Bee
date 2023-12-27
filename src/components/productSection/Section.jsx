@@ -19,6 +19,7 @@ import RemerasChombasLaboral from "../../assets/img/remeras-chombas-laboral.jpg"
 import Shorts from "../../assets/img/shorts.jpg";
 import ShortsDeportivos from "../../assets/img/shorts-deportivos.jpg";
 import Tazas from "../../assets/img/tazas.jpg";
+
 const PAGINATION = [
   {
     id: "escolar-egresados",
@@ -99,6 +100,7 @@ export default function Section() {
                 return (
                   <div className={`hexoArbol-rama${a + 1} rama`}>
                     {item.pages.map((page, i, array) => {
+                      console.log(array[ite]);
                       let prod = array[ite];
                       if (i < count) {
                         ite++;
