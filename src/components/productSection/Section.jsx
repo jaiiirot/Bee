@@ -132,19 +132,21 @@ export default function Section() {
         <aside className="hexoArbol">
           {PAGINATION.map((item) => {
             if (item.id === section) {
+              let ite = 0;
               return item.mobile.map((count, a) => {
-                let ite = count;
                 return (
                   <div className={`hexoArbol-rama${a + 1} rama`}>
-                    {item.pages.map((page, i) => {
+                    {item.pages.map((page, i, array) => {
+                      let prod = array[ite];
                       if (i < count) {
+                        ite++;
                         return (
                           <HexagonImg
-                            key={page.name}
-                            img={page.img}
-                            url={`/productos/${section}/${page.name}/`}
+                            key={prod.name}
+                            img={prod.img}
+                            url={`/productos/${section}/${prod.name}/`}
                           >
-                            {page.name}
+                            {prod.name}
                           </HexagonImg>
                         );
                       }
