@@ -36,9 +36,9 @@ function App() {
               <Route path=":section/">
                 <Route index element={<Section />} />
                 <Route path=":element/" element={<SectionElement />} />
-                <Route path="remeras-chombas" element={<RemerasChombas />} />
-                <Route path="buzos-camperas" element={<BuzosCamperas />} />
-                <Route path="egresados-egresaditos" element={<EgresadosEgresaditos />} />
+                <Route path="remeras-y-chombas" element={<RemerasChombas />} />
+                <Route path="buzos-y-camperas" element={<BuzosCamperas />} />
+                <Route path="egresados-y-egresaditos" element={<EgresadosEgresaditos />} />
                 <Route path="shorts" element={<Shorts />} />
                 <Route path="pantalones" element={<Pantalones />} />
                 <Route path="camisetas" element={<Camisetas />} />
