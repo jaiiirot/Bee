@@ -287,7 +287,7 @@ const PedidoCompraList = ({ opciones }) => {
         <div>
           <h2>Método de envío</h2>
         </div>
-        <div className="opciones-menu menu-medios-pago">
+        <div className="menu-metodos-envio opciones-menu ">
           {metodosEnvio.map((envio, index) => (
             <div key={index} className="circulos-menu opcion-tela">
               <input

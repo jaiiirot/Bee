@@ -12,6 +12,14 @@ import ParticlesBackground from "./components/config/ParticlesBackground";
 import "./main.css";
 import Section from "./components/productSection/Section";
 import SectionElement from "./components/productSection/SectionElement";
+import RemerasChombas from "./components/page/RemerasChombas";
+import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
+import BuzosCamperas from "./components/page/BuzosCamperas";
+import EgresadosEgresaditos from "./components/page/EgresadosEgresaditos";
+import Shorts from "./components/page/Shorts";
+import Pantalones from "./components/page/Pantalones";
+import Camisetas from "./components/page/Camisetas";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
@@ -21,12 +29,19 @@ function App() {
         <Routes>
           <Route path="/" element={<Body />}>
             <Route index element={<Home />} />
+            <Route path="/estampados" element={<SeccionEstampados />} />
             <Route path="nosotros/" element={<Nosotros />} />
             <Route path="productos/">
               <Route index element={<Productos />} />
               <Route path=":section/">
                 <Route index element={<Section />} />
                 <Route path=":element/" element={<SectionElement />} />
+                <Route path="remeras-chombas" element={<RemerasChombas />} />
+                <Route path="buzos-camperas" element={<BuzosCamperas />} />
+                <Route path="egresados-egresaditos" element={<EgresadosEgresaditos />} />
+                <Route path="shorts" element={<Shorts />} />
+                <Route path="pantalones" element={<Pantalones />} />
+                <Route path="camisetas" element={<Camisetas />} />
               </Route>
             </Route>
             <Route path="ayuda/">

@@ -1,0 +1,26 @@
+.slider-container{
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 50px 0;
+
+    .slider{
+        display: flex;
+        cursor: grab;
+    
+        .item{
+            height: fit-content;
+            width: fit-content;
+            
+            img{
+                height: 300px;
+                width: auto;
+                pointer-events: none;
+                padding: 0 10px;
+            }
+        }
+    }
+    
+}
+
+
+
