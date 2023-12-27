@@ -16,6 +16,9 @@ import RemerasChombas from "./components/page/RemerasChombas";
 import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
 import BuzosCamperas from "./components/page/BuzosCamperas";
 import EgresadosEgresaditos from "./components/page/EgresadosEgresaditos";
+import Shorts from "./components/page/Shorts";
+import Pantalones from "./components/page/Pantalones";
+import Camisetas from "./components/page/Camisetas";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -36,6 +39,9 @@ function App() {
                 <Route path="remeras-chombas" element={<RemerasChombas />} />
                 <Route path="buzos-camperas" element={<BuzosCamperas />} />
                 <Route path="egresados-egresaditos" element={<EgresadosEgresaditos />} />
+                <Route path="shorts" element={<Shorts />} />
+                <Route path="pantalones" element={<Pantalones />} />
+                <Route path="camisetas" element={<Camisetas />} />
               </Route>
             </Route>
             <Route path="ayuda/">
