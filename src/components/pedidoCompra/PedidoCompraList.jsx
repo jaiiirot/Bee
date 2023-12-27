@@ -75,6 +75,7 @@ const PedidoCompraList = ({ opciones }) => {
       userData.email == "" &&
       userData.phone == "" &&
       disenio == "" &&
+      prendas == "" &&
       descripcionDisenio == ""
     ) {
       setShowIconoExclamacion(true);
@@ -83,6 +84,7 @@ const PedidoCompraList = ({ opciones }) => {
       userData.email.length > 0 &&
       userData.phone.length > 0 &&
       disenio.length > 0 &&
+      prendas.length > 0 &&
       descripcionDisenio.length > 0
     ) {
       enviarInformacion();
@@ -91,6 +93,7 @@ const PedidoCompraList = ({ opciones }) => {
     }
   };
   const enviarInformacion = () => {
+    
     setDatosCompra({
       usuario: userData.name,
       email: userData.email,
@@ -102,9 +105,11 @@ const PedidoCompraList = ({ opciones }) => {
       medioDePago: medioPago,
       metodoDeEnvio: metodoEnvio,
     });
-    console.log(datosCompra);
-    window.open(enlaceWhatsApp);
+    
+
+    /* window.open(enlaceWhatsApp); */
   };
+  console.log(datosCompra);
 
   return (
     <div className="section-presupuesto">
@@ -148,7 +153,7 @@ const PedidoCompraList = ({ opciones }) => {
             <input
               type="tel"
               id="phone"
-              name="phoneo"
+              name="phone"
               placeholder="TELEFONO"
               onChange={getUserData}
             />
@@ -163,18 +168,23 @@ const PedidoCompraList = ({ opciones }) => {
       </section>
 
       <section className="section-tela">
-        { opciones.length>0 ?
-          (<div>
+        {opciones.length > 0 ? (
+          <div>
             <h2>Tela</h2>
-          </div>) : null
-        }
+          </div>
+        ) : null}
         <div className="opciones-menu menu-tela">
+        {showIconoExclamacion && tela == "" ? (
+            <div className="icono-exclamacion">
+              <FontAwesomeIcon icon={faCircleExclamation} />
+            </div>
+          ) : null}
           {opciones.map((palabra, index) => (
             <div key={index} className="circulos-menu opcion-tela">
               <input
                 type="radio"
                 id={palabra}
-                name="drone"
+                name="tela"
                 value={palabra}
                 onClick={seleccionarTela}
                 required
@@ -182,6 +192,7 @@ const PedidoCompraList = ({ opciones }) => {
               <label htmlFor={palabra}>{palabra} </label>
             </div>
           ))}
+          
         </div>
       </section>
 
@@ -195,7 +206,7 @@ const PedidoCompraList = ({ opciones }) => {
               <input
                 type="radio"
                 id="conDisenio"
-                name="drone"
+                name="grupoDisenio"
                 value="Sí"
                 onClick={seleccionarDisenio}
               />
@@ -205,7 +216,7 @@ const PedidoCompraList = ({ opciones }) => {
               <input
                 type="radio"
                 id="sinDisenio"
-                name="drone"
+                name="grupoDisenio"
                 value="No"
                 onClick={seleccionarDisenio}
               />
@@ -234,25 +245,19 @@ const PedidoCompraList = ({ opciones }) => {
             ></textarea>
           </div>
 
-          {/* {showDescipcionTela ? (
-            <div className="disenio-propio">
-              <textarea
-                name="mensaje"
-                id="mensaje"
-                placeholder="Breve descripción: diseño, colores,  etc."
-                onChange={descripcionDisenioTela}
-                required
-              ></textarea>
-            </div>
-          ) : null} */}
         </div>
       </section>
 
-      <section className="cantidad-prendas">
+      <section className="cantidad-prendas-container">
         <div>
           <h2>Indica cantidad de prendas por talle</h2>
         </div>
         <div className="cantidad-prendas">
+          {showIconoExclamacion && prendas == "" ? (
+            <div className="icono-exclamacion">
+              <FontAwesomeIcon icon={faCircleExclamation} />
+            </div>
+          ) : null}
           <textarea
             name="mensaje"
             id="mensaje"
@@ -273,7 +278,7 @@ const PedidoCompraList = ({ opciones }) => {
               <input
                 type="radio"
                 id={pago}
-                name="drone"
+                name="metodoPago"
                 value={pago}
                 onClick={seleccionarMedioPago}
                 required
@@ -294,7 +299,7 @@ const PedidoCompraList = ({ opciones }) => {
               <input
                 type="radio"
                 id={envio}
-                name="drone"
+                name="metodoEnvio"
                 value={envio}
                 onClick={seleccionarMetodoEnvio}
                 required
