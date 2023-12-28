@@ -14,11 +14,11 @@ const NAVEGATION = [
         name: "Nuestros estampados",
       },
       {
-        href: "",
+        href: "/productos",
         name: "Productos personalizados",
       },
       {
-        href: "",
+        href: "/contacto",
         name: "Envíanos tu consulta",
       },
     ],
@@ -28,7 +28,7 @@ const NAVEGATION = [
     title: "NOSOTROS",
     pages: [
       {
-        href: "",
+        href: "/nosotros",
         name: "Quienes somos",
       },
       {
@@ -46,19 +46,19 @@ const NAVEGATION = [
     title: "PRODUCTOS",
     pages: [
       {
-        href: "",
+        href: "/productos/escolar-egresados",
         name: "Indumetaria escolar y egresados",
       },
       {
-        href: "",
+        href: "/productos/deportiva",
         name: "Indumentaria deportiva",
       },
       {
-        href: "",
+        href: "/productos/laboral",
         name: "Indumentaria laboral",
       },
       {
-        href: "",
+        href: "/productos/objetos-personalizados",
         name: "Objetos personalizados",
       },
     ],
@@ -68,15 +68,15 @@ const NAVEGATION = [
     title: "AYUDA",
     pages: [
       {
-        href: "",
+        href: "/ayuda/preguntas-frecuentes",
         name: "Preguntas frecuentes",
       },
       {
-        href: "",
+        href: "/ayuda/terminos-condiciones",
         name: "Términos y condiciones",
       },
       {
-        href: "",
+        href: "/ayuda/como-comprar",
         name: "Cómo comprar",
       },
     ],
@@ -84,6 +84,12 @@ const NAVEGATION = [
 ];
 
 const FooterList = () => {
+  const inInstagram = () => {
+    window.open("https://www.instagram.com/_beemendoza/", "_blank");
+  };
+  const inFacebook = () => {
+    window.open("https://www.facebook.com/_beemendoza/", "_blank");
+  };
   return (
     <>
       <div className="footer-container">
@@ -105,8 +111,16 @@ const FooterList = () => {
                     );
                   })}
                   <div className="footer-menu-redes">
-                    <img src={IconoFacebook} alt="icono-facebook" />
-                    <img src={IconoInstagram} alt="icono-instagram" />
+                    <img
+                      onClick={inFacebook}
+                      src={IconoFacebook}
+                      alt="icono-facebook"
+                    />
+                    <img
+                      onClick={inInstagram}
+                      src={IconoInstagram}
+                      alt="icono-instagram"
+                    />
                   </div>
                 </div>
               );
@@ -149,8 +163,16 @@ const FooterList = () => {
           <p>Lunes a Viernes de 9 a 17:30hs- Sábados de 9 a 13hs.</p>
           <h2>Social</h2>
           <div className="footer-menu-redes">
-            <img src={IconoInstagram} alt="icono-instagram" />
-            <img src={IconoWhatsapp} alt="icono-facebook" />
+            <img
+              onClick={inInstagram}
+              src={IconoInstagram}
+              alt="icono-instagram"
+            />
+            <img
+              onClick={inFacebook}
+              src={IconoWhatsapp}
+              alt="icono-facebook"
+            />
           </div>
         </div>
       </div>

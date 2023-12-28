@@ -10,6 +10,9 @@ export default function NavbarMobile({ pages }) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const toWhatsapp = () => {
+    window.open("https://wa.me/5492634328998", "_blank");
+  };
   return (
     <header className="header-movil">
       <nav className="header-movil-nav">
@@ -26,7 +29,9 @@ export default function NavbarMobile({ pages }) {
           </svg>
         </Button>
         <Logo />
-        <Whatsapp />
+        <span onClick={toWhatsapp}>
+          <Whatsapp />
+        </span>
       </nav>
 
       <Offcanvas

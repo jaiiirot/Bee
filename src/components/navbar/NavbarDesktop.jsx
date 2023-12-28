@@ -6,7 +6,7 @@ import Whatsapp from "../image/Whatsapp";
 export default function NavbarDesktop({ pages }) {
   const [page, setPage] = useState(pages);
   const toWhatsapp = () => {
-    window.open("https://wa.me/5491141430021", "_blank");
+    window.open("https://wa.me/5492634328998", "_blank");
   };
 
   return (
