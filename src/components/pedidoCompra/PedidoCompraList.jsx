@@ -2,11 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
 
-
-const PedidoCompraList = ({ opciones }) => {
+const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
-
+  
   const opcionesPago = [
     "Efectivo",
     "Transferencia",
@@ -51,11 +51,11 @@ const PedidoCompraList = ({ opciones }) => {
   const [disenio, setDisenio] = useState("");
   const [descripcionDisenio, setDescripcionDisenio] = useState("");
   const [prendas, setPrendas] = useState("");
-  /* const [showDescipcionTela, setShowDescipcionTela] = useState(false); */
+  
 
   const seleccionarDisenio = (e) => {
     setDisenio(e.target.value);
-    /* setShowDescipcionTela(!showDescipcionTela); */
+    
   };
 
   const descripcionDisenioTela = (e) => {
@@ -92,8 +92,10 @@ const PedidoCompraList = ({ opciones }) => {
       setShowIconoExclamacion(true);
     }
   };
+
+  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
+
   const enviarInformacion = () => {
-    
     setDatosCompra({
       usuario: userData.name,
       email: userData.email,
@@ -106,10 +108,12 @@ const PedidoCompraList = ({ opciones }) => {
       metodoDeEnvio: metodoEnvio,
     });
     
-
-    /* window.open(enlaceWhatsApp); */
+    setAbrirWhatsapp(true);
+    
   };
- /*  console.log(datosCompra); */
+
+  /*  console.log(datosCompra); */
+  
 
   return (
     <div className="section-presupuesto">
@@ -167,34 +171,33 @@ const PedidoCompraList = ({ opciones }) => {
         </form>
       </section>
 
-        {opciones.length > 0 ? (
-      <section className="section-tela">
+      {opciones.length > 0 ? (
+        <section className="section-tela">
           <div>
             <h2>Tela</h2>
           </div>
-        
-        <div className="opciones-menu menu-tela">
-        {showIconoExclamacion && tela == "" ? (
-            <div className="icono-exclamacion">
-              <FontAwesomeIcon icon={faCircleExclamation} />
-            </div>
-          ) : null}
-          {opciones.map((palabra, index) => (
-            <div key={index} className="circulos-menu opcion-tela">
-              <input
-                type="radio"
-                id={palabra}
-                name="tela"
-                value={palabra}
-                onClick={seleccionarTela}
-                required
-              />
-              <label htmlFor={palabra}>{palabra} </label>
-            </div>
-          ))}
-          
-        </div>
-      </section>
+
+          <div className="opciones-menu menu-tela">
+            {showIconoExclamacion && tela == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+            {opciones.map((palabra, index) => (
+              <div key={index} className="circulos-menu opcion-tela">
+                <input
+                  type="radio"
+                  id={palabra}
+                  name="tela"
+                  value={palabra}
+                  onClick={seleccionarTela}
+                  required
+                />
+                <label htmlFor={palabra}>{palabra} </label>
+              </div>
+            ))}
+          </div>
+        </section>
       ) : null}
 
       <section className="disenio">
@@ -245,7 +248,6 @@ const PedidoCompraList = ({ opciones }) => {
               required
             ></textarea>
           </div>
-
         </div>
       </section>
 
@@ -325,6 +327,9 @@ const PedidoCompraList = ({ opciones }) => {
           ENVIAR SOLICITUD
         </button>
       </section>
+
+      { abrirWhatsapp ?
+        <MensajeWhatsapp datosCompra={datosCompra} producto= {titulo}  /> : null}
     </div>
   );
 };

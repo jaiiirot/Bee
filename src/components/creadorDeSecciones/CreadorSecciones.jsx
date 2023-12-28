@@ -30,41 +30,48 @@ const CreadorSecciones = ({
         <h1>{titulo}</h1>
       </div>
       <>
-      {caruselEnDesktop === 'si' ? (
-        <CaruselList imagenes={imagenes} />
-      ) : caruselEnDesktop === 'RemerasChombasLaboral' ? (
-        <CaruselListRemerasChombasLaboral imagenes={imagenes} />
-      ) : (
-        <div className="secciones-productos-imagenes">
-          <div className="secciones-productos-imagen">
-            <div className="product-cont">
-              {imagenes.map((imagen, index) => (
-                <img key={index} src={imagen} alt={imagen} />
-              ))}
+        {caruselEnDesktop === "si" ? (
+          <CaruselList imagenes={imagenes} />
+        ) : caruselEnDesktop === "RemerasChombasLaboral" ? (
+          <CaruselListRemerasChombasLaboral imagenes={imagenes} />
+        ) : (
+          <div className="secciones-productos-imagenes">
+            <div className="secciones-productos-imagen">
+              <div className="product-cont">
+                {imagenes.map((imagen, index) => (
+                  <img key={index} src={imagen} alt={imagen} />
+                ))}
               </div>
             </div>
           </div>
         )}
       </>
 
-
-
-      <div className={imagenes.length===0 ? ("secciones-productos-imagenes-mobile-oculto"): "secciones-productos-imagenes-mobile"} >
+      <div
+        className={
+          imagenes.length === 0
+            ? "secciones-productos-imagenes-mobile-oculto"
+            : "secciones-productos-imagenes-mobile"
+        }
+      >
         <div className="secciones-productos-imagen">
-          
-{caruselMobile==="" ? (<div className= {imagenes.length<=2 ? ("product-cont-mobile"):"product-cont"} >
-            {imagenes.map((imagen, index) => (
-              <img key={index} src={imagen} alt={imagen} />
-            ))}
-
-          </div>) : <div className= "product-cont-mobile-imagenes-grandes" >
-            {imagenes.map((imagen, index) => (
-              <img key={index} src={imagen} alt={imagen} />
-            ))}
-
-          </div>}
-
-          
+          {caruselMobile === "" ? (
+            <div
+              className={
+                imagenes.length <= 2 ? "product-cont-mobile" : "product-cont"
+              }
+            >
+              {imagenes.map((imagen, index) => (
+                <img key={index} src={imagen} alt={imagen} />
+              ))}
+            </div>
+          ) : (
+            <div className="product-cont-mobile-imagenes-grandes">
+              {imagenes.map((imagen, index) => (
+                <img key={index} src={imagen} alt={imagen} />
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
@@ -101,10 +108,12 @@ const CreadorSecciones = ({
 
 export default CreadorSecciones;
 
-{/* <div className="secciones-productos-imagenes">
+{
+  /* <div className="secciones-productos-imagenes">
           {imagenes.map((imagen, index) => (
             <div className="secciones-productos-imagen" key={index}>
               <img src={imagen} alt={`Imagen ${index + 1}`} />
             </div>
           ))}
-        </div> */}
+        </div> */
+}

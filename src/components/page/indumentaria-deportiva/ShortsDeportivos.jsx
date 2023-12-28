@@ -57,7 +57,7 @@ const ShortsDeportivos = () => {
 
       <GuiaDeTalles />
       <div id="pedidoCompraList">
-        <PedidoCompraList opciones={opciones} />
+        <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
       </div>
     </div>
   );

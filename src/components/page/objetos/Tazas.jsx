@@ -48,7 +48,7 @@ const Tazas = () => {
     
           
           <div id="pedidoCompraList">
-            <ObjetosPedidosCompraList  />
+            <ObjetosPedidosCompraList titulo= {informacionProducto[0].titulo} />
           </div>
         </div>
       );

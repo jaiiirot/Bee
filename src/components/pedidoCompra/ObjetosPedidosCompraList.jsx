@@ -3,12 +3,13 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import CounterListContainer from "../counter/CounterListContainer";
+import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
 
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const ObjetosPedidosCompraList = () => {
+const ObjetosPedidosCompraList = ({titulo}) => {
   const [datosCompra, setDatosCompra] = useState({});
-
+  
   const opcionesPago = [
     "Efectivo",
     "Transferencia",
@@ -106,6 +107,9 @@ const ObjetosPedidosCompraList = () => {
       setShowIconoExclamacion(true);
     }
   };
+
+  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
+
   const enviarInformacion = () => {
     setDatosCompra({
       usuario: userData.name,
@@ -118,10 +122,10 @@ const ObjetosPedidosCompraList = () => {
       metodoDeEnvio: metodoEnvio,
     });
 
-    /* window.open(enlaceWhatsApp); */
+    setAbrirWhatsapp(true);
   };
-  /* console.log(datosCompra); */
-
+  
+  
   return (
     <div className="section-presupuesto">
       <h1>¡Pide tu presupuesto!</h1>
@@ -318,6 +322,9 @@ const ObjetosPedidosCompraList = () => {
           ENVIAR SOLICITUD
         </button>
       </section>
+
+      { abrirWhatsapp ?
+        <MensajeWhatsapp producto={titulo} datosCompra={datosCompra}  /> : null}
     </div>
   );
 };
