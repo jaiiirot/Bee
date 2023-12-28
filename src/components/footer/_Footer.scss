@@ -15,7 +15,12 @@
     font-size: 15px;
     font-weight: 600;
   }
+  a,
   p {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: $negro;
     margin: 0;
     font-weight: normal;
     padding: 5px 0;
@@ -116,20 +121,17 @@
         width: 100%;
       }
 
-      .footer-menu-redes{
+      .footer-menu-redes {
         display: flex;
         justify-content: space-around;
         width: 60px;
         margin: auto;
         padding: 10px 0;
 
-        img{
+        img {
           width: 25px;
         }
       }
     }
-
-
-    
   }
 }

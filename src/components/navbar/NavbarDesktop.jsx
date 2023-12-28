@@ -5,6 +5,10 @@ import Whatsapp from "../image/Whatsapp";
 
 export default function NavbarDesktop({ pages }) {
   const [page, setPage] = useState(pages);
+  const toWhatsapp = () => {
+    window.open("https://wa.me/5491141430021", "_blank");
+  };
+
   return (
     <header className="header">
       <Logo className={"header-logo"} />
@@ -19,10 +23,8 @@ export default function NavbarDesktop({ pages }) {
               </li>
             );
           })}
-          <li>
-            <Link to="/www.whatsapp.com">
-              <Whatsapp />
-            </Link>
+          <li onClick={toWhatsapp} style={{ cursor: "pointer" }}>
+            <Whatsapp />
           </li>
         </ul>
       </nav>

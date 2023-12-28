@@ -19,7 +19,7 @@ import EgresadosEgresaditos from "./components/page/EgresadosEgresaditos";
 import Shorts from "./components/page/Shorts";
 import Pantalones from "./components/page/Pantalones";
 import Camisetas from "./components/page/Camisetas";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
@@ -38,7 +38,10 @@ function App() {
                 <Route path=":element/" element={<SectionElement />} />
                 <Route path="remeras-y-chombas" element={<RemerasChombas />} />
                 <Route path="buzos-y-camperas" element={<BuzosCamperas />} />
-                <Route path="egresados-y-egresaditos" element={<EgresadosEgresaditos />} />
+                <Route
+                  path="egresados-y-egresaditos"
+                  element={<EgresadosEgresaditos />}
+                />
                 <Route path="shorts" element={<Shorts />} />
                 <Route path="pantalones" element={<Pantalones />} />
                 <Route path="camisetas" element={<Camisetas />} />
@@ -50,7 +53,7 @@ function App() {
                 path="preguntas-frecuentes/"
                 element={<PreguntasFrecuentes />}
               />
-              <Route path="terminos/" element={<Terminos />} />
+              <Route path="terminos-condiciones/" element={<Terminos />} />
               <Route path="como-comprar/" element={<ComoComprar />} />
             </Route>
             <Route path="contacto/" element={<Contacto />} />

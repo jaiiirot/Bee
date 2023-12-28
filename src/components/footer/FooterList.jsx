@@ -1,7 +1,87 @@
 import IconoInstagram from "../../assets/icon/icono-instagram.svg";
 import IconoFacebook from "../../assets/icon/icono-facebook.svg";
-import IconoWhatsapp from "../../assets/icon/whatsapp.svg"
+import IconoWhatsapp from "../../assets/icon/whatsapp.svg";
 import logo from "../../assets/icon/icon.png";
+import { Link } from "react-router-dom";
+
+const NAVEGATION = [
+  {
+    clase: "footer-menu-inicio",
+    title: "INICIO",
+    pages: [
+      {
+        href: "",
+        name: "Nuestros estampados",
+      },
+      {
+        href: "",
+        name: "Productos personalizados",
+      },
+      {
+        href: "",
+        name: "Envíanos tu consulta",
+      },
+    ],
+  },
+  {
+    clase: "footer-menu-nosotros",
+    title: "NOSOTROS",
+    pages: [
+      {
+        href: "",
+        name: "Quienes somos",
+      },
+      {
+        href: "",
+        name: "Nuestros estampados",
+      },
+      {
+        href: "",
+        name: "Nuestros clientes",
+      },
+    ],
+  },
+  {
+    clase: "footer-menu-productos",
+    title: "PRODUCTOS",
+    pages: [
+      {
+        href: "",
+        name: "Indumetaria escolar y egresados",
+      },
+      {
+        href: "",
+        name: "Indumentaria deportiva",
+      },
+      {
+        href: "",
+        name: "Indumentaria laboral",
+      },
+      {
+        href: "",
+        name: "Objetos personalizados",
+      },
+    ],
+  },
+  {
+    clase: "footer-menu-ayuda",
+    title: "AYUDA",
+    pages: [
+      {
+        href: "",
+        name: "Preguntas frecuentes",
+      },
+      {
+        href: "",
+        name: "Términos y condiciones",
+      },
+      {
+        href: "",
+        name: "Cómo comprar",
+      },
+    ],
+  },
+];
 
 const FooterList = () => {
   return (
@@ -12,38 +92,38 @@ const FooterList = () => {
         </div>
 
         <div className="footer-menu-container">
-          <div className="footer-menu-inicio">
-            <h2>INICIO</h2>
-            <p>Nuestros estampados</p>
-            <p>Productos personalizados</p>
-            <p>Envíanos tu consulta</p>
-          </div>
-
-          <div className="footer-menu-nosotros">
-            <h2>NOSOTROS</h2>
-            <p>Quienes somos</p>
-            <p>Nuestros estampados</p>
-            <p>Nuestros clientes</p>
-            <div className="footer-menu-redes">
-              <img src={IconoFacebook} alt="icono-facebook" />
-              <img src={IconoInstagram} alt="icono-instagram" />
-            </div>
-          </div>
-
-          <div className="footer-menu-productos">
-            <h2>PRODUCTOS</h2>
-            <p>Indumetaria escolar y egresados</p>
-            <p>Indumentaria deportiva</p>
-            <p>Indumentaria laboral</p>
-            <p>Objetos personalizados</p>
-          </div>
-
-          <div className="footer-menu-ayuda">
-            <h2>AYUDA</h2>
-            <p>Preguntas frecuentes</p>
-            <p>Términos y condiciones</p>
-            <p>Cómo comprar</p>
-          </div>
+          {NAVEGATION.map((option, index) => {
+            if (option.title === "NOSOTROS") {
+              return (
+                <div className={option.clase} key={index * Math.random()}>
+                  <h2>{option.title}</h2>
+                  {option.pages.map((page, index) => {
+                    return (
+                      <Link to={page.href} key={index * Math.random()}>
+                        {page.name}
+                      </Link>
+                    );
+                  })}
+                  <div className="footer-menu-redes">
+                    <img src={IconoFacebook} alt="icono-facebook" />
+                    <img src={IconoInstagram} alt="icono-instagram" />
+                  </div>
+                </div>
+              );
+            }
+            return (
+              <div className={option.clase} key={index * Math.random() * 110}>
+                <h2>{option.title}</h2>
+                {option.pages.map((page, index) => {
+                  return (
+                    <Link to={page.href} key={index + 100 * Math.random()}>
+                      {page.name}
+                    </Link>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
         <div className="footer-direccion">
           <p>

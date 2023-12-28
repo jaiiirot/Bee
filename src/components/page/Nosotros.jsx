@@ -1,8 +1,6 @@
-import { Link } from "react-router-dom";
+import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestrosEstampados/HexagonosNuestrosEstampadosListContainer";
 import Logo from "./../image/Logo";
 import Texto from "./../texto/Texto";
-import nuestrosEstampados from "./../../assets/img/nuestros-estampados-termovinilo.jpg";
-import nuestrosClientes from "./../../assets/img/nuestros-clientes.jpg";
 const INFO = [
   {
     titulo:
@@ -50,20 +48,6 @@ export default function Nosotros() {
         <aside className="options-welcome">
           <h2>¿QUIÉNES SOMOS?</h2>
         </aside>
-        <aside className="options-option">
-          <div className="options-info">
-            <Link to="/nuestros-estampados">
-              <img src={nuestrosEstampados} alt="" />
-              <h3>NUESTROS ESTAMPADOS</h3>
-            </Link>
-          </div>
-          <div className="options-info">
-            <Link to="nuestros-clientes">
-              <img src={nuestrosClientes} alt="" />
-              <h3>NUESTROS CLIENTES</h3>
-            </Link>
-          </div>
-        </aside>
       </section>
       <section className="info">
         <aside className="info-welcome">
@@ -72,6 +56,41 @@ export default function Nosotros() {
         {INFO.map((info, index) => (
           <Texto key={index} titulo={info.titulo} texto={info.texto} />
         ))}
+      </section>
+      <section className="section-hex">
+        <section className="nuestros-estampados-section">
+          <HexagonosNuestrosEstampadosListContainer />
+        </section>
+
+        <section className="mobile-nuestros-estampados-section">
+          <HexagonosNuestrosEstampadosListContainer />
+        </section>
+      </section>
+      <section className="info">
+        <aside className="cont-text">
+          <h3 className="cont-text-titulo">
+            Personalización en Cada Punto y Tela
+          </h3>
+          <br />
+          <p className="cont-text-parrafo">
+            En BEE, nos especializamos en la creación de productos textiles
+            totalmente personalizados. Desde indumentaria laboral y uniformes
+            escolares hasta prendas deportivas y de egresados, abarcamos un
+            amplio espectro de necesidades. Nuestra versatilidad nos permite
+            adaptarnos a las tendencias y temporadas, creando desde
+            merchandising hasta sets escolares y conjuntos deportivos.
+            <br />
+            En BEE, cada prenda cuenta una historia única, tejida con la
+            dedicación y calidad que nos caracterizan. Descubre la
+            personalización en cada detalle.
+          </p>
+          <br />
+          <br />
+          <h3 className="cont-text-titulo">
+            ¡Haz que tu ropa cuente tu historia con BEE, donde la creatividad y
+            la calidad se encuentran en cada estampado!
+          </h3>
+        </aside>
       </section>
     </>
   );

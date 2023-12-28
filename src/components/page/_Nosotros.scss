@@ -1,3 +1,14 @@
+.options,
+.info,
+.section-hex {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto;
+}
+
 .options {
   padding: 0.5rem 0px;
   margin: 0px auto;
@@ -14,45 +25,9 @@
   &-welcome {
     margin: 1rem 0px;
     h2 {
-      font-size: 2.4rem;
-    }
-  }
-  &-option {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    .options-info {
-      width: 450px;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border: 2px solid #000;
-      a {
-        width: 100%;
-        height: 100%;
-        text-decoration: none;
-        color: #000;
-        img {
-          height: 85%;
-          width: 100%;
-          object-fit: cover;
-        }
-        h3 {
-          padding-right: 1rem;
-          height: 15%;
-          width: 100%;
-          font-size: 1.3rem;
-          border-top: 2px solid #000;
-          background-color: $color-primary;
-          margin-top: 0;
-          margin-bottom: 0rem;
-          font-weight: 500;
-          line-height: unset;
-        }
-      }
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+      font-weight: 900;
     }
   }
 }
@@ -62,6 +37,11 @@
   &-welcome {
     display: none;
     text-align: center;
+  }
+}
+.section-hex {
+  .nuestros-estampados-section-mobile {
+    padding: 0;
   }
 }
 
@@ -76,25 +56,8 @@
     &-welcome {
       display: none;
       h2 {
-        font-size: 2rem;
-      }
-    }
-    &-option {
-      width: 95%;
-      .options-info {
-        width: 100%;
-        height: 200px;
-        a {
-          img {
-            height: 85%;
-            width: 100%;
-          }
-          h3 {
-            height: 15%;
-            width: 100%;
-            font-size: 1.2rem;
-          }
-        }
+        font-size: 1.8rem;
+        font-weight: 600;
       }
     }
   }
@@ -102,9 +65,12 @@
     width: 95%;
     &-welcome {
       display: unset;
+      margin-bottom: 1rem;
     }
     .cont-text-titulo {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
     }
   }
 }

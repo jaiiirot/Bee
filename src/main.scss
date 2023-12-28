@@ -1,14 +1,16 @@
 /*UTILIDADES*/
-@import "./utils/Colors";
+@import "~bootstrap/scss/bootstrap";
+@import "./utils/Reset";
 @import "./utils/Mixin-Extend";
 @import "./utils/Typography";
-@import "~bootstrap/scss/bootstrap";
 $color-primary: #efb322;
 $color-secundary: #040404;
 $color-tertiary: #f8f8f8;
 $color-quaternary: #cecdbb;
-
-
+$botones-amarillo-dorado: #e7bb43;
+$Hero-gris: #d9d9d9;
+$negro: #000000;
+$inputs-formulario-gris: #cecdbb;
 * {
   font-family: $font-family-project;
   font-weight: bold;

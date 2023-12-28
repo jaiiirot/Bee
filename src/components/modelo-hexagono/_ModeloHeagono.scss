@@ -1,6 +1,6 @@
 .estampados {
   width: 200px;
-  height: 200px;
+  height: 233px;
   position: relative;
   margin: auto;
 
@@ -40,7 +40,6 @@
   }
   .hexagono-sin-imagen {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -59,15 +58,13 @@
       font-size: 30px;
       margin: 0;
     }
-
-    /* background-image: url("./assets/img/indumentaria-escolar-card.png"); */
   }
 }
 
 @media (max-width: 576px) {
   .estampados {
-    width: 40vw;
-    height: 40vw;
+    width: 130px;
+    height: 143px;
     .hexagone {
       z-index: 100;
       h2 {
@@ -93,8 +90,8 @@
         0.7
       ); /* Color blanco con opacidad */
     }
-    .hexagono-con-imagen{
-      h2{
+    .hexagono-con-imagen {
+      h2 {
         font-size: 1rem;
       }
     }
