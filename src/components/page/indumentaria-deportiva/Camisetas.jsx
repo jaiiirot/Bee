@@ -31,7 +31,7 @@ const Camisetas = () => {
         {
           type: "span",
           content: [
-            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de",
+            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de ",
             {
               type: "link",
               to: "/estampados",

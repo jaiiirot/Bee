@@ -1,8 +1,8 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+
 
 const PedidoCompraList = ({ opciones }) => {
   const [datosCompra, setDatosCompra] = useState({});
@@ -122,7 +122,7 @@ const PedidoCompraList = ({ opciones }) => {
               type="text"
               id="name"
               name="name"
-              placeholder="NOMBRE"
+              placeholder="Nombre"
               onChange={getUserData}
             />
 
@@ -138,7 +138,7 @@ const PedidoCompraList = ({ opciones }) => {
               type="email"
               id="email"
               name="email"
-              placeholder="CORREO"
+              placeholder="Correo electrónico"
               onChange={getUserData}
             />
 
@@ -154,7 +154,7 @@ const PedidoCompraList = ({ opciones }) => {
               type="tel"
               id="phone"
               name="phone"
-              placeholder="TELEFONO"
+              placeholder="Teléfono"
               onChange={getUserData}
             />
 

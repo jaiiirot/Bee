@@ -28,7 +28,7 @@ import ConjuntosPantalonesRemeras from "./components/page/indumentaria-laboral/C
 import RemerasChombasLaboral from "./components/page/indumentaria-laboral/RemerasChombasLaboral";
 import ChaquetasAmbosGuardapolvos from "./components/page/indumentaria-laboral/ChaquetasAmbosGuardapolvos";
 import Delantales from "./components/page/indumentaria-laboral/Delantales";
-
+import Llaveros from "./components/page/objetos/Llaveros";
 
 
 function App() {
@@ -61,6 +61,7 @@ function App() {
                 <Route path="laboral-remeras-y-chombas" element={<RemerasChombasLaboral />} />
                 <Route path="chaquetas-ambos-y-guardapolvos" element={<ChaquetasAmbosGuardapolvos />} />
                 <Route path="delantales" element={<Delantales />} />
+                <Route path="llaveros" element={<Llaveros />} />
               </Route>
             </Route>
             <Route path="ayuda/">

@@ -1,0 +1,28 @@
+.contador-container {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  width: 80px;
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+
+  .contador-container-numero {
+    margin: auto;
+    background-color: white;
+    grid-column: 1;
+  }
+
+  .contador-flechas-container {
+    display: flex;
+    flex-direction: column;
+    
+    grid-column: 2;
+    border: 1px solid black;
+    background-color: $inputs-formulario-gris;
+    
+    svg {
+      
+      height: fit-content;
+    }
+  }
+}
