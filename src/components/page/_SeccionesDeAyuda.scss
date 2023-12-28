@@ -13,23 +13,25 @@
   }
 
   .contenido-texto-container {
+    margin: 0px auto;
+    width: 75%;
     h2 {
       color: black;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       padding: 20px 0;
       font-weight: 600;
       letter-spacing: 1px;
 
       span {
         color: black;
-        font-size: 1.8rem;
-        font-weight: normal;
+        font-weight: 200;
       }
     }
     p {
       color: black;
       font-size: 1.2rem;
       padding: 10px 0;
+      font-weight: 400;
     }
     ul {
       font-size: 1.2rem;
@@ -40,7 +42,7 @@
 
     .consultas-adicionales-texto {
       color: black;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       padding: 10px 0;
     }
   }
@@ -62,7 +64,7 @@
           font-size: 1.5rem;
         }
       }
-      p{
+      p {
         font-size: 1.2rem;
       }
     }

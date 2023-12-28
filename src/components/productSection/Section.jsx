@@ -110,7 +110,7 @@ export default function Section() {
                             img={prod.img}
                             url={`/productos/${section}/${prod.name}/`}
                           >
-                            {prod.name}
+                            {prod.name.split("-").join(" ")}
                           </HexagonImg>
                         );
                       }
