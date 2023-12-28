@@ -8,6 +8,7 @@ const CreadorSecciones = ({
   imagenes,
   descripcion,
   caruselEnDesktop,
+  caruselMobile,
 }) => {
   const scrollToPedidoCompraList = () => {
     // Calcula la posición del componente PedidoCompraList
@@ -46,15 +47,24 @@ const CreadorSecciones = ({
         )}
       </>
 
+
+
       <div className={imagenes.length===0 ? ("secciones-productos-imagenes-mobile-oculto"): "secciones-productos-imagenes-mobile"} >
         <div className="secciones-productos-imagen">
           
-          <div className= {imagenes.length<2 ? ("product-cont-mobile"):"product-cont"} >
+{caruselMobile==="" ? (<div className= {imagenes.length<=2 ? ("product-cont-mobile"):"product-cont"} >
             {imagenes.map((imagen, index) => (
               <img key={index} src={imagen} alt={imagen} />
             ))}
 
-          </div>
+          </div>) : <div className= "product-cont-mobile-imagenes-grandes" >
+            {imagenes.map((imagen, index) => (
+              <img key={index} src={imagen} alt={imagen} />
+            ))}
+
+          </div>}
+
+          
         </div>
       </div>
 

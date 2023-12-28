@@ -67,9 +67,9 @@ const PAGINATION = [
     desktop: [4, 3],
     mobile: [2, 1, 2, 1, 2],
     pages: [
-      { name: "gorros", img: Gorros },
       { name: "llaveros", img: Llaveros },
       { name: "banderas-y-fly-banners", img: Banderas },
+      { name: "gorros", img: Gorros },
       { name: "pins", img: Pins },
       { name: "tazas", img: Tazas },
       { name: "lapiceras", img: Lapiceras },
@@ -100,7 +100,7 @@ export default function Section() {
                 return (
                   <div className={`hexoArbol-rama${a + 1} rama`}>
                     {item.pages.map((page, i, array) => {
-                      console.log(array[ite]);
+                      /* console.log(array[ite]); */
                       let prod = array[ite];
                       if (i < count) {
                         ite++;

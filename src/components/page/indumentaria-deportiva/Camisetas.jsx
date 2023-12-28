@@ -55,6 +55,7 @@ const Camisetas = () => {
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="si"
+        caruselMobile= ""
       />
 
       <GuiaDeTalles />

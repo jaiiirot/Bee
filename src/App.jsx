@@ -29,6 +29,12 @@ import RemerasChombasLaboral from "./components/page/indumentaria-laboral/Remera
 import ChaquetasAmbosGuardapolvos from "./components/page/indumentaria-laboral/ChaquetasAmbosGuardapolvos";
 import Delantales from "./components/page/indumentaria-laboral/Delantales";
 import Llaveros from "./components/page/objetos/Llaveros";
+import BanderasFlyBanners from "./components/page/objetos/BanderasFlyBanners";
+import Gorros from "./components/page/objetos/Gorros";
+import Pins from "./components/page/objetos/Pins";
+import Tazas from "./components/page/objetos/Tazas";
+import Lapiceras from "./components/page/objetos/Lapiceras";
+import Logos from "./components/page/objetos/Logos";
 
 
 function App() {
@@ -62,6 +68,12 @@ function App() {
                 <Route path="chaquetas-ambos-y-guardapolvos" element={<ChaquetasAmbosGuardapolvos />} />
                 <Route path="delantales" element={<Delantales />} />
                 <Route path="llaveros" element={<Llaveros />} />
+                <Route path="banderas-y-fly-banners" element={<BanderasFlyBanners />} />
+                <Route path="gorros" element={<Gorros />} />
+                <Route path="pins" element={<Pins />} />
+                <Route path="tazas" element={<Tazas />} />
+                <Route path="lapiceras" element={<Lapiceras />} />
+                <Route path="logos" element={<Logos />} />
               </Route>
             </Route>
             <Route path="ayuda/">

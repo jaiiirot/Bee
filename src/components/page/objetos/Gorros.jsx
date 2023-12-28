@@ -1,15 +1,21 @@
 import React from "react";
 import ObjetosPedidosCompraList from "../../pedidoCompra/ObjetosPedidosCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import img1Llaveros from "../../../assets/img/llaveros1.jpg";
+import img1Gorros from "../../../assets/img/gorros1.jpg";
+import img2Gorros from "../../../assets/img/gorros2.jpg";
+import img3Gorros from "../../../assets/img/gorros3.jpg";
+import img4Gorros from "../../../assets/img/gorros4.jpg";
 
-const Llaveros = () => {
+const Gorros = () => {
     
     const informacionProducto = [
       {
-        titulo: "LLAVEROS",
+        titulo: "GORROS",
         imagenes: {
-          imagen1: img1Llaveros,
+          imagen1: img1Gorros,
+          imagen2: img2Gorros,
+          imagen3: img3Gorros,
+          imagen4: img4Gorros,
           
         },
         descripcion: [
@@ -37,7 +43,7 @@ const Llaveros = () => {
           titulo={informacionProducto[0].titulo}
           imagenes={imagenesArray}
           descripcion={informacionProducto[0].descripcion}
-          caruselEnDesktop="no"
+          caruselEnDesktop="si"
           caruselMobile= ""
         />
   
@@ -49,4 +55,4 @@ const Llaveros = () => {
     );
 }
 
-export default Llaveros
+export default Gorros

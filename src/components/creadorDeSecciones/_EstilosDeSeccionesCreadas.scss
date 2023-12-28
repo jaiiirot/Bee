@@ -104,6 +104,18 @@
             margin: 0 5px;
           }
         }
+        .product-cont-mobile-imagenes-grandes {
+          height: 200px;
+          width: 100%;
+          overflow-x: scroll;
+          display: flex;
+          
+
+          img {
+            margin: 0 5px;
+          }
+        }
+        
 
         .product-cont {
           height: 200px;
@@ -147,6 +159,11 @@
     .secciones-informacion-boton {
       margin: 30px 0;
       text-align: center;
+      
+      
+      button{
+        width: 100%;
+      }
     }
   }
 }

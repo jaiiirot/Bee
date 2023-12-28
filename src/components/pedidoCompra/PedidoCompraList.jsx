@@ -109,7 +109,7 @@ const PedidoCompraList = ({ opciones }) => {
 
     /* window.open(enlaceWhatsApp); */
   };
-  console.log(datosCompra);
+ /*  console.log(datosCompra); */
 
   return (
     <div className="section-presupuesto">
@@ -167,12 +167,12 @@ const PedidoCompraList = ({ opciones }) => {
         </form>
       </section>
 
-      <section className="section-tela">
         {opciones.length > 0 ? (
+      <section className="section-tela">
           <div>
             <h2>Tela</h2>
           </div>
-        ) : null}
+        
         <div className="opciones-menu menu-tela">
         {showIconoExclamacion && tela == "" ? (
             <div className="icono-exclamacion">
@@ -195,13 +195,14 @@ const PedidoCompraList = ({ opciones }) => {
           
         </div>
       </section>
+      ) : null}
 
       <section className="disenio">
         <div>
           <h2>¿Tienes tu propio diseño?</h2>
         </div>
         <div className="menu-disenio">
-          <div className="opciones-menu">
+          <div className="opciones-menu menu-de-diseno-mobile">
             <div className="circulos-menu opcion-diseño">
               <input
                 type="radio"

@@ -45,6 +45,7 @@ const ChaquetasAmbosGuardapolvos = () => {
           imagenes={imagenesArray}
           descripcion={informacionProducto[0].descripcion}
           caruselEnDesktop="no"
+          caruselMobile= ""
         />
   
         <GuiaDeTalles />

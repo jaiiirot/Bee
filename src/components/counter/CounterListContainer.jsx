@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CounterList from "./CounterList";
 
-const CounterListContainer = () => {
+const CounterListContainer = ({ actualizarCantidad }) => {
   const [count, setCount] = useState(1);
 
   const increment = () => {
@@ -16,17 +16,19 @@ const CounterListContainer = () => {
       setCount(count - 1);
     }
   };
-  const reiniciarContador = () => {
-    setCount(1);
+  const actualizarContador = (nuevoValor) => {
+    if (!isNaN(nuevoValor) && nuevoValor >= 1 && nuevoValor <= 10) {
+      setCount(nuevoValor);
+    }
   };
-
+  
   return (
     <div>
       <CounterList
         incrementar={increment}
         disminuir={decrement}
         count={count}
-        reiniciarContador={reiniciarContador}
+        actualizarContador={actualizarContador}
       />
 
       

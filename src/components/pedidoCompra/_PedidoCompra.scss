@@ -138,7 +138,8 @@
       }
     }
   }
-  .cantidad-prendas{
+
+  .cantidad-prendas {
     .icono-exclamacion {
       display: flex;
       justify-content: right;
@@ -245,13 +246,29 @@
     h2 {
       font-size: 1.5rem;
     }
-
-    .opciones-menu {
-      display: grid;
-      grid-template-columns: 50% 50%;
-
+    .form {
+      .form-cont {
+        .contenedor-input {
+          input {
+            font-weight: 100;
+            font-size: 1.5rem;
+          }
+          input::placeholder {
+            font-size: 1.25rem;
+          }
+        }
+      }
       .icono-exclamacion {
-        grid-column: 2;
+        /* PARA LOS FORMS */
+        display: flex;
+        right: 0;
+        width: fit-content;
+        position: absolute;
+        padding-top: 20px;
+        padding-right: 20px;
+        font-size: 1.2rem;
+        z-index: 5;
+        margin: auto 0;
         svg {
           path {
             color: red;
@@ -259,6 +276,53 @@
         }
       }
     }
+
+    .opciones-menu {
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+
+    .disenio {
+      .menu-disenio {
+        .opciones-menu {
+          .icono-exclamacion {
+            /* para la seccion de diseño */
+            display: flex;
+            justify-content: right;
+            width: 100%;
+            position: relative;
+            top: -30px;
+            padding-right: 20px;
+            font-size: 1.2rem;
+            grid-column: 2;
+            svg {
+              path {
+                color: red;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    /* .menu-de-diseno-mobile {
+      display: grid;
+      grid-template-columns: 40% 40% 20%;
+
+      .circulos-menu{
+        width: 30px;
+      }
+
+      .icono-exclamacion {
+       width: 20%;
+        grid-column: 3;
+        svg {
+          path {
+            color: red;
+          }
+        }
+      }
+    } */
     .menu-metodos-envio {
       display: flex;
       flex-direction: column;
@@ -267,6 +331,11 @@
       display: flex;
       justify-content: center;
       padding: 30px 0;
+
+      button{
+        width: 100%;
+        font-weight: 600;
+      }
     }
   }
 }
