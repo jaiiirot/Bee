@@ -109,6 +109,10 @@
           $font-size-botones-productos-personalizados,
           $font-family-project
         );
+        a{
+          text-decoration: none;
+          color: black;
+        }
       }
 
       .personalizar-productos-vacio {
@@ -271,9 +275,9 @@
   }
 
   .info-tienda-container {
-    .hexagon {
-      $hexagon-width: 30vw; /* 496px en figma */
-      $hexagon-height: 16vw; /* 460px en figma */
+   /*  .hexagon {
+      $hexagon-width: 30vw; 
+      $hexagon-height: 16vw; 
       display: flex;
       justify-content: center;
       align-items: center;
@@ -306,7 +310,7 @@
         bottom: -($hexagon-height / 2);
         border-top: $hexagon-height / 2 solid #3498db;
       }
-    }
+    } */
     .info-tienda-hexagonosFila1 {
       display: flex;
       width: 61vw;
