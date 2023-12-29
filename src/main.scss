@@ -20,7 +20,6 @@ $inputs-formulario-gris: #cecdbb;
   text-decoration: none;
   box-sizing: border-box;
   color: $color-secundary;
-  
 }
 body {
   background-color: $color-tertiary;
@@ -65,10 +64,6 @@ body {
 @import "./components/page/SeccionesDeAyuda";
 @import "./components/creadorDeSecciones/EstilosDeSeccionesCreadas";
 @import "./components/page/GuiaDeTalles";
-$color-primary: #efb322;
-$color-secundary: #040404;
-$color-tertiary: #f8f8f8;
-$color-quaternary: #cecdbb;
 
 /* .tooltip-inner{
   background-color: blue;
