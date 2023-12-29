@@ -1,9 +1,9 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "./GuiaDeTalles";
-import img1BuzosCamperas from "../../assets/img/buzos-camperas1.jpg";
-import img2BuzosCamperas from "../../assets/img/buzos-camperas2.png";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import GuiaDeTalles from "../GuiaDeTalles";
+import img1BuzosCamperas from "../../../assets/img/buzos-camperas1.jpg";
+import img2BuzosCamperas from "../../../assets/img/buzos-camperas2.png";
 
 const BuzosCamperas = () => {
   const opciones = [
@@ -11,7 +11,7 @@ const BuzosCamperas = () => {
     "Deportivo sin frisa",
     "Rústico de algodón",
     "Ketten",
-    "Aún no me decido",
+    /*"Aún no me decido",*/
   ];
 
   const informacionProducto = [
@@ -54,11 +54,12 @@ const BuzosCamperas = () => {
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop= "no"
+        caruselMobile= ""
       />
 
       <GuiaDeTalles />
       <div id="pedidoCompraList">
-        <PedidoCompraList opciones={opciones} />
+        <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
       </div>
     </div>
   );

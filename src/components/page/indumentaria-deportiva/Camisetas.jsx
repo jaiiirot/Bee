@@ -1,11 +1,11 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "./GuiaDeTalles";
-import img1Camisetas from "../../assets/img/camisetas1.jpg";
-import img2Camisetas from "../../assets/img/camisetas2.jpg";
-import img3Camisetas from "../../assets/img/camisetas3.jpg";
-import img4Camisetas from "../../assets/img/camisetas4.jpg";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import GuiaDeTalles from "../GuiaDeTalles";
+import img1Camisetas from "../../../assets/img/camisetas1.jpg";
+import img2Camisetas from "../../../assets/img/camisetas2.jpg";
+import img3Camisetas from "../../../assets/img/camisetas3.jpg";
+import img4Camisetas from "../../../assets/img/camisetas4.jpg";
 
 const Camisetas = () => {
   const opciones = [
@@ -31,7 +31,7 @@ const Camisetas = () => {
         {
           type: "span",
           content: [
-            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de",
+            "Disponibles en diversos colores y talles para adaptarse a tus preferencias, estas prendas ofrecen la opción de ",
             {
               type: "link",
               to: "/estampados",
@@ -55,11 +55,12 @@ const Camisetas = () => {
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="si"
+        caruselMobile= ""
       />
 
       <GuiaDeTalles />
       <div id="pedidoCompraList">
-        <PedidoCompraList opciones={opciones} />
+        <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
       </div>
     </div>
   );

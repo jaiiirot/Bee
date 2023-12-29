@@ -4,12 +4,14 @@
 .secciones-productos-container {
   padding: 0 150px;
   overflow-x: hidden;
-  
+
   .secciones-productos-titulo {
     text-align: center;
     h1 {
       padding-top: 50px;
       margin: 0;
+      font-weight: 600;
+      
     }
   }
   .secciones-productos-imagenes {
@@ -25,7 +27,6 @@
         width: 100%;
         overflow-y: visible;
         display: flex;
-        
       }
       img {
         width: auto;
@@ -34,28 +35,7 @@
       }
     }
   }
-  /* .secciones-productos-imagenes-carusel {
-    display: flex;
-    justify-content: center;
-    padding: 50px 0;
-
-    .secciones-productos-imagen {
-      padding: 0 20px;
-
-      .product-cont {
-        height: 200px;
-        width: 100%;
-        overflow-x: hidden;
-        display: flex;
-        
-      }
-      img {
-        width: auto;
-        height: 300px;
-      }
-    }
-  } */
-
+  
   .secciones-productos-informacion {
     display: grid;
     grid-template-columns: 70% 30%;
@@ -78,7 +58,6 @@
     }
     .secciones-informacion-boton {
       grid-column: 2;
-      
 
       button {
         @extend .botonEnviar;
@@ -89,7 +68,8 @@
 }
 
 @media (max-width: 576px) {
-  .secciones-productos-imagenes, .slider-container {
+  .secciones-productos-imagenes,
+  .slider-container {
     display: none;
   }
 
@@ -104,6 +84,7 @@
     .secciones-productos-imagenes {
       display: none;
     }
+
     .secciones-productos-imagenes-mobile {
       display: block;
       justify-content: center;
@@ -111,6 +92,30 @@
 
       .secciones-productos-imagen {
         padding: 0px;
+
+        .product-cont-mobile {
+          height: 200px;
+          width: 100%;
+          overflow-x: scroll;
+          display: flex;
+          justify-content: center;
+
+          img {
+            margin: 0 5px;
+          }
+        }
+        .product-cont-mobile-imagenes-grandes {
+          height: 200px;
+          width: 100%;
+          overflow-x: scroll;
+          display: flex;
+          
+
+          img {
+            margin: 0 5px;
+          }
+        }
+        
 
         .product-cont {
           height: 200px;
@@ -134,20 +139,11 @@
           }
         }
 
-        /* .carousel {
-          .carousel-inner {
-            .carousel-item {
-              width: 60vw;
-              text-align: center;
-              img {
-                width: 100vw;
-                height: 200px;
-                
-              }
-            }
-          }
-        } */
       }
+    }
+    .secciones-productos-imagenes-mobile-oculto {
+      display: none;
+      
     }
     .secciones-productos-informacion {
       display: flex;
@@ -156,12 +152,18 @@
 
       .secciones-informacion-descripcion {
         width: 100%;
+        padding-top: 25px;
       }
     }
 
     .secciones-informacion-boton {
       margin: 30px 0;
       text-align: center;
+      
+      
+      button{
+        width: 100%;
+      }
     }
   }
 }

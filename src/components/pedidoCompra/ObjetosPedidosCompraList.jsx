@@ -2,9 +2,12 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import CounterListContainer from "../counter/CounterListContainer";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
 
-const PedidoCompraList = ({ opciones, titulo }) => {
+import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
+
+const ObjetosPedidosCompraList = ({titulo}) => {
   const [datosCompra, setDatosCompra] = useState({});
   
   const opcionesPago = [
@@ -18,6 +21,28 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     "Retiro en sucursal",
     "A domicilio (a cargo del comprador)",
   ];
+
+  const [count, setCount] = useState(1);
+
+  const incrementar = () => {
+    if (count < 10) {
+      setCount(count + 1);
+    } else {
+        setCount(count);
+    }
+  };
+  const disminuir = () => {
+    if (count > 1) {
+      setCount(count - 1);
+    }
+  };
+  const actualizarContador = (nuevoValor) => {
+    if (!isNaN(nuevoValor) && nuevoValor >= 1 && nuevoValor <= 10) {
+      setCount(nuevoValor);
+    }
+  };
+
+
 
   const [userData, setUserData] = useState({
     name: "",
@@ -34,13 +59,11 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     event.preventDefault();
   };
 
-  const [tela, setTela] = useState("");
   const [medioPago, setMedioPago] = useState("");
   const [metodoEnvio, setMetodoEnvio] = useState("");
+  const [cantidad, setCantidad] = useState(1);
 
-  const seleccionarTela = (e) => {
-    setTela(e.target.value);
-  };
+
   const seleccionarMedioPago = (e) => {
     setMedioPago(e.target.value);
   };
@@ -50,24 +73,18 @@ const PedidoCompraList = ({ opciones, titulo }) => {
 
   const [disenio, setDisenio] = useState("");
   const [descripcionDisenio, setDescripcionDisenio] = useState("");
-  const [prendas, setPrendas] = useState("");
-  
 
   const seleccionarDisenio = (e) => {
     setDisenio(e.target.value);
-    
   };
 
   const descripcionDisenioTela = (e) => {
     setDescripcionDisenio(e.target.value);
   };
-  const cantidadPrendras = (e) => {
-    setPrendas(e.target.value);
-  };
+
+  
 
   const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
-
-  const validacion = () => {};
 
   const handleClick = () => {
     if (
@@ -75,7 +92,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       userData.email == "" &&
       userData.phone == "" &&
       disenio == "" &&
-      prendas == "" &&
       descripcionDisenio == ""
     ) {
       setShowIconoExclamacion(true);
@@ -84,7 +100,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       userData.email.length > 0 &&
       userData.phone.length > 0 &&
       disenio.length > 0 &&
-      prendas.length > 0 &&
       descripcionDisenio.length > 0
     ) {
       enviarInformacion();
@@ -100,21 +115,17 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       usuario: userData.name,
       email: userData.email,
       phone: userData.phone,
-      tela: tela,
+      cantidadObjetos: count,
       disenioPropio: disenio,
       descripcionDisenio: descripcionDisenio,
-      cantidadDePrendas: prendas,
       medioDePago: medioPago,
       metodoDeEnvio: metodoEnvio,
     });
-    
+
     setAbrirWhatsapp(true);
-    
   };
-
-  /*  console.log(datosCompra); */
   
-
+  
   return (
     <div className="section-presupuesto">
       <h1>¡Pide tu presupuesto!</h1>
@@ -171,41 +182,45 @@ const PedidoCompraList = ({ opciones, titulo }) => {
         </form>
       </section>
 
-      {opciones.length > 0 ? (
-        <section className="section-tela">
-          <div>
-            <h2>Tela</h2>
-          </div>
+      <section className="seccion-contador">
+        {/* <CounterListContainer /> */}
+        <div className="seccion-contador">
+      
+      <div className="contador-titulo">
+        <p>Cantidad</p>
+      </div>
 
-          <div className="opciones-menu menu-tela">
-            {showIconoExclamacion && tela == "" ? (
-              <div className="icono-exclamacion">
-                <FontAwesomeIcon icon={faCircleExclamation} />
-              </div>
-            ) : null}
-            {opciones.map((palabra, index) => (
-              <div key={index} className="circulos-menu opcion-tela">
-                <input
-                  type="radio"
-                  id={palabra}
-                  name="tela"
-                  value={palabra}
-                  onClick={seleccionarTela}
-                  required
-                />
-                <label htmlFor={palabra}>{palabra} </label>
-              </div>
-            ))}
-          </div>
-        </section>
-      ) : null}
+      <div className="contador-container">
+
+        <div className="contador-container-numero">
+          <input
+            type="text"
+            value={count}
+            onChange={(e) => actualizarContador(parseInt(e.target.value, 10))}
+          
+          />
+        </div>
+
+        <div className="contador-flechas-container">
+          <button onClick={incrementar}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </button>
+          <button onClick={disminuir}>
+            <FontAwesomeIcon icon={faChevronDown} />
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+      </section>
 
       <section className="disenio">
         <div>
           <h2>¿Tienes tu propio diseño?</h2>
         </div>
         <div className="menu-disenio">
-          <div className="opciones-menu menu-de-diseno-mobile">
+          <div className="opciones-menu">
             <div className="circulos-menu opcion-diseño">
               <input
                 type="radio"
@@ -248,26 +263,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
               required
             ></textarea>
           </div>
-        </div>
-      </section>
-
-      <section className="cantidad-prendas-container">
-        <div>
-          <h2>Indica cantidad de prendas por talle</h2>
-        </div>
-        <div className="cantidad-prendas">
-          {showIconoExclamacion && prendas == "" ? (
-            <div className="icono-exclamacion">
-              <FontAwesomeIcon icon={faCircleExclamation} />
-            </div>
-          ) : null}
-          <textarea
-            name="mensaje"
-            id="mensaje"
-            placeholder="Por ejemplo: 2 talle S y 3 talle M."
-            onChange={cantidadPrendras}
-            required
-          ></textarea>
         </div>
       </section>
 
@@ -329,9 +324,9 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       </section>
 
       { abrirWhatsapp ?
-        <MensajeWhatsapp datosCompra={datosCompra} producto= {titulo}  /> : null}
+        <MensajeWhatsapp producto={titulo} datosCompra={datosCompra}  /> : null}
     </div>
   );
 };
 
-export default PedidoCompraList;
+export default ObjetosPedidosCompraList;

@@ -1,9 +1,9 @@
 import React from "react";
-import PedidoCompraList from "../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../creadorDeSecciones/CreadorSecciones";
-import img1RemerasChombas from "../../assets/img/remeras-y-chombas1.jpeg";
-import img2RemerasChombas from "../../assets/img/remeras-y-chombas2.jpeg";
-import GuiaDeTalles from "./GuiaDeTalles";
+import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
+import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
+import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpeg";
+import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpeg";
+import GuiaDeTalles from "../GuiaDeTalles";
 
 const RemerasChombas = () => {
  
@@ -56,11 +56,12 @@ const RemerasChombas = () => {
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop= "no"
+        caruselMobile= ""
       />
 
       <GuiaDeTalles />
       <div id="pedidoCompraList">
-        <PedidoCompraList opciones={opciones} />
+        <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
       </div>
     </div>
   );
