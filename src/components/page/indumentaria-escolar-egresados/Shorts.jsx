@@ -2,8 +2,6 @@ import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import GuiaDeTalles from "../GuiaDeTalles";
-import img1Shorts from "../../../assets/img/shorts1.jpg";
-import img2Shorts from "../../../assets/img/shorts2.jpg";
 
 const Shorts = () => {
   const opciones = [

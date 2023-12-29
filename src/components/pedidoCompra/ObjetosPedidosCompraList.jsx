@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-import CounterListContainer from "../counter/CounterListContainer";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
 
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";

@@ -7,46 +7,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 0 100px;
+  padding: 50px 0;
 
-  /* .hexagon {
-    $hexagon-width: 15vw;
-    $hexagon-height: 8vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: $hexagon-width;
-    height: $hexagon-height;
-    background-color: #3498db;
-    position: relative;
-    border: 1px solid #3498db;
-
-    p {
-      font-size: 1.5rem;
-      margin: 0;
-    }
-
-    &:before,
-    &:after {
-      content: "";
-      width: 0;
-      border-left: $hexagon-width / 2 solid transparent;
-      border-right: $hexagon-width / 2 solid transparent;
-      position: absolute;
-    }
-
-    &:before {
-      top: -($hexagon-height / 2);
-      border-bottom: $hexagon-height / 2 solid #3498db;
-      background-position: center;
-      background-size: cover;
-    }
-
-    &:after {
-      bottom: -($hexagon-height / 2);
-      border-top: $hexagon-height / 2 solid #3498db;
-    }
-  } */
   .info-tienda-hexagonosFila1 {
     display: flex;
     width: 410px;
@@ -75,51 +37,14 @@
       align-items: center;
       padding: 50px 0 50px;
   
-      /* .hexagon {
-        $hexagon-width: 30vw; 
-        $hexagon-height: 16vw; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: $hexagon-width;
-        height: $hexagon-height;
-        background-color: #3498db;
-        position: relative;
-        border: 1px solid #3498db;
-  
-        p {
-          font-size: 1rem;
-          margin: auto;
-        }
-  
-        &:before,
-        &:after {
-          content: "";
-          width: 0;
-          border-left: $hexagon-width / 2 solid transparent;
-          border-right: $hexagon-width / 2 solid transparent;
-          position: absolute;
-        }
-  
-        &:before {
-          top: -($hexagon-height / 2);
-          border-bottom: $hexagon-height / 2 solid #3498db;
-        }
-  
-        &:after {
-          bottom: -($hexagon-height / 2);
-          border-top: $hexagon-height / 2 solid #3498db;
-        }
-      } */
       .info-tienda-hexagonosFila1 {
         display: flex;
-        width: 82.5vw;
+        width: 280px;
         justify-content: space-around;
-        margin-top: -8.5vw;
-        /* padding-top: 100px; */
+        margin-top: -25px;
       }
       .info-tienda-hexagonosFila2 {
-        margin-top: -8.5vw;
+        margin-top: -25px;
         display: flex;
         width: 82.5vw;
         justify-content: space-around;

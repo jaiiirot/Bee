@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import Logo from "../image/Logo";
 import Whatsapp from "../image/Whatsapp";
@@ -19,7 +19,12 @@ export default function NavbarDesktop({ pages }) {
             p === "Inicio" ? (url = "/") : (url = `/${url.toLowerCase()}`);
             return (
               <li key={e}>
-                <Link to={url}>{p}</Link>
+                <NavLink
+                  className={({ isActive }) => (isActive ? "linkActive" : "")}
+                  to={url}
+                >
+                  {p}
+                </NavLink>
               </li>
             );
           })}
