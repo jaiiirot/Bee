@@ -33,7 +33,9 @@ const MensajeWhatsapp = ({datosCompra, producto}) => {
       enviarWhatsApp()
 
   return (
-    <></>
+    <>{(() => {
+      window.location.href = "/productos";
+    })()}</>
   )
 }
 
