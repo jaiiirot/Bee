@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
-// import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
+import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
 import { Link } from "react-router-dom";
+
 const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
 

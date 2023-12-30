@@ -1,10 +1,14 @@
+import React, { useContext } from "react";
+import ContextCheckout, {
+  ContextCheckoutInformacion,
+} from "../context/ContextCheckout";
 const MensajeWhatsapp = ({ datosCompra, producto }) => {
+  const { setInformacion } = useContext(ContextCheckoutInformacion);
+
   const numeroWhatsApp =
     "51950011434"; /* Numero del dueño del emprendimiento */
 
   const enviarWhatsApp = () => {
-    const numeroWhatsApp =
-    "51950011434"
     let mensaje =
       "Hola, mi nombre es *" +
       datosCompra.usuario +
@@ -31,12 +35,21 @@ const MensajeWhatsapp = ({ datosCompra, producto }) => {
     const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       mensaje
     )}`;
+
+    setInformacion(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`);
+
     window.open(enlaceWhatsApp, "_blank");
   };
 
   enviarWhatsApp();
 
-  return <></>;
+  return (
+    <>
+      {(() => {
+        window.location.href = "/checkout";
+      })()}
+    </>
+  );
 };
 
 export default MensajeWhatsapp;
