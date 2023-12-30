@@ -99,7 +99,6 @@ export default function Section() {
                 return (
                   <div className={`hexoArbol-rama${a + 1} rama`}>
                     {item.pages.map((page, i, array) => {
-                      /* console.log(array[ite]); */
                       let prod = array[ite];
                       if (i < count) {
                         ite++;

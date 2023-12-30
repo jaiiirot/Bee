@@ -35,62 +35,97 @@ import Pins from "./components/page/objetos/Pins";
 import Tazas from "./components/page/objetos/Tazas";
 import Lapiceras from "./components/page/objetos/Lapiceras";
 import Logos from "./components/page/objetos/Logos";
-
+import Checkout from "./components/page/Checkout";
+import ContextCheckout from "./components/context/ContextCheckout";
 
 function App() {
   return (
     <>
       <ParticlesBackground />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Body />}>
-            <Route index element={<Home />} />
-            <Route path="/estampados" element={<SeccionEstampados />} />
-            <Route path="nosotros/" element={<Nosotros />} />
-            <Route path="productos/">
-              <Route index element={<Productos />} />
-              <Route path=":section/">
-                <Route index element={<Section />} />
-                <Route path=":element/" element={<SectionElement />} />
-                <Route path="remeras-y-chombas" element={<RemerasChombas />} />
-                <Route path="buzos-y-camperas" element={<BuzosCamperas />} />
-                <Route
-                  path="egresados-y-egresaditos"
-                  element={<EgresadosEgresaditos />}
-                />
-                <Route path="shorts" element={<Shorts />} />
-                <Route path="pantalones" element={<Pantalones />} />
-                <Route path="camisetas" element={<Camisetas />} />
-                <Route path="conjuntos-de-verano" element={<ConjuntosDeVerano />} />
-                <Route path="conjuntos-de-invierno" element={<ConjuntosDeInvierno />} />
-                <Route path="shorts-deportivos" element={<ShortsDeportivos />} />
-                <Route path="buzos-y-camperas-deportivas" element={<BuzosCamperasDeportivas />} />
-                <Route path="pantalones-deportivos" element={<PantalonesDeportivos />} />
-                <Route path="conjuntos-pantalones-y-remeras" element={<ConjuntosPantalonesRemeras />} />
-                <Route path="laboral-remeras-y-chombas" element={<RemerasChombasLaboral />} />
-                <Route path="chaquetas-ambos-y-guardapolvos" element={<ChaquetasAmbosGuardapolvos />} />
-                <Route path="delantales" element={<Delantales />} />
-                <Route path="llaveros" element={<Llaveros />} />
-                <Route path="banderas-y-fly-banners" element={<BanderasFlyBanners />} />
-                <Route path="gorros" element={<Gorros />} />
-                <Route path="pins" element={<Pins />} />
-                <Route path="tazas" element={<Tazas />} />
-                <Route path="lapiceras" element={<Lapiceras />} />
-                <Route path="logos" element={<Logos />} />
+        <ContextCheckout>
+          <Routes>
+            <Route path="/" element={<Body />}>
+              <Route index element={<Home />} />
+              <Route path="/estampados" element={<SeccionEstampados />} />
+              <Route path="nosotros/" element={<Nosotros />} />
+              <Route path="productos/">
+                <Route index element={<Productos />} />
+                <Route path=":section/">
+                  <Route index element={<Section />} />
+                  <Route path=":element/" element={<SectionElement />} />
+                  <Route
+                    path="remeras-y-chombas"
+                    element={<RemerasChombas />}
+                  />
+                  <Route path="buzos-y-camperas" element={<BuzosCamperas />} />
+                  <Route
+                    path="egresados-y-egresaditos"
+                    element={<EgresadosEgresaditos />}
+                  />
+                  <Route path="shorts" element={<Shorts />} />
+                  <Route path="pantalones" element={<Pantalones />} />
+                  <Route path="camisetas" element={<Camisetas />} />
+                  <Route
+                    path="conjuntos-de-verano"
+                    element={<ConjuntosDeVerano />}
+                  />
+                  <Route
+                    path="conjuntos-de-invierno"
+                    element={<ConjuntosDeInvierno />}
+                  />
+                  <Route
+                    path="shorts-deportivos"
+                    element={<ShortsDeportivos />}
+                  />
+                  <Route
+                    path="buzos-y-camperas-deportivas"
+                    element={<BuzosCamperasDeportivas />}
+                  />
+                  <Route
+                    path="pantalones-deportivos"
+                    element={<PantalonesDeportivos />}
+                  />
+                  <Route
+                    path="conjuntos-pantalones-y-remeras"
+                    element={<ConjuntosPantalonesRemeras />}
+                  />
+                  <Route
+                    path="laboral-remeras-y-chombas"
+                    element={<RemerasChombasLaboral />}
+                  />
+                  <Route
+                    path="chaquetas-ambos-y-guardapolvos"
+                    element={<ChaquetasAmbosGuardapolvos />}
+                  />
+                  <Route path="delantales" element={<Delantales />} />
+                  <Route path="llaveros" element={<Llaveros />} />
+                  <Route
+                    path="banderas-y-fly-banners"
+                    element={<BanderasFlyBanners />}
+                  />
+                  <Route path="gorros" element={<Gorros />} />
+                  <Route path="pins" element={<Pins />} />
+                  <Route path="tazas" element={<Tazas />} />
+                  <Route path="lapiceras" element={<Lapiceras />} />
+                  <Route path="logos" element={<Logos />} />
+                </Route>
               </Route>
+              <Route path="ayuda/">
+                <Route index element={<Ayuda />} />
+                <Route
+                  path="preguntas-frecuentes/"
+                  element={<PreguntasFrecuentes />}
+                />
+                <Route path="terminos-condiciones/" element={<Terminos />} />
+                <Route path="como-comprar/" element={<ComoComprar />} />
+              </Route>
+              <Route path="contacto/" element={<Contacto />} />
+              <Route path="checkout/" element={<Checkout />} />
+              <Route path="*" element={<h1>404</h1>} />
             </Route>
-            <Route path="ayuda/">
-              <Route index element={<Ayuda />} />
-              <Route
-                path="preguntas-frecuentes/"
-                element={<PreguntasFrecuentes />}
-              />
-              <Route path="terminos-condiciones/" element={<Terminos />} />
-              <Route path="como-comprar/" element={<ComoComprar />} />
-            </Route>
-            <Route path="contacto/" element={<Contacto />} />
-          </Route>
-        </Routes>
+          </Routes>
+        </ContextCheckout>
       </BrowserRouter>
     </>
   );
