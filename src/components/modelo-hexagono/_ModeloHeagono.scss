@@ -6,7 +6,6 @@
 
   .hexagono-con-imagen {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    /* background-color: red; */
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -16,7 +15,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    cursor: pointer;
+    cursor: auto;
 
     h2 {
       color: black;
@@ -26,7 +25,6 @@
       margin: 0;
     }
 
-    /* background-image: url("./assets/img/indumentaria-escolar-card.png"); */
   }
   .hexagono-con-imagen::before {
     content: "";
@@ -36,7 +34,7 @@
     bottom: 0;
     left: 0;
     z-index: 90;
-    background-color: rgba(255, 255, 255, 0.4); /* Color blanco con opacidad */
+    background-color: rgba(255, 255, 255, 0.4); 
   }
   .hexagono-sin-imagen {
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
@@ -88,7 +86,7 @@
         255,
         255,
         0.7
-      ); /* Color blanco con opacidad */
+      );
     }
     .hexagono-con-imagen {
       h2 {

@@ -3,7 +3,7 @@ import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestro
 
 const SeccionEstampados = () => {
   return (
-    <>
+    <div style={{paddingTop: "50px"}}>
       <HexagonosNuestrosEstampadosListContainer />
 
       <div className="nuestros-estampados-informacion">
@@ -30,7 +30,7 @@ const SeccionEstampados = () => {
           </span>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

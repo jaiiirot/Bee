@@ -8,6 +8,9 @@
   justify-content: center;
   margin: 0px auto;
 }
+.info{
+  display: none;
+}
 
 .options {
   padding: 0.5rem 0px;
@@ -46,6 +49,9 @@
 }
 
 @media (max-width: 768px) {
+  .info{
+    display: block;
+  }
   .options {
     &-logo {
       img {
