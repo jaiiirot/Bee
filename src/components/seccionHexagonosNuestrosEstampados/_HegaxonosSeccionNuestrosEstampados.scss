@@ -7,9 +7,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0 2rem;
+  padding: 100px 0 100px;
 
-  .hexagon {
+  /* .hexagon {
     $hexagon-width: 15vw;
     $hexagon-height: 8vw;
     display: flex;
@@ -46,92 +46,93 @@
       bottom: -($hexagon-height / 2);
       border-top: $hexagon-height / 2 solid #3498db;
     }
-  }
+  } */
   .info-tienda-hexagonosFila1 {
     display: flex;
     width: 410px;
     justify-content: space-around;
     margin-top: -45px;
-    gap: 1rem;
   }
   .info-tienda-hexagonosFila2 {
     margin-top: -45px;
     display: flex;
     width: 615px;
     justify-content: space-around;
-    gap: 1rem;
   }
 }
 
-@media (max-width: 576px) {
+
+@media (max-width: 576px){
+
   .nuestros-estampados-section {
-    display: none;
-  }
+      display: none;
+    }
 
-  .nuestros-estampados-section-mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 50px 0 50px;
-
-    .hexagon {
-      $hexagon-width: 30vw; /* 496px en figma */
-      $hexagon-height: 16vw; /* 460px en figma */
+    .nuestros-estampados-section-mobile {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: $hexagon-width;
-      height: $hexagon-height;
-      background-color: #3498db;
-      position: relative;
-      border: 1px solid #3498db;
-
-      p {
-        font-size: 1rem;
-        margin: auto;
+      padding: 50px 0 50px;
+  
+      /* .hexagon {
+        $hexagon-width: 30vw; 
+        $hexagon-height: 16vw; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: $hexagon-width;
+        height: $hexagon-height;
+        background-color: #3498db;
+        position: relative;
+        border: 1px solid #3498db;
+  
+        p {
+          font-size: 1rem;
+          margin: auto;
+        }
+  
+        &:before,
+        &:after {
+          content: "";
+          width: 0;
+          border-left: $hexagon-width / 2 solid transparent;
+          border-right: $hexagon-width / 2 solid transparent;
+          position: absolute;
+        }
+  
+        &:before {
+          top: -($hexagon-height / 2);
+          border-bottom: $hexagon-height / 2 solid #3498db;
+        }
+  
+        &:after {
+          bottom: -($hexagon-height / 2);
+          border-top: $hexagon-height / 2 solid #3498db;
+        }
+      } */
+      .info-tienda-hexagonosFila1 {
+        display: flex;
+        width: 82.5vw;
+        justify-content: space-around;
+        margin-top: -8.5vw;
+        /* padding-top: 100px; */
       }
-
-      &:before,
-      &:after {
-        content: "";
-        width: 0;
-        border-left: $hexagon-width / 2 solid transparent;
-        border-right: $hexagon-width / 2 solid transparent;
-        position: absolute;
+      .info-tienda-hexagonosFila2 {
+        margin-top: -8.5vw;
+        display: flex;
+        width: 82.5vw;
+        justify-content: space-around;
       }
-
-      &:before {
-        top: -($hexagon-height / 2);
-        border-bottom: $hexagon-height / 2 solid #3498db;
+      .home-titulos{
+        padding-bottom: 50px;
+        h2{
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
       }
-
-      &:after {
-        bottom: -($hexagon-height / 2);
-        border-top: $hexagon-height / 2 solid #3498db;
-      }
+      
     }
-    .info-tienda-hexagonosFila1 {
-      display: flex;
-      width: 82.5vw;
-      justify-content: space-around;
-      margin-top: -8.5vw;
-      gap: 1rem;
-      /* padding-top: 100px; */
-    }
-    .info-tienda-hexagonosFila2 {
-      margin-top: -8.5vw;
-      display: flex;
-      width: 82.5vw;
-      justify-content: space-around;
-      gap: 1rem;
-    }
-    .home-titulos {
-      padding-bottom: 50px;
-      h2 {
-        font-size: 1.5rem;
-        font-weight: 600;
-      }
-    }
-  }
+
+
 }
