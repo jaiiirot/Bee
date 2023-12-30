@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
-
 import { faChevronDown, faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-const ObjetosPedidosCompraList = ({titulo}) => {
+const ObjetosPedidosCompraList = ({ titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
-  
+  const [count, setCount] = useState(1);
+  const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
+  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
+  const [medioPago, setMedioPago] = useState("");
+  const [metodoEnvio, setMetodoEnvio] = useState("");
+  const [disenio, setDisenio] = useState("");
+  const [descripcionDisenio, setDescripcionDisenio] = useState("");
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
   const opcionesPago = [
     "Efectivo",
     "Transferencia",
@@ -21,13 +32,11 @@ const ObjetosPedidosCompraList = ({titulo}) => {
     "A domicilio (a cargo del comprador)",
   ];
 
-  const [count, setCount] = useState(1);
-
   const incrementar = () => {
     if (count < 10) {
       setCount(count + 1);
     } else {
-        setCount(count);
+      setCount(count);
     }
   };
   const disminuir = () => {
@@ -41,13 +50,6 @@ const ObjetosPedidosCompraList = ({titulo}) => {
     }
   };
 
-
-
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
   const getUserData = (event) => {
     setUserData({
       ...userData,
@@ -58,20 +60,12 @@ const ObjetosPedidosCompraList = ({titulo}) => {
     event.preventDefault();
   };
 
-  const [medioPago, setMedioPago] = useState("");
-  const [metodoEnvio, setMetodoEnvio] = useState("");
-  const [cantidad, setCantidad] = useState(1);
-
-
   const seleccionarMedioPago = (e) => {
     setMedioPago(e.target.value);
   };
   const seleccionarMetodoEnvio = (e) => {
     setMetodoEnvio(e.target.value);
   };
-
-  const [disenio, setDisenio] = useState("");
-  const [descripcionDisenio, setDescripcionDisenio] = useState("");
 
   const seleccionarDisenio = (e) => {
     setDisenio(e.target.value);
@@ -81,50 +75,58 @@ const ObjetosPedidosCompraList = ({titulo}) => {
     setDescripcionDisenio(e.target.value);
   };
 
-  
-
-  const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
-
   const handleClick = () => {
     if (
-      userData.name == "" &&
-      userData.email == "" &&
-      userData.phone == "" &&
-      disenio == "" &&
-      descripcionDisenio == ""
+      userData.name !== "" &&
+      userData.name !== undefined &&
+      userData.email !== "" &&
+      userData.email !== undefined &&
+      userData.phone !== "" &&
+      userData.phone !== undefined &&
+      disenio !== "" &&
+      disenio !== undefined &&
+      count !== "" &&
+      count !== undefined &&
+      descripcionDisenio !== "" &&
+      descripcionDisenio !== undefined
     ) {
-      setShowIconoExclamacion(true);
-    } else if (
-      userData.name.length > 0 &&
-      userData.email.length > 0 &&
-      userData.phone.length > 0 &&
-      disenio.length > 0 &&
-      descripcionDisenio.length > 0
-    ) {
-      enviarInformacion();
+      setShowIconoExclamacion(false);
+      setDatosCompra({
+        usuario: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        disenioPropio: disenio,
+        descripcionDisenio: descripcionDisenio,
+        cantidadObjetos: count,
+        medioDePago: medioPago,
+        metodoDeEnvio: metodoEnvio,
+      });
     } else {
       setShowIconoExclamacion(true);
     }
   };
+  useEffect(() => {
+    console.log(datosCompra);
+    if (
+      userData.name !== "" &&
+      userData.name !== undefined &&
+      userData.email !== "" &&
+      userData.email !== undefined &&
+      userData.phone !== "" &&
+      userData.phone !== undefined &&
+      disenio !== "" &&
+      disenio !== undefined &&
+      count !== "" &&
+      count !== undefined &&
+      descripcionDisenio !== "" &&
+      descripcionDisenio !== undefined
+    ) {
+      setAbrirWhatsapp(true);
+    } else {
+      setAbrirWhatsapp(false);
+    }
+  }, [datosCompra]);
 
-  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
-
-  const enviarInformacion = () => {
-    setDatosCompra({
-      usuario: userData.name,
-      email: userData.email,
-      phone: userData.phone,
-      cantidadObjetos: count,
-      disenioPropio: disenio,
-      descripcionDisenio: descripcionDisenio,
-      medioDePago: medioPago,
-      metodoDeEnvio: metodoEnvio,
-    });
-
-    setAbrirWhatsapp(true);
-  };
-  
-  
   return (
     <div className="section-presupuesto">
       <h1>¡Pide tu presupuesto!</h1>
@@ -184,34 +186,31 @@ const ObjetosPedidosCompraList = ({titulo}) => {
       <section className="seccion-contador">
         {/* <CounterListContainer /> */}
         <div className="seccion-contador">
-      
-      <div className="contador-titulo">
-        <p>Cantidad</p>
-      </div>
+          <div className="contador-titulo">
+            <p>Cantidad</p>
+          </div>
 
-      <div className="contador-container">
+          <div className="contador-container">
+            <div className="contador-container-numero">
+              <input
+                type="text"
+                value={count}
+                onChange={(e) =>
+                  actualizarContador(parseInt(e.target.value, 10))
+                }
+              />
+            </div>
 
-        <div className="contador-container-numero">
-          <input
-            type="text"
-            value={count}
-            onChange={(e) => actualizarContador(parseInt(e.target.value, 10))}
-          
-          />
+            <div className="contador-flechas-container">
+              <button onClick={incrementar}>
+                <FontAwesomeIcon icon={faChevronUp} />
+              </button>
+              <button onClick={disminuir}>
+                <FontAwesomeIcon icon={faChevronDown} />
+              </button>
+            </div>
+          </div>
         </div>
-
-        <div className="contador-flechas-container">
-          <button onClick={incrementar}>
-            <FontAwesomeIcon icon={faChevronUp} />
-          </button>
-          <button onClick={disminuir}>
-            <FontAwesomeIcon icon={faChevronDown} />
-          </button>
-        </div>
-      </div>
-
-    </div>
-
       </section>
 
       <section className="disenio">
@@ -317,13 +316,16 @@ const ObjetosPedidosCompraList = ({titulo}) => {
       </section>
 
       <section className="boton-enviar">
-        <button type="submit" onClick={handleClick}>
-          ENVIAR SOLICITUD
-        </button>
+        {abrirWhatsapp ? (
+          <>
+            <MensajeWhatsapp datosCompra={datosCompra} producto={titulo} />
+          </>
+        ) : (
+          <button type="submit" onClick={handleClick}>
+            ENVIAR SOLICITUD
+          </button>
+        )}
       </section>
-
-      { abrirWhatsapp ?
-        <MensajeWhatsapp producto={titulo} datosCompra={datosCompra}  /> : null}
     </div>
   );
 };

@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
-import ContextCheckout, {
-  ContextCheckoutInformacion,
-} from "../context/ContextCheckout";
+import { ContextCheckoutInformacion } from "../context/ContextCheckout";
+import { Link } from "react-router-dom";
 const MensajeWhatsapp = ({ datosCompra, producto }) => {
   const { setInformacion } = useContext(ContextCheckoutInformacion);
 
   const numeroWhatsApp =
-    "51950011434"; /* Numero del dueño del emprendimiento */
+    "5492634328998"; /* Numero del dueño del emprendimiento */
 
   const enviarWhatsApp = () => {
     let mensaje =
@@ -35,19 +34,21 @@ const MensajeWhatsapp = ({ datosCompra, producto }) => {
     const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       mensaje
     )}`;
-
-    setInformacion(`https://wa.me/${numeroWhatsApp}?text=${mensaje}`);
-
+    console.log(mensaje);
+    console.log(enlaceWhatsApp);
+    setInformacion(enlaceWhatsApp);
     window.open(enlaceWhatsApp, "_blank");
   };
 
-  enviarWhatsApp();
+  // enviarWhatsApp();
 
   return (
     <>
-      {(() => {
-        window.location.href = "/checkout";
-      })()}
+      <Link to="/checkout">
+        <button type="submit" onClick={enviarWhatsApp}>
+          ENVIAR SOLICITUD
+        </button>
+      </Link>
     </>
   );
 };

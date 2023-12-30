@@ -4,6 +4,8 @@ import Logo from "../image/Logo";
 import Whatsapp from "../image/Whatsapp";
 export default function Checkout() {
   const { informacion } = useContext(ContextCheckoutInformacion);
+
+  console.log(informacion);
   return (
     <>
       <section className="checkout">
@@ -24,10 +26,7 @@ export default function Checkout() {
               asiendo clieck al logo de Whatsapp.¡
             </p>
             <span>
-              <a
-                href={informacion}
-                target="_blank"
-              >
+              <a href={informacion} target="_blank">
                 <Whatsapp />
               </a>
             </span>

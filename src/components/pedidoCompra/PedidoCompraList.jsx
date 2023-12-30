@@ -3,10 +3,21 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
-import { Link } from "react-router-dom";
-
 const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
+  const [userData, setUserData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+  const [tela, setTela] = useState("");
+  const [medioPago, setMedioPago] = useState("");
+  const [metodoEnvio, setMetodoEnvio] = useState("");
+  const [disenio, setDisenio] = useState("");
+  const [descripcionDisenio, setDescripcionDisenio] = useState("");
+  const [prendas, setPrendas] = useState("");
+  const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
+  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
 
   const opcionesPago = [
     "Efectivo",
@@ -20,11 +31,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     "A domicilio (a cargo del comprador)",
   ];
 
-  const [userData, setUserData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
   const getUserData = (event) => {
     setUserData({
       ...userData,
@@ -35,10 +41,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     event.preventDefault();
   };
 
-  const [tela, setTela] = useState("");
-  const [medioPago, setMedioPago] = useState("");
-  const [metodoEnvio, setMetodoEnvio] = useState("");
-
   const seleccionarTela = (e) => {
     setTela(e.target.value);
   };
@@ -48,10 +50,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
   const seleccionarMetodoEnvio = (e) => {
     setMetodoEnvio(e.target.value);
   };
-
-  const [disenio, setDisenio] = useState("");
-  const [descripcionDisenio, setDescripcionDisenio] = useState("");
-  const [prendas, setPrendas] = useState("");
 
   const seleccionarDisenio = (e) => {
     setDisenio(e.target.value);
@@ -64,64 +62,37 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     setPrendas(e.target.value);
   };
 
-  const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
   const handleClick = () => {
     if (
-      userData.name == "" &&
-      userData.email == "" &&
-      userData.phone == "" &&
-      disenio == "" &&
-      prendas == "" &&
-      descripcionDisenio == ""
+      userData.name !== "" &&
+      userData.name !== undefined &&
+      userData.email !== "" &&
+      userData.email !== undefined &&
+      userData.phone !== "" &&
+      userData.phone !== undefined &&
+      disenio !== "" &&
+      disenio !== undefined &&
+      prendas !== "" &&
+      prendas !== undefined &&
+      descripcionDisenio !== "" &&
+      descripcionDisenio !== undefined
     ) {
-      setShowIconoExclamacion(true);
-    } else if (
-      userData.name.length > 0 &&
-      userData.email.length > 0 &&
-      userData.phone.length > 0 &&
-      disenio.length > 0 &&
-      prendas.length > 0 &&
-      descripcionDisenio.length > 0
-    ) {
-      enviarInformacion();
+      setShowIconoExclamacion(false);
+      setDatosCompra({
+        usuario: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        tela: tela,
+        disenioPropio: disenio,
+        descripcionDisenio: descripcionDisenio,
+        cantidadDePrendas: prendas,
+        medioDePago: medioPago,
+        metodoDeEnvio: metodoEnvio,
+      });
     } else {
       setShowIconoExclamacion(true);
     }
   };
-
-  //=======================================================
-
-  const enviarWhatsApp = () => {
-    const numeroWhatsApp = "51950011434";
-    let mensaje =
-      "Hola, mi nombre es *" +
-      datosCompra.usuario +
-      "* quisiera solicitar un presupuesto. Estos son mis datos:";
-
-    if (datosCompra.email) mensaje += "\n*Email:* " + datosCompra.email;
-    if (datosCompra.phone) mensaje += "\n*Teléfono:* " + datosCompra.phone;
-    if (producto) mensaje += "\n*Producto:* " + producto;
-    if (datosCompra.tela) mensaje += "\n*Tela:* " + datosCompra.tela;
-    if (datosCompra.disenioPropio)
-      mensaje += "\n*Diseño Propio:* " + datosCompra.disenioPropio;
-    if (datosCompra.descripcionDisenio)
-      mensaje += "\n*Descripción diseño:* " + datosCompra.descripcionDisenio;
-    if (datosCompra.cantidadDePrendas)
-      mensaje +=
-        "\n*Cantidad de prendas por talle:* " + datosCompra.cantidadDePrendas;
-    if (datosCompra.cantidadObjetos)
-      mensaje += "\n*Cantidad de objetos:* " + datosCompra.cantidadObjetos;
-    if (datosCompra.medioDePago)
-      mensaje += "\n*Medio de pago:* " + datosCompra.medioDePago;
-    if (datosCompra.metodoDeEnvio)
-      mensaje += "\n*Método de envío:* " + datosCompra.metodoDeEnvio;
-
-    const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
-      mensaje
-    )}`;
-    window.open(enlaceWhatsApp, "_blank");
-  };
-
   useEffect(() => {
     if (
       userData.name !== "" &&
@@ -141,32 +112,7 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     } else {
       setAbrirWhatsapp(false);
     }
-  }, [
-    datosCompra,
-    userData,
-    tela,
-    disenio,
-    descripcionDisenio,
-    prendas,
-    medioPago,
-    metodoEnvio,
-  ]);
-
-  const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
-
-  const enviarInformacion = () => {
-    setDatosCompra({
-      usuario: userData.name,
-      email: userData.email,
-      phone: userData.phone,
-      tela: tela,
-      disenioPropio: disenio,
-      descripcionDisenio: descripcionDisenio,
-      cantidadDePrendas: prendas,
-      medioDePago: medioPago,
-      metodoDeEnvio: metodoEnvio,
-    });
-  };
+  }, [datosCompra]);
 
   return (
     <div className="section-presupuesto">
@@ -377,19 +323,15 @@ const PedidoCompraList = ({ opciones, titulo }) => {
 
       <section className="boton-enviar">
         {abrirWhatsapp ? (
-          <Link to="/checkout" onClick={enviarWhatsApp}>
-            ENVIAR SOLICITUD
-          </Link>
+          <>
+            <MensajeWhatsapp datosCompra={datosCompra} producto={titulo} />
+          </>
         ) : (
           <button type="submit" onClick={handleClick}>
             ENVIAR SOLICITUD
           </button>
         )}
       </section>
-      {/* 
-      {abrirWhatsapp ? (
-        <MensajeWhatsapp datosCompra={datosCompra} producto={titulo} />
-      ) : null} */}
     </div>
   );
 };

@@ -11,10 +11,9 @@ const CaruselList = ({ imagenes }) => {
         className="slider"
         drag="x"
         dragConstraints={{ right: 0, left: -1300 }}
-        
       >
-        {imagenes.map((image) => (
-          <motion.div className="item">
+        {imagenes.map((image, i) => (
+          <motion.div className="item" key={i}>
             <img src={image} alt="" />
           </motion.div>
         ))}
