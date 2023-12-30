@@ -4,7 +4,6 @@ import Logo from "../image/Logo";
 import Whatsapp from "../image/Whatsapp";
 export default function Checkout() {
   const { informacion } = useContext(ContextCheckoutInformacion);
-  console.log(informacion);
   return (
     <>
       <section className="checkout">

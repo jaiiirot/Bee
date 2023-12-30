@@ -10,7 +10,7 @@ const NAVEGATION = [
     title: "INICIO",
     pages: [
       {
-        href: "",
+        href: "/estampados",
         name: "Nuestros estampados",
       },
       {
@@ -32,12 +32,8 @@ const NAVEGATION = [
         name: "Quienes somos",
       },
       {
-        href: "",
+        href: "/estampados",
         name: "Nuestros estampados",
-      },
-      {
-        href: "",
-        name: "Nuestros clientes",
       },
     ],
   },

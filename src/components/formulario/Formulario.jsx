@@ -76,9 +76,11 @@ export default function Formulario() {
           required
         ></textarea>
         {condition ? (
-          <Link to="/checkout" onClick={pushform} className="button-form">
-            ENVIAR
-          </Link>
+          <>
+            <Link to="/checkout" onClick={pushform} className="button-form">
+              ENVIAR
+            </Link>
+          </>
         ) : (
           <button className="button-form">ENVIAR</button>
         )}
