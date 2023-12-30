@@ -26,7 +26,7 @@ export default function Checkout() {
             </p>
             <span>
               <a
-                href={`https://wa.me/5492634328998?text=nombre%3A%20${informacion.nombre}%0Acorreo%3A%20${informacion.correo}%0Atelefono%3A%20${informacion.telefono}%0Amensaje%3A%20%22${informacion.mensaje}%22`}
+                href={informacion}
                 target="_blank"
               >
                 <Whatsapp />
