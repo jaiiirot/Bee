@@ -3,10 +3,11 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
+import { Link } from "react-router-dom";
 
 const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
-  
+
   const opcionesPago = [
     "Efectivo",
     "Transferencia",
@@ -51,11 +52,9 @@ const PedidoCompraList = ({ opciones, titulo }) => {
   const [disenio, setDisenio] = useState("");
   const [descripcionDisenio, setDescripcionDisenio] = useState("");
   const [prendas, setPrendas] = useState("");
-  
 
   const seleccionarDisenio = (e) => {
     setDisenio(e.target.value);
-    
   };
 
   const descripcionDisenioTela = (e) => {
@@ -107,13 +106,11 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       medioDePago: medioPago,
       metodoDeEnvio: metodoEnvio,
     });
-    
+
     setAbrirWhatsapp(true);
-    
   };
 
   /*  console.log(datosCompra); */
-  
 
   return (
     <div className="section-presupuesto">
@@ -328,8 +325,12 @@ const PedidoCompraList = ({ opciones, titulo }) => {
         </button>
       </section>
 
-      { abrirWhatsapp ?
-        <MensajeWhatsapp datosCompra={datosCompra} producto= {titulo}  /> : null}
+      {abrirWhatsapp ? (
+        <>
+          <MensajeWhatsapp datosCompra={datosCompra} producto={titulo} />
+          
+        </>
+      ) : null}
     </div>
   );
 };
