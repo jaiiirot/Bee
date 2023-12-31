@@ -106,7 +106,6 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
     }
   };
   useEffect(() => {
-    console.log(datosCompra);
     if (
       userData.name !== "" &&
       userData.name !== undefined &&
@@ -125,7 +124,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
     } else {
       setAbrirWhatsapp(false);
     }
-  }, [datosCompra]);
+  }, [userData, disenio, count, descripcionDisenio, medioPago, metodoEnvio]);
 
   return (
     <div className="section-presupuesto">

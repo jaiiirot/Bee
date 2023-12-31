@@ -78,17 +78,6 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       descripcionDisenio !== undefined
     ) {
       setShowIconoExclamacion(false);
-      setDatosCompra({
-        usuario: userData.name,
-        email: userData.email,
-        phone: userData.phone,
-        tela: tela,
-        disenioPropio: disenio,
-        descripcionDisenio: descripcionDisenio,
-        cantidadDePrendas: prendas,
-        medioDePago: medioPago,
-        metodoDeEnvio: metodoEnvio,
-      });
     } else {
       setShowIconoExclamacion(true);
     }
@@ -108,11 +97,22 @@ const PedidoCompraList = ({ opciones, titulo }) => {
       descripcionDisenio !== "" &&
       descripcionDisenio !== undefined
     ) {
+      setDatosCompra({
+        usuario: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        tela: tela,
+        disenioPropio: disenio,
+        descripcionDisenio: descripcionDisenio,
+        cantidadDePrendas: prendas,
+        medioDePago: medioPago,
+        metodoDeEnvio: metodoEnvio,
+      });
       setAbrirWhatsapp(true);
     } else {
       setAbrirWhatsapp(false);
     }
-  }, [datosCompra]);
+  }, [userData, disenio, prendas, descripcionDisenio, medioPago, metodoEnvio]);
 
   return (
     <div className="section-presupuesto">

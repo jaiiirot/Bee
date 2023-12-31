@@ -34,8 +34,7 @@ const MensajeWhatsapp = ({ datosCompra, producto }) => {
     const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(
       mensaje
     )}`;
-    console.log(mensaje);
-    console.log(enlaceWhatsApp);
+
     setInformacion(enlaceWhatsApp);
     window.open(enlaceWhatsApp, "_blank");
   };
