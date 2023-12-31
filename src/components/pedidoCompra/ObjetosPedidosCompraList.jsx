@@ -91,16 +91,6 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
       descripcionDisenio !== undefined
     ) {
       setShowIconoExclamacion(false);
-      setDatosCompra({
-        usuario: userData.name,
-        email: userData.email,
-        phone: userData.phone,
-        disenioPropio: disenio,
-        descripcionDisenio: descripcionDisenio,
-        cantidadObjetos: count,
-        medioDePago: medioPago,
-        metodoDeEnvio: metodoEnvio,
-      });
     } else {
       setShowIconoExclamacion(true);
     }
@@ -120,6 +110,16 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
       descripcionDisenio !== "" &&
       descripcionDisenio !== undefined
     ) {
+      setDatosCompra({
+        usuario: userData.name,
+        email: userData.email,
+        phone: userData.phone,
+        disenioPropio: disenio,
+        descripcionDisenio: descripcionDisenio,
+        cantidadObjetos: count,
+        medioDePago: medioPago,
+        metodoDeEnvio: metodoEnvio,
+      });
       setAbrirWhatsapp(true);
     } else {
       setAbrirWhatsapp(false);
