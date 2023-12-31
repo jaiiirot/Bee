@@ -6,7 +6,7 @@ export default function Formulario() {
   const [condition, setCondition] = useState(false);
   const { setInformacion } = useContext(ContextCheckoutInformacion);
   const onSumitForm = ({ target }) => {
-    console.log(target);
+    
     setForm({
       ...form,
       [target.name]: target.value,

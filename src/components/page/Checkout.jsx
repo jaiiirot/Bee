@@ -5,7 +5,7 @@ import Whatsapp from "../image/Whatsapp";
 export default function Checkout() {
   const { informacion } = useContext(ContextCheckoutInformacion);
 
-  console.log(informacion);
+  
   return (
     <>
       <section className="checkout">
@@ -23,7 +23,7 @@ export default function Checkout() {
             <p>
               !Si el mensaje no se envio,tenga comunicacion directa con nosotros
               <br />
-              asiendo clieck al logo de Whatsapp.¡
+              haciendo click al logo de Whatsapp¡
             </p>
             <span>
               <a href={informacion} target="_blank">
