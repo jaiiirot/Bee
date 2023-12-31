@@ -97,14 +97,17 @@ export default function Section() {
               let ite = 0;
               return item.desktop.map((count, a) => {
                 return (
-                  <div className={`hexoArbol-rama${a + 1} rama`}>
+                  <div
+                    className={`hexoArbol-rama${a + 1} rama`}
+                    key={a + Math.random() * 100}
+                  >
                     {item.pages.map((page, i, array) => {
                       let prod = array[ite];
                       if (i < count) {
                         ite++;
                         return (
                           <HexagonImg
-                            key={prod.name}
+                            key={a + Math.random() * 1000}
                             img={prod.img}
                             url={`/productos/${section}/${prod.name}/`}
                           >
@@ -127,14 +130,17 @@ export default function Section() {
               let ite = 0;
               return item.mobile.map((count, a) => {
                 return (
-                  <div className={`hexoArbol-rama${a + 1} rama`}>
+                  <div
+                    className={`hexoArbol-rama${a + 1} rama`}
+                    key={a + Math.random() * 100}
+                  >
                     {item.pages.map((page, i, array) => {
                       let prod = array[ite];
                       if (i < count) {
                         ite++;
                         return (
                           <HexagonImg
-                            key={prod.name}
+                            key={a + Math.random() * 100}
                             img={prod.img}
                             url={`/productos/${section}/${prod.name}/`}
                           >
