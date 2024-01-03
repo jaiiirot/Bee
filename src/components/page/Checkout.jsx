@@ -21,7 +21,7 @@ export default function Checkout() {
           <h3>Atentamente: El Equipo de Bee Mendoza.</h3>
           <div className="checkout-envio">
             <p>
-              !Si el mensaje no se envio,tenga comunicacion directa con nosotros
+              !Si el mensaje no se envio, tenga comunicacion directa con nosotros
               <br />
               haciendo click al logo de Whatsapp¡
             </p>
