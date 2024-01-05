@@ -2,8 +2,11 @@ import React from "react";
 import OverlayAnimation from "../overlayAnimation/OverlayAnimation";
 import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 
-const HexagonosNuestrosEstampadosList = ({dataSublimacionYTermovinilo, dataDtf_titulo_TermoImpreso, dataSerigrafiaYBordado}) => {
-  console.log(dataSublimacionYTermovinilo)
+const HexagonosNuestrosEstampadosList = ({
+  dataSublimacionYTermovinilo,
+  dataDtf_titulo_TermoImpreso,
+  dataSerigrafiaYBordado,
+}) => {
   return (
     <div>
       <section className="nuestros-estampados-section">
