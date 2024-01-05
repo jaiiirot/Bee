@@ -29,6 +29,15 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     modal: "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
     jerseydealgodón: "Textura suave, tela fresca y respirable. Cómoda, ideal para hacer ejercicio.",
     jerseydeportivo: "Textura suave y liviana. Transpirable y de secado rápido. Ideal para prendas deportivas",
+    gabardina: "textura gruesa y aspecto rústico. Alta calidad, ideal para el entorno laboral.",
+    ketten: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    deportivosinfrisa: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    frisadeportiva: "Textura blanda y cómoda. Abrigada. Durable y de fácil lavado.",
+    rústicodealgodón: "Textura suave y abrigada, grosor fino. Transpirable y resistente.",
+    jean: "textura de algodón muy resistente, duradera con cuerpo y estabilidad. Ideal para ropa de trabajo.",
+    sarga: "Textura gruesa y aspecto rústico. Alta calidad, ideal pera el entorno laboral.",
+    trópical: "Textura ligera, suave y transpirable, de apariencia elegante, ideal para climas cálidos.",
+    lycra: "Textura elástica y resistente al sudor, de rápida absorción. Se adapta cómodamente al cuerpo.",
 
   };
 

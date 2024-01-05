@@ -8,7 +8,7 @@ const OverlayAnimationTela = React.forwardRef(({ children, message }, ref) => {
   
     const renderTooltip = (props) => (
       <Tooltip className="custom-tooltip" id="custom-tooltip" {...props}>
-        <ul>{message}</ul>
+        <p>{message}</p>
       </Tooltip>
     );
   
