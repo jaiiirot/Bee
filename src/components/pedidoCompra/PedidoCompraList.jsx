@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
+import OverlayAnimationTela from "../overlayAnimation/OverlayAnimationTela";
+
 const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
   const [userData, setUserData] = useState({
@@ -18,6 +20,26 @@ const PedidoCompraList = ({ opciones, titulo }) => {
   const [prendas, setPrendas] = useState("");
   const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
   const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
+
+
+  const descripcionesTela = {
+    piqué: "Textura acolchada con apariencia sofisticada y refinada. Ideal para uso diario.",
+    piquésublimable: "textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
+    spum: "Textura lisa y suave al tacto, elástica, cómoda y de fácil lavado. Transpirable.",
+    modal: "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    jerseydealgodón: "Textura suave, tela fresca y respirable. Cómoda, ideal para hacer ejercicio.",
+    jerseydeportivo: "Textura suave y liviana. Transpirable y de secado rápido. Ideal para prendas deportivas",
+    gabardina: "textura gruesa y aspecto rústico. Alta calidad, ideal para el entorno laboral.",
+    ketten: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    deportivosinfrisa: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    frisadeportiva: "Textura blanda y cómoda. Abrigada. Durable y de fácil lavado.",
+    rústicodealgodón: "Textura suave y abrigada, grosor fino. Transpirable y resistente.",
+    jean: "textura de algodón muy resistente, duradera con cuerpo y estabilidad. Ideal para ropa de trabajo.",
+    sarga: "Textura gruesa y aspecto rústico. Alta calidad, ideal pera el entorno laboral.",
+    trópical: "Textura ligera, suave y transpirable, de apariencia elegante, ideal para climas cálidos.",
+    lycra: "Textura elástica y resistente al sudor, de rápida absorción. Se adapta cómodamente al cuerpo.",
+
+  };
 
   const opcionesPago = [
     "Efectivo",
@@ -192,7 +214,9 @@ const PedidoCompraList = ({ opciones, titulo }) => {
                   onClick={seleccionarTela}
                   required
                 />
-                <label htmlFor={palabra}>{palabra} </label>
+                <OverlayAnimationTela key={index} message={descripcionesTela[palabra.toLowerCase().replace(/\s/g, '')]}>
+                  <label htmlFor={palabra}>{palabra} </label>
+                </OverlayAnimationTela>
               </div>
             ))}
           </div>
