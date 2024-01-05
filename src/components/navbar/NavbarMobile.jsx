@@ -14,7 +14,10 @@ export default function NavbarMobile({ pages }) {
     window.open("https://wa.me/5492634328998", "_blank");
   };
   return (
-    <header className="header-movil">
+    <header
+      className="header-movil"
+      style={{ position: "fixed", top: "0", width: "100%", zIndex: "100" }}
+    >
       <nav className="header-movil-nav">
         <Button variant="black" onClick={handleShow}>
           <svg
@@ -36,16 +39,16 @@ export default function NavbarMobile({ pages }) {
 
       <Offcanvas
         show={show}
-        placement="end"
+        placement="start"
         onHide={handleClose}
         style={{ height: "300px", width: "200px" }}
         className="header-movil-cont"
       >
-        <Offcanvas.Header closeButton style={{ padding: " .2rem 0.5rem" }}>
+        <Offcanvas.Header closeButton style={{ padding: " 1rem 1rem" }}>
           <Offcanvas.Title>
-            <ul className="header-movil-logo">
+            {/* <ul className="header-movil-logo">
               <Logo />
-            </ul>
+            </ul> */}
           </Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>

@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
-import imgHex from "../../assets/icon/hexagon.png";
+// import imgHex from "../../assets/icon/hexagon.png";
 export default function Hexagon({ localUrl, className, children, subClass }) {
   return (
-    <Link to={localUrl} className={`hex-cont hex-cont-${subClass}`}>
+    <Link
+      to={localUrl}
+      className={`hex-cont hex-cont-${subClass}`}
+      style={{ background: "#f8d788" }}
+    >
       <div className={className}>
         <div className="hex-subcont">
-          <img className="hex-img" src={imgHex} alt="imagen de hexagono" />
+          {/* <img className="hex-img" src={imgHex} alt="imagen de hexagono" /> */}
           <p className="hex-text">{children}</p>
         </div>
       </div>

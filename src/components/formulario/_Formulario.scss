@@ -17,22 +17,22 @@
     input,
     textarea {
       width: 100%;
-      border-radius: 1rem;
+      border-radius: 0.5rem;
       padding: 0.5rem 1rem;
-      font-size: 1.2rem;
+      font-size: 1rem;
       border: 2px solid $color-quaternary;
       background-color: $color-quaternary;
     }
     input::placeholder,
     textarea::placeholder {
       color: rgb(56, 56, 56);
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 100;
     }
     input:focus,
     textarea:focus {
       outline: 4px solid $color-primary;
-      font-weight: normal;
+      font-weight: 100;
     }
 
     textarea {
@@ -42,6 +42,10 @@
     .button-form {
       @extend .botonEnviar;
     }
+  }
+
+  * a {
+    text-decoration: none;
   }
 }
 
