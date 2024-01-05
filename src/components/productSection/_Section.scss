@@ -1,6 +1,10 @@
+$medidaDesktopDistanciaHexagonos: -4.2rem;
+$medidaTabletDistanciaHexagonos: -4.5rem;
+$medidaMobileDistanciaHexagonos: -2.6rem;
+
 .sectionhex-title {
   margin-top: 3.8rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   width: 100%;
   padding-bottom: 1rem;
   text-align: center;
@@ -14,23 +18,23 @@
     flex-direction: column;
     .rama {
       display: flex;
-      gap: 1rem;
+      gap: 0.2rem;
       .heximg-cont {
         width: 270px;
         height: 303px;
       }
     }
     .hexoArbol-rama2 {
-      transform: translateY(-3.8rem);
+      transform: translateY($medidaDesktopDistanciaHexagonos);
     }
     .hexoArbol-rama3 {
-      transform: translateY(-7.6rem);
+      transform: translateY($medidaDesktopDistanciaHexagonos * 2);
     }
     .hexoArbol-rama4 {
-      transform: translateY(-11.4rem);
+      transform: translateY($medidaDesktopDistanciaHexagonos * 3);
     }
     .hexoArbol-rama5 {
-      transform: translateY(-15.2rem);
+      transform: translateY($medidaDesktopDistanciaHexagonos * 4);
     }
   }
 }
@@ -52,23 +56,23 @@
       flex-direction: column;
       .rama {
         display: flex;
-        gap: 1rem;
+        gap: 0.2rem;
         .heximg-cont {
           width: 270px;
           height: 303px;
         }
       }
       .hexoArbol-rama2 {
-        transform: translateY(-3.8rem);
+        transform: translateY($medidaTabletDistanciaHexagonos);
       }
       .hexoArbol-rama3 {
-        transform: translateY(-7.6rem);
+        transform: translateY($medidaTabletDistanciaHexagonos * 2);
       }
       .hexoArbol-rama4 {
-        transform: translateY(-11.4rem);
+        transform: translateY($medidaTabletDistanciaHexagonos * 3);
       }
       .hexoArbol-rama5 {
-        transform: translateY(-15.2rem);
+        transform: translateY($medidaTabletDistanciaHexagonos * 4);
       }
     }
   }
@@ -78,23 +82,23 @@
     padding: 0px 0px 2rem;
     .hexoArbol {
       .rama {
-        gap: 0.5rem;
+        gap: 0.2rem;
         .heximg-cont {
           width: 150px;
           height: 183px;
         }
       }
       .hexoArbol-rama2 {
-        transform: translateY(-2.3rem);
+        transform: translateY($medidaMobileDistanciaHexagonos);
       }
       .hexoArbol-rama3 {
-        transform: translateY(-4.6rem);
+        transform: translateY($medidaMobileDistanciaHexagonos * 2);
       }
       .hexoArbol-rama4 {
-        transform: translateY(-6.9rem);
+        transform: translateY($medidaMobileDistanciaHexagonos * 3);
       }
       .hexoArbol-rama5 {
-        transform: translateY(-9.2rem);
+        transform: translateY($medidaMobileDistanciaHexagonos * 4);
       }
     }
   }
