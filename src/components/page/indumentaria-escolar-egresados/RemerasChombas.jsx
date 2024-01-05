@@ -9,11 +9,11 @@ const RemerasChombas = () => {
  
   const opciones = [
     "Piqué",
-    "Jersey de algodón",
     "Piqué sublimable",
-    "Jersey deportivo",
     "Spum",
     "Modal",
+    "Jersey de algodón",
+    "Jersey deportivo",
   ];
 
   const informacionProducto = [

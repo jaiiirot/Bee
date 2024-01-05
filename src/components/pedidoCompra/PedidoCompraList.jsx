@@ -3,6 +3,8 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import MensajeWhatsapp from "../EnviarMensajeWhatsApp/MensajeWhatsapp";
+import OverlayAnimationTela from "../overlayAnimation/OverlayAnimationTela";
+
 const PedidoCompraList = ({ opciones, titulo }) => {
   const [datosCompra, setDatosCompra] = useState({});
   const [userData, setUserData] = useState({
@@ -18,6 +20,17 @@ const PedidoCompraList = ({ opciones, titulo }) => {
   const [prendas, setPrendas] = useState("");
   const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
   const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
+
+
+  const descripcionesTela = {
+    piqué: "Textura acolchada con apariencia sofisticada y refinada. Ideal para uso diario.",
+    piquésublimable: "textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
+    spum: "Textura lisa y suave al tacto, elástica, cómoda y de fácil lavado. Transpirable.",
+    modal: "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    jerseydealgodón: "Textura suave, tela fresca y respirable. Cómoda, ideal para hacer ejercicio.",
+    jerseydeportivo: "Textura suave y liviana. Transpirable y de secado rápido. Ideal para prendas deportivas",
+
+  };
 
   const opcionesPago = [
     "Efectivo",
@@ -192,7 +205,9 @@ const PedidoCompraList = ({ opciones, titulo }) => {
                   onClick={seleccionarTela}
                   required
                 />
-                <label htmlFor={palabra}>{palabra} </label>
+                <OverlayAnimationTela key={index} message={descripcionesTela[palabra.toLowerCase().replace(/\s/g, '')]}>
+                  <label htmlFor={palabra}>{palabra} </label>
+                </OverlayAnimationTela>
               </div>
             ))}
           </div>
