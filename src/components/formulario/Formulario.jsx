@@ -48,7 +48,7 @@ export default function Formulario() {
           type="text"
           id="nombre"
           name="nombre"
-          placeholder="NOMBRE"
+          placeholder="Nombre"
           onChange={onSumitForm}
           required
         />
@@ -56,7 +56,7 @@ export default function Formulario() {
           type="email"
           id="correo"
           name="correo"
-          placeholder="CORREO"
+          placeholder="Correo electrónico"
           onChange={onSumitForm}
           required
         />
@@ -64,14 +64,14 @@ export default function Formulario() {
           type="tel"
           id="telefono"
           name="telefono"
-          placeholder="TELEFONO"
+          placeholder="Teléfono"
           onChange={onSumitForm}
           required
         />
         <textarea
           name="mensaje"
           id="mensaje"
-          placeholder="MENSAJE"
+          placeholder="Mensaje"
           onChange={onSumitForm}
           required
         ></textarea>

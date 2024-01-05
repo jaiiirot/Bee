@@ -1,6 +1,7 @@
 import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestrosEstampados/HexagonosNuestrosEstampadosListContainer";
 import Logo from "./../image/Logo";
 import Texto from "./../texto/Texto";
+
 const INFO = [
   {
     titulo:
@@ -57,7 +58,7 @@ export default function Nosotros() {
           <Texto key={index} titulo={info.titulo} texto={info.texto} />
         ))}
       </section>
-      <section className="section-hex">
+      {/* <section className="section-hex">
         <section className="nuestros-estampados-section">
           <HexagonosNuestrosEstampadosListContainer />
         </section>
@@ -65,7 +66,10 @@ export default function Nosotros() {
         <section className="mobile-nuestros-estampados-section">
           <HexagonosNuestrosEstampadosListContainer />
         </section>
-      </section>
+      </section> */}
+
+      <HexagonosNuestrosEstampadosListContainer />
+
       <section className="info">
         <aside className="cont-text">
           <h3 className="cont-text-titulo">
@@ -84,7 +88,6 @@ export default function Nosotros() {
             dedicación y calidad que nos caracterizan. Descubre la
             personalización en cada detalle.
           </p>
-          <br />
           <br />
           <h3 className="cont-text-titulo">
             ¡Haz que tu ropa cuente tu historia con BEE, donde la creatividad y

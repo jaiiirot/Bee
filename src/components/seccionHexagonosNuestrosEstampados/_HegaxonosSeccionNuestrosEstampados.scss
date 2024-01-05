@@ -35,22 +35,22 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 50px 0 50px;
+      padding: 0;
   
       .info-tienda-hexagonosFila1 {
         display: flex;
-        width: 280px;
+        width: 325px;
         justify-content: space-around;
-        margin-top: -25px;
+        margin-top: -35px;
       }
       .info-tienda-hexagonosFila2 {
-        margin-top: -25px;
+        margin-top: -35px;
         display: flex;
-        width: 82.5vw;
+        width: 325px;
         justify-content: space-around;
       }
       .home-titulos{
-        padding-bottom: 50px;
+        padding-bottom: 70px;
         h2{
           font-size: 1.5rem;
           font-weight: 600;

@@ -13,7 +13,7 @@ const ModeloHexagono = ({ imgFondo, titulo, claseHexagono }) => {
       <section className="estampados">
         <div
           className={claseHexagono}
-          style={{ backgroundImage: `url("src/assets/img/${imgFondo}")` }}
+          style={{ backgroundImage: `url(${imgFondo})` }}
         >
           <h2>{titulo} </h2>
         </div>

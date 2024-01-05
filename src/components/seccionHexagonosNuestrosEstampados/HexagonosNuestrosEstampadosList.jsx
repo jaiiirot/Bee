@@ -3,6 +3,7 @@ import OverlayAnimation from "../overlayAnimation/OverlayAnimation";
 import ModeloHexagono from "../modelo-hexagono/ModeloHexagono";
 
 const HexagonosNuestrosEstampadosList = ({dataSublimacionYTermovinilo, dataDtf_titulo_TermoImpreso, dataSerigrafiaYBordado}) => {
+  console.log(dataSublimacionYTermovinilo)
   return (
     <div>
       <section className="nuestros-estampados-section">

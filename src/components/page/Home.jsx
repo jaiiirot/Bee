@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <>
+    <div className="section-home">
       <section className="hero-section">
         <div className="hero-img-container">
           <div className="hero-titulo">
@@ -50,27 +50,44 @@ const Home = () => {
         </div>
         <div className="personalizar-productos-container">
           <div className="indumentaria-escolar personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio indumentaria-escolar-card"></div>
-            <button >
-              <Link to="productos/escolar-egresados" >INDUMENTARIA ESCOLAR Y EGRESADOS</Link>
+            <Link
+              to="productos/escolar-egresados"
+              className="personalizar-productos-vacio indumentaria-escolar-card"
+            ></Link>
+            <button>
+              <Link to="productos/escolar-egresados">
+                INDUMENTARIA ESCOLAR Y EGRESADOS
+              </Link>
             </button>
           </div>
+
           <div className="indumentaria-deportiva personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio indumentaria-deportiva-card"></div>
+            <Link
+              to="productos/deportiva"
+              className="personalizar-productos-vacio indumentaria-deportiva-card"
+            ></Link>
             <button>
               <Link to="productos/deportiva">INDUMENTARIA DEPORTIVA</Link>
             </button>
           </div>
           <div className="indumentaria-laboral personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio indumentaria-laboral-card"></div>
+            <Link
+              to="productos/laboral"
+              className="personalizar-productos-vacio indumentaria-laboral-card"
+            ></Link>
             <button>
               <Link to="productos/laboral">INDUMENTARIA LABORAL</Link>
             </button>
           </div>
           <div className="objetos-personalizados personalizar-productos-container-img">
-            <div className="personalizar-productos-vacio objetos-personalizados-card"></div>
+            <Link
+              to="productos/objetos-personalizados"
+              className="personalizar-productos-vacio objetos-personalizados-card"
+            ></Link>
             <button>
-              <Link to="productos/objetos-personalizados">OBJETOS PERSONALIZADOS</Link>
+              <Link to="productos/objetos-personalizados">
+                OBJETOS PERSONALIZADOS
+              </Link>
             </button>
           </div>
         </div>
@@ -79,7 +96,7 @@ const Home = () => {
       <section ref={sectionRef1} className="formulario-section">
         <Formulario />
       </section>
-    </>
+    </div>
   );
 };
 

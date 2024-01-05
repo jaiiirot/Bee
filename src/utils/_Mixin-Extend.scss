@@ -16,6 +16,8 @@ $botones-amarillo-dorado: #efb322;
   font-family: $font-family;
 }
 
+// EXTEND //
+
 .flex-spaceBetween {
   display: flex;
   justify-content: space-between;
@@ -33,3 +35,5 @@ $botones-amarillo-dorado: #efb322;
   color: $botones-amarillo-dorado;
   font-weight: 600;
 }
+
+
