@@ -17,11 +17,12 @@
     input,
     textarea {
       width: 100%;
-      border-radius: 0.5rem;
+      border-radius: 0.2rem;
       padding: 0.5rem 1rem;
       font-size: 1rem;
       border: 2px solid $color-quaternary;
       background-color: $color-quaternary;
+      font-weight: 100;
     }
     input::placeholder,
     textarea::placeholder {
