@@ -1,6 +1,4 @@
-$medidaDesktopDistanciaHexagonos: -4.2rem;
-$medidaTabletDistanciaHexagonos: -4.5rem;
-$medidaMobileDistanciaHexagonos: -2.6rem;
+
 
 .sectionhex-title {
   margin-top: 3.8rem;
@@ -19,9 +17,17 @@ $medidaMobileDistanciaHexagonos: -2.6rem;
     .rama {
       display: flex;
       gap: 0.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
       .heximg-cont {
-        width: 270px;
-        height: 303px;
+        width: $medidaHexagonoDesktopWidth;
+        height: $medidaHexagonoDesktopHeight;
+      }
+      .heximg-text {
+        p {
+          font-size: 1.2rem;
+        }
       }
     }
     .hexoArbol-rama2 {
@@ -58,8 +64,13 @@ $medidaMobileDistanciaHexagonos: -2.6rem;
         display: flex;
         gap: 0.2rem;
         .heximg-cont {
-          width: 270px;
-          height: 303px;
+          width: $medidaHexagonoDesktopWidth - 20px;
+          height: $medidaHexagonoDesktopHeight - 20px;
+        }
+        .heximg-text {
+          p {
+            font-size: 1rem;
+          }
         }
       }
       .hexoArbol-rama2 {
@@ -79,13 +90,12 @@ $medidaMobileDistanciaHexagonos: -2.6rem;
 }
 @media (max-width: 550px) {
   .mobile-sectionhex {
-    padding: 0px 0px 2rem;
     .hexoArbol {
       .rama {
         gap: 0.2rem;
         .heximg-cont {
-          width: 150px;
-          height: 183px;
+          width: $medidaHexagonoDesktopWidth - 150px;
+          height: $medidaHexagonoDesktopHeight - 150px;
         }
       }
       .hexoArbol-rama2 {

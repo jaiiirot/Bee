@@ -12,6 +12,13 @@ $Hero-gris: #d9d9d9;
 $negro: #000000;
 $inputs-formulario-gris: #cecdbb;
 $paddingLateralGeneral: 0 10px;
+/* HEXO IMG */
+$medidaHexagonoDesktopWidth: 280px;
+$medidaHexagonoDesktopHeight: 293px;
+/* SECTION */
+$medidaDesktopDistanciaHexagonos: -4.4rem;
+$medidaTabletDistanciaHexagonos: -4.1rem;
+$medidaMobileDistanciaHexagonos: -2rem;
 * {
   font-family: $font-family-project;
   font-weight: bold;

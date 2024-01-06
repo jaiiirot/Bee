@@ -94,7 +94,7 @@ const HexagonosNuestrosEstampadosList = ({
             </OverlayAnimation>
           ))}
         </div>
-        <div className="info-tienda-hexagonosFila1">
+        <div className="info-tienda-hexagonosFila3">
           {dataSerigrafiaYBordado.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
               <div key={data.titulo}>
@@ -107,7 +107,7 @@ const HexagonosNuestrosEstampadosList = ({
             </OverlayAnimation>
           ))}
         </div>
-        <div className="info-tienda-hexagonosFila2">
+        <div className="info-tienda-hexagonosFila4">
           {dataDtf_titulo_TermoImpreso.slice(2, 3).map((data, index) => (
             <div key={index}>
               {data.shouldAnimate ? (

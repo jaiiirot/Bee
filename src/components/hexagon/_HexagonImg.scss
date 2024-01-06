@@ -1,3 +1,4 @@
+
 .heximg {
   clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
   &-cont {
@@ -10,8 +11,8 @@
     overflow: hidden;
   }
   &-image {
-    width: 300px;
-    height: 330px;
+    width: $medidaHexagonoDesktopWidth;
+    height: $medidaHexagonoDesktopHeight;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
