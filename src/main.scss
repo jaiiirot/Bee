@@ -1,7 +1,6 @@
 /*UTILIDADES*/
 @import "~bootstrap/scss/bootstrap";
 @import "./utils/Reset";
-@import "./utils/Mixin-Extend";
 @import "./utils/Typography";
 $color-primary: #efb322;
 $color-secundary: #040404;
@@ -11,7 +10,21 @@ $botones-amarillo-dorado: #e7bb43;
 $Hero-gris: #d9d9d9;
 $negro: #000000;
 $inputs-formulario-gris: #cecdbb;
+/* FONTS*/
+$font-family-project: "Oswald", sans-serif;
+$font-family-rubik: "Rubik", sans-serif;
+
+$font-size-titulo-principal: 120px;
+$font-size-subtitulos-h2: 60px;
+$font-size-inputs: 29px;
+
+$font-size-botones-productos-personalizados: 1rem;
+$font-weight-botones-productos-personalizados: 500;
+
+/* PADDING SECCION*/
 $paddingLateralGeneral: 0 10px;
+$paddingTopBottomGeneral: 10px 0;
+
 /* HEXO IMG */
 $medidaHexagonoDesktopWidth: 280px;
 $medidaHexagonoDesktopHeight: 293px;
@@ -20,7 +33,7 @@ $medidaDesktopDistanciaHexagonos: -4.4rem;
 $medidaTabletDistanciaHexagonos: -4.1rem;
 $medidaMobileDistanciaHexagonos: -2rem;
 * {
-  font-family: $font-family-project;
+  font-family: $font-family-rubik;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -30,17 +43,15 @@ $medidaMobileDistanciaHexagonos: -2rem;
   color: $color-secundary;
 }
 body {
-  background-color: $color-tertiary;
+  background: url("./assets/img/fondo-hex.png") no-repeat center center fixed;
   font-size: 1.2rem;
 }
-*.particles-cont {
-  position: absolute;
-  top: 0;
-  z-index: -50;
-  canvas {
-    z-index: -50 !important;
-  }
+
+header * {
+  font-family: $font-family-project;
 }
+/*UTILIDADES*/
+@import "./utils/Mixin-Extend";
 
 /*COMPONENTES*/
 @import "./components/hexagon/HexagonImg";

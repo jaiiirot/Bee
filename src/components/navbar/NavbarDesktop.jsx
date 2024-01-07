@@ -23,7 +23,7 @@ export default function NavbarDesktop({ pages }) {
                   className={({ isActive }) => (isActive ? "linkActive" : "")}
                   to={url}
                 >
-                  {p}
+                  {p.toUpperCase()}
                 </NavLink>
               </li>
             );

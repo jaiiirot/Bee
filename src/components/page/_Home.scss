@@ -12,7 +12,6 @@
   align-items: center;
   margin: 0 auto;
   width: 80%;
-  padding-top: 4rem;
   .hero-img-container {
     height: fit-content;
     display: flex;
@@ -23,7 +22,6 @@
 
     .hero-lema {
       text-align: center;
-
       p {
         margin: 0;
         padding: 50px 0;
@@ -32,7 +30,6 @@
     }
 
     .hero-boton-contacto {
-      padding-bottom: 40px;
       margin: 0 auto;
 
       button {
@@ -49,28 +46,14 @@
     .hero-titulo {
       text-align: center;
       font-weight: 800;
+      * {
+        font-size: $font-family-project;
+      }
       h1 {
         letter-spacing: 0.2rem;
         font-size: 4rem;
         text-align: center;
-        margin: 0;
-        line-height: 6rem;
       }
-    }
-  }
-
-  .logo-whatsapp-container {
-    position: relative;
-    top: -100px;
-    font-size: 50px;
-    text-align: right;
-    display: flex;
-    justify-content: right;
-    width: 100%;
-    padding-right: 100px;
-
-    .icono-whatsapp {
-      cursor: pointer;
     }
   }
 }
@@ -78,9 +61,8 @@
 .personalizar-productos-section {
   .personalizar-productos-container {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 50% 50%;
-    padding: 50px 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 100%;
     height: fit-content;
     width: 70%;
@@ -88,7 +70,6 @@
 
     .personalizar-productos-container-img {
       border: 1px solid black;
-      margin: 10px auto;
       display: grid;
       grid-template-rows: 78% 22%;
       width: 32vw;

@@ -19,8 +19,12 @@
     justify-content: center;
     gap: 1rem;
     .ayuda-hex {
-      width: 200px;
-      height: 233px;
+      width: $medidaHexagonoDesktopWidth - 40px;
+      height: $medidaHexagonoDesktopHeight - 40px;
+      .hex-text {
+        padding: 0 12px;
+        text-align: center;
+      }
     }
   }
 }
