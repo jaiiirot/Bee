@@ -6,23 +6,23 @@ const Ayuda = () => {
   return (
     <div className="ayuda-container">
       <div className="titulo-container">
-        <h1>AYUDA</h1>
+        <h1 className="font-title">AYUDA</h1>
       </div>
       <div className="info-tienda-hexagonosFila1">
         <HexagonVacio
-          localUrl={"/ayuda/preguntas-frecuentes"}
+          localUrl={"/ayuda/preguntas-frecuentes/"}
           className={"ayuda-hex"}
         >
           PREGUNTAS FRECUENTES
         </HexagonVacio>
         <HexagonVacio
-          localUrl={"/ayuda/terminos-condiciones"}
+          localUrl={"/ayuda/terminos-condiciones/"}
           className={"ayuda-hex"}
         >
           TERMINOS Y CONDICIONES
         </HexagonVacio>
         <HexagonVacio
-          localUrl={"/ayuda/como-comprar"}
+          localUrl={"/ayuda/como-comprar/"}
           className={"ayuda-hex"}
           subClass={"active"}
         >

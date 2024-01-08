@@ -44,12 +44,29 @@ $medidaMobileDistanciaHexagonos: -2rem;
 }
 body {
   background: url("./assets/img/fondo-hex.png") no-repeat center center fixed;
-  font-size: 1.2rem;
+  // text-wrap: balance;
 }
 
 header * {
   font-family: $font-family-project;
 }
+
+* .font-title {
+  font-family: $font-family-project;
+  font-size: 40px;
+  @media (max-width: 576px) {
+    font-size: 32px;
+  }
+}
+
+* .font-p {
+  font-family: $font-family-project;
+  font-size: 28px;
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+}
+
 /*UTILIDADES*/
 @import "./utils/Mixin-Extend";
 
@@ -62,11 +79,8 @@ header * {
 @import "./components/formulario/Formulario";
 @import "./components/texto/Texto";
 @import "./components/productSection/Section";
-@import "./components/productSection/SectionElement";
 @import "./components/modelo-hexagono/ModeloHeagono";
 @import "./components/overlayAnimation/OverlayAnimation";
-@import "./components/productSection/Section";
-@import "./components/productSection/SectionElement";
 @import "./components/pedidoCompra/PedidoCompra";
 @import "./components/seccionHexagonosNuestrosEstampados/HegaxonosSeccionNuestrosEstampados";
 @import "./components/seccionEstampados/SeccionEstampados";

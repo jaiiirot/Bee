@@ -82,7 +82,7 @@ export default function Section() {
   return (
     <>
       <aside className="sectionhex-title">
-        <h1>
+        <h1 className="font-title">
           {PAGINATION.map((title) => {
             if (title.id === section) {
               return title.name;

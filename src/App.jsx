@@ -4,13 +4,9 @@ import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
 import Home from "./components/page/Home";
 import Ayuda from "./components/page/Ayuda";
-import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
-import Terminos from "./components/page/Terminos";
-import ComoComprar from "./components/page/ComoComprar";
 import Productos from "./components/page/Productos";
 import "./main.css";
 import Section from "./components/productSection/Section";
-import SectionElement from "./components/productSection/SectionElement";
 import RemerasChombas from "./components/page/indumentaria-escolar-egresados/RemerasChombas";
 import SeccionEstampados from "./components/seccionEstampados/SeccionEstampados";
 import BuzosCamperas from "./components/page/indumentaria-escolar-egresados/BuzosCamperas";
@@ -36,6 +32,7 @@ import Lapiceras from "./components/page/objetos/Lapiceras";
 import Logos from "./components/page/objetos/Logos";
 import Checkout from "./components/page/Checkout";
 import ContextCheckout from "./components/context/ContextCheckout";
+import SeccionesDeAyuda from "./components/page/SeccionesDeAyuda";
 
 function App() {
   return (
@@ -45,13 +42,12 @@ function App() {
           <Routes>
             <Route path="/" element={<Body />}>
               <Route index element={<Home />} />
-              <Route path="/estampados" element={<SeccionEstampados />} />
+              <Route path="estampados/" element={<SeccionEstampados />} />
               <Route path="nosotros/" element={<Nosotros />} />
               <Route path="productos/">
                 <Route index element={<Productos />} />
                 <Route path=":section/">
                   <Route index element={<Section />} />
-                  <Route path=":element/" element={<SectionElement />} />
                   <Route
                     path="remeras-y-chombas"
                     element={<RemerasChombas />}
@@ -111,12 +107,7 @@ function App() {
               </Route>
               <Route path="ayuda/">
                 <Route index element={<Ayuda />} />
-                <Route
-                  path="preguntas-frecuentes/"
-                  element={<PreguntasFrecuentes />}
-                />
-                <Route path="terminos-condiciones/" element={<Terminos />} />
-                <Route path="como-comprar/" element={<ComoComprar />} />
+                <Route path=":seccionAyuda/" element={<SeccionesDeAyuda />} />
               </Route>
               <Route path="contacto/" element={<Contacto />} />
               <Route path="checkout/" element={<Checkout />} />

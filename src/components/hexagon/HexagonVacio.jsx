@@ -9,7 +9,7 @@ export default function Hexagon({ localUrl, className, children, subClass }) {
     >
       <div className={className}>
         <div className="hex-subcont">
-          <p className="hex-text">{children}</p>
+          <p className="hex-text font-p ">{children}</p>
         </div>
       </div>
     </Link>
