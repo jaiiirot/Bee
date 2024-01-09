@@ -20,10 +20,12 @@ const Home = () => {
       <section className="hero-section">
         <div className="hero-img-container">
           <div className="hero-titulo">
-            <h1>HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE</h1>
+            <h1 className="font-title">
+              HACEMOS REALIDAD EL DISEÑO QUE SOÑASTE
+            </h1>
           </div>
           <div className="hero-lema">
-            <p>
+            <p className="font-p">
               Realizamos la personalización de objetos e Indumentaria colegial,
               laboral y deportiva
             </p>
@@ -36,59 +38,47 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="nuestros-estampados-section">
-        <HexagonosNuestrosEstampadosListContainer />
-      </section>
-
-      <section className="mobile-nuestros-estampados-section">
+      <section className="home-nuestros-estampados-section">
         <HexagonosNuestrosEstampadosListContainer />
       </section>
 
       <section className="personalizar-productos-section">
         <div className="home-titulos productos-personalizados-titulo">
-          <h2>PRODUCTOS PERSONALIZADOS</h2>
+          <h2 className="font-title">PRODUCTOS PERSONALIZADOS</h2>
         </div>
         <div className="personalizar-productos-container">
           <div className="indumentaria-escolar personalizar-productos-container-img">
             <Link
               to="productos/escolar-egresados"
               className="personalizar-productos-vacio indumentaria-escolar-card"
-            ></Link>
-            <button>
-              <Link to="productos/escolar-egresados">
-                INDUMENTARIA ESCOLAR Y EGRESADOS
-              </Link>
-            </button>
+            >
+              <button>INDUMENTARIA ESCOLAR Y EGRESADOS</button>
+            </Link>
           </div>
 
           <div className="indumentaria-deportiva personalizar-productos-container-img">
             <Link
               to="productos/deportiva"
               className="personalizar-productos-vacio indumentaria-deportiva-card"
-            ></Link>
-            <button>
-              <Link to="productos/deportiva">INDUMENTARIA DEPORTIVA</Link>
-            </button>
+            >
+              <button>INDUMENTARIA DEPORTIVA</button>
+            </Link>
           </div>
           <div className="indumentaria-laboral personalizar-productos-container-img">
             <Link
               to="productos/laboral"
               className="personalizar-productos-vacio indumentaria-laboral-card"
-            ></Link>
-            <button>
-              <Link to="productos/laboral">INDUMENTARIA LABORAL</Link>
-            </button>
+            >
+              <button>INDUMENTARIA LABORAL</button>
+            </Link>
           </div>
           <div className="objetos-personalizados personalizar-productos-container-img">
             <Link
               to="productos/objetos-personalizados"
               className="personalizar-productos-vacio objetos-personalizados-card"
-            ></Link>
-            <button>
-              <Link to="productos/objetos-personalizados">
-                OBJETOS PERSONALIZADOS
-              </Link>
-            </button>
+            >
+              <button>OBJETOS PERSONALIZADOS</button>
+            </Link>
           </div>
         </div>
       </section>

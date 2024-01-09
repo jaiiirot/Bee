@@ -47,26 +47,17 @@ export default function Nosotros() {
           <Logo />
         </aside>
         <aside className="options-welcome">
-          <h2>¿QUIÉNES SOMOS?</h2>
+          <h2 className="font-title">¿QUIÉNES SOMOS?</h2>
         </aside>
       </section>
       <section className="info">
         <aside className="info-welcome">
-          <h2>¿QUIÉNES SOMOS?</h2>
+          <h2 className="font-title">¿QUIÉNES SOMOS?</h2>
         </aside>
         {INFO.map((info, index) => (
           <Texto key={index} titulo={info.titulo} texto={info.texto} />
         ))}
       </section>
-      {/* <section className="section-hex">
-        <section className="nuestros-estampados-section">
-          <HexagonosNuestrosEstampadosListContainer />
-        </section>
-
-        <section className="mobile-nuestros-estampados-section">
-          <HexagonosNuestrosEstampadosListContainer />
-        </section>
-      </section> */}
 
       <HexagonosNuestrosEstampadosListContainer />
 

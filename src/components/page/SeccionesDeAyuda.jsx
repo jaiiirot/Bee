@@ -25,7 +25,7 @@ export default function SeccionesDeAyuda() {
 
   return (
     <div className="ayuda-section-container">
-      <div className="titulo-container ">
+      <div className="titulo-container">
         <h1 className="font-title">{seccion.titleseccion}</h1>
       </div>
       <ul className="contenido-texto-container">

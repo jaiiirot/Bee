@@ -8,9 +8,6 @@
   justify-content: center;
   margin: 0px auto;
 }
-/* .info{
-  display: none;
-} */
 
 .options {
   padding: 0.5rem 0px;
@@ -31,7 +28,6 @@
       font-size: 2rem;
       margin-bottom: 0.75rem;
       font-weight: 900;
-      
     }
   }
 }
@@ -50,7 +46,7 @@
 }
 
 @media (max-width: 768px) {
-  .info{
+  .info {
     display: block;
   }
   .options {
@@ -82,22 +78,18 @@
   }
 }
 
-@media (max-width: 576px){
-
-  .options{
+@media (max-width: 576px) {
+  .options {
     padding: 50px 0px;
     padding-bottom: 0;
   }
-  .info{
+  .info {
     padding: 0;
-    h2{
+    h2 {
       padding-bottom: 30px;
     }
-    h3{
+    h3 {
       line-height: 1.3rem;
     }
   }
-  
-
 }
-

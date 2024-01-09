@@ -8,7 +8,7 @@ export default function Body() {
     <>
       <NavbarDesktop pages={pages} />
       <NavbarMobile pages={pages} />
-      <main style={{ marginTop: "5rem" }}>
+      <main style={{ marginTop: "56px" }}>
         <Outlet />
       </main>
       <FooterList />

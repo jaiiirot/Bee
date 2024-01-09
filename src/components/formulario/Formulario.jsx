@@ -6,7 +6,6 @@ export default function Formulario() {
   const [condition, setCondition] = useState(false);
   const { setInformacion } = useContext(ContextCheckoutInformacion);
   const onSumitForm = ({ target }) => {
-    
     setForm({
       ...form,
       [target.name]: target.value,
@@ -41,7 +40,7 @@ export default function Formulario() {
   return (
     <section className="form">
       <div className="form-info">
-        <h1>ENVIANOS TU CONSULTA</h1>
+        <h2 className="font-title">ENVIANOS TU CONSULTA</h2>
       </div>
       <form className="form-cont" onSubmit={onSubmit}>
         <input

@@ -4,20 +4,6 @@ $botones-amarillo-dorado: #efb322;
 
 // MIXIN //
 
-@mixin propiedades-botones-productos-personalizados(
-  $color-fondo,
-  $padding,
-  $font-size,
-  $font-family
-) {
-  background-color: $color-fondo;
-  padding: $padding;
-  font-size: $font-size;
-  font-family: $font-family;
-}
-
-// EXTEND //
-
 .flex-spaceBetween {
   display: flex;
   justify-content: space-between;
@@ -35,5 +21,3 @@ $botones-amarillo-dorado: #efb322;
   color: $botones-amarillo-dorado;
   font-weight: 600;
 }
-
-

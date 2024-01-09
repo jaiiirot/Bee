@@ -4,7 +4,7 @@
   width: 90%;
 
   .titulo-container {
-    padding: 2rem 0px;
+    padding: 104px 0px 128px;
     text-align: center;
 
     h1 {
@@ -17,7 +17,7 @@
     margin: 0px auto;
     width: 75%;
     padding: 0;
-    * li {
+    li {
       list-style: none;
     }
     h2,
@@ -31,6 +31,9 @@
     }
     ul {
       font-size: 1.2rem;
+      li {
+        list-style: disc;
+      }
     }
 
     .consultas-adicionales-texto {
@@ -43,8 +46,9 @@
 @media (max-width: 576px) {
   .ayuda-section-container {
     .titulo-container {
+      padding: 70px 0px 50px;
       h1 {
-        font-size: 30px;
+        font-size: 28px;
       }
     }
 
