@@ -16,3 +16,21 @@
   line-height: 1;
   //   color: var(--bs-heading-color);
 }
+
+body {
+  margin: 0;
+  font-family: $font-family-rubik;
+  font-size: unset;
+  font-weight: unset;
+  line-height: unset;
+  color: #000;
+  text-align: unset;
+  background-color: unset;
+  -webkit-text-size-adjust: unset;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* p {
+  margin-top: 0;
+  margin-bottom: 0;
+}

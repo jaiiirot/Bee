@@ -20,19 +20,21 @@
     li {
       list-style: none;
     }
-    h2,
-    p {
-      font-size: 24px;
-    }
-    p {
-      color: black;
-      padding: 10px 0;
-      font-weight: 100;
-    }
-    ul {
-      font-size: 1.2rem;
-      li {
-        list-style: disc;
+    .cont-text {
+      padding: 0;
+      &-ul {
+        font-size: 24px;
+        font-weight: 900;
+        margin-bottom: 40px;
+        span {
+          font-size: 24px;
+          font-weight: 200;
+        }
+        &-li {
+          list-style: disc;
+          font-size: 24px;
+          font-weight: 200;
+        }
       }
     }
 
@@ -49,20 +51,6 @@
       padding: 70px 0px 50px;
       h1 {
         font-size: 28px;
-      }
-    }
-
-    .contenido-texto-container {
-      width: 100%;
-      h2 {
-        font-size: 1.5rem;
-
-        span {
-          font-size: 1.5rem;
-        }
-      }
-      p {
-        font-size: 1.2rem;
       }
     }
   }

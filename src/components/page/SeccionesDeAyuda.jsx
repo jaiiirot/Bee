@@ -32,21 +32,25 @@ export default function SeccionesDeAyuda() {
         {seccion?.content?.map((paso, i) => {
           if (seccionAyuda === "como-comprar" && paso.id === 3) {
             return (
-              <li key={paso.id}>
-                <h2>{paso.titulo}</h2>
-                <p>{paso.contenido}</p>
-                <ul>
+              <li key={paso.id} className="cont-text">
+                <h2 className="cont-text-titulo">{paso.titulo}</h2>
+                <p className="cont-text-parrafo">{paso.contenido}</p>
+                <ul className="cont-text-ul">
                   {paso.subcontenido.map((subPaso, index) => {
-                    return <li key={index}>{subPaso.titulo}</li>;
+                    return (
+                      <li key={index} className="cont-text-ul-li">
+                        {subPaso.titulo}
+                      </li>
+                    );
                   })}
                 </ul>
               </li>
             );
           }
           return (
-            <li key={paso.id}>
-              <h2>{paso.titulo}</h2>
-              <p>{paso.contenido}</p>
+            <li key={paso.id} className="cont-text">
+              <h2 className="cont-text-titulo">{paso.titulo}</h2>
+              <p className="cont-text-parrafo">{paso.contenido}</p>
             </li>
           );
         })}

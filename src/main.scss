@@ -1,7 +1,3 @@
-/*UTILIDADES*/
-@import "~bootstrap/scss/bootstrap";
-@import "./utils/Reset";
-@import "./utils/Typography";
 $color-primary: #efb322;
 $color-secundary: #040404;
 $color-tertiary: #f8f8f8;
@@ -32,6 +28,10 @@ $medidaHexagonoDesktopHeight: 293px;
 $medidaDesktopDistanciaHexagonos: -4.4rem;
 $medidaTabletDistanciaHexagonos: -4.1rem;
 $medidaMobileDistanciaHexagonos: -2rem;
+/*UTILIDADES*/
+@import "~bootstrap/scss/bootstrap";
+@import "./utils/Typography";
+@import "./utils/Reset";
 * {
   font-family: $font-family-rubik;
   font-weight: bold;
@@ -76,7 +76,6 @@ header * {
 @import "./components/navbar/NavbarMobile";
 @import "./components/footer/Footer";
 @import "./components/formulario/Formulario";
-@import "./components/texto/Texto";
 @import "./components/productSection/Section";
 @import "./components/modelo-hexagono/ModeloHeagono";
 @import "./components/overlayAnimation/OverlayAnimation";
