@@ -25,8 +25,8 @@ $paddingTopBottomGeneral: 10px 0;
 $medidaHexagonoDesktopWidth: 280px;
 $medidaHexagonoDesktopHeight: 293px;
 /* SECTION */
-$medidaDesktopDistanciaHexagonos: -4.4rem;
-$medidaTabletDistanciaHexagonos: -4.1rem;
+$medidaDesktopDistanciaHexagonos: -4rem;
+$medidaTabletDistanciaHexagonos: -3.8rem;
 $medidaMobileDistanciaHexagonos: -2rem;
 /*UTILIDADES*/
 @import "~bootstrap/scss/bootstrap";
@@ -42,12 +42,8 @@ $medidaMobileDistanciaHexagonos: -2rem;
   box-sizing: border-box;
   color: $color-secundary;
 }
-body {
+.background-hex {
   background: url("./assets/img/fondo-hex.png") no-repeat center center fixed;
-}
-
-header * {
-  font-family: $font-family-project;
 }
 
 * .font-title {

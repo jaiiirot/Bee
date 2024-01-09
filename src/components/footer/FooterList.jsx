@@ -87,60 +87,67 @@ const FooterList = () => {
     window.open("https://www.facebook.com/_beemendoza/", "_blank");
   };
   return (
-    <>
+    <footer>
       <div className="footer-container">
         <div className="footer-logo-container">
           <img src={logo} alt="Logo" />
         </div>
-
-        <div className="footer-menu-container">
-          {NAVEGATION.map((option, index) => {
-            if (option.title === "NOSOTROS") {
+        <div className="footer-menu-division">
+          <div className="footer-menu-container">
+            {NAVEGATION.map((option, index) => {
+              if (option.title === "NOSOTROS") {
+                return (
+                  <div
+                    className={`footer-card ${option.clase}`}
+                    key={index * Math.random()}
+                  >
+                    <h2>{option.title}</h2>
+                    {option.pages.map((page, index) => {
+                      return (
+                        <Link to={page.href} key={index * Math.random()}>
+                          {page.name}
+                        </Link>
+                      );
+                    })}
+                    <div className="footer-menu-redes">
+                      <img
+                        onClick={inFacebook}
+                        src={IconoFacebook}
+                        alt="icono-facebook"
+                      />
+                      <img
+                        onClick={inInstagram}
+                        src={IconoInstagram}
+                        alt="icono-instagram"
+                      />
+                    </div>
+                  </div>
+                );
+              }
               return (
-                <div className={option.clase} key={index * Math.random()}>
+                <div
+                  className={`footer-card ${option.clase}`}
+                  key={index * Math.random() * 110}
+                >
                   <h2>{option.title}</h2>
                   {option.pages.map((page, index) => {
                     return (
-                      <Link to={page.href} key={index * Math.random()}>
+                      <Link to={page.href} key={index + 100 * Math.random()}>
                         {page.name}
                       </Link>
                     );
                   })}
-                  <div className="footer-menu-redes">
-                    <img
-                      onClick={inFacebook}
-                      src={IconoFacebook}
-                      alt="icono-facebook"
-                    />
-                    <img
-                      onClick={inInstagram}
-                      src={IconoInstagram}
-                      alt="icono-instagram"
-                    />
-                  </div>
                 </div>
               );
-            }
-            return (
-              <div className={option.clase} key={index * Math.random() * 110}>
-                <h2>{option.title}</h2>
-                {option.pages.map((page, index) => {
-                  return (
-                    <Link to={page.href} key={index + 100 * Math.random()}>
-                      {page.name}
-                    </Link>
-                  );
-                })}
-              </div>
-            );
-          })}
-        </div>
-        <div className="footer-direccion">
-          <p>
-            Fleming y Necochea. La Colonia, Junin, Mendoza. Teléfonos
-            263-432-8998/ 263-4590565. Horario de atención: Lunes a Viernes de 9
-            a 17:30, Sábados de 9 a 13.
-          </p>
+            })}
+          </div>
+          <div className="footer-direccion">
+            <p>
+              Fleming y Necochea. La Colonia, Junin, Mendoza. Teléfonos
+              263-432-8998/ 263-4590565. Horario de atención: Lunes a Viernes de
+              9 a 17:30, Sábados de 9 a 13.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -172,7 +179,7 @@ const FooterList = () => {
           </div>
         </div>
       </div>
-    </>
+    </footer>
   );
 };
 

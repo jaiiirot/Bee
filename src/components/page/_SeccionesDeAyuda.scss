@@ -1,7 +1,6 @@
 .ayuda-section-container {
   margin: 0px auto;
-  margin-bottom: 2rem;
-  width: 90%;
+  padding-bottom: 2rem;
 
   .titulo-container {
     padding: 104px 0px 128px;
@@ -37,14 +36,9 @@
         }
       }
     }
-
-    .consultas-adicionales-texto {
-      color: black;
-      font-size: 1.5rem;
-      padding: 10px 0;
-    }
   }
 }
+
 @media (max-width: 576px) {
   .ayuda-section-container {
     .titulo-container {
@@ -52,6 +46,11 @@
       h1 {
         font-size: 28px;
       }
+    }
+  }
+  .consultas-adicionales-texto {
+    h2 {
+      font-size: 1rem;
     }
   }
 }

@@ -2,17 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 75vh;
-  gap: 6vh;
+  height: max-content;
+  margin: 160px auto;
+  gap: 104px;
+  @media (max-width: 768px) {
+    margin: 116px auto;
+    gap: 69px;
+  }
   &-info {
     text-align: center;
-    width: 75%;
-    margin-bottom: 2rem;
-    h1 {
-      font-size: 2rem;
-      font-weight: 600;
-    }
   }
   &-cont {
     height: max-content;
@@ -30,7 +28,7 @@
     width: max-content;
     height: 100%;
     margin: 0px auto;
-    gap: 0.2rem;
+    gap: 10px;
     .heximg {
       width: $medidaHexagonoDesktopWidth;
       height: $medidaHexagonoDesktopHeight;
@@ -52,7 +50,7 @@
 
 @media (max-width: 768px) {
   .product {
-    height: 80vh;
+    height: max-content;
     &-cont {
       width: 90%;
     }
@@ -64,11 +62,6 @@
       .heximg-cont {
         width: $medidaHexagonoDesktopWidth - 30px;
         height: $medidaHexagonoDesktopHeight - 30px;
-      }
-      .heximg-text {
-        p {
-          font-size: 1rem;
-        }
       }
     }
   }

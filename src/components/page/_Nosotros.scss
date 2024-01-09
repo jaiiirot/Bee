@@ -52,9 +52,12 @@
     text-align: center;
   }
 }
-.section-hex {
-  .nuestros-estampados-section-mobile {
-    padding: 0;
+.nosotros-cont-hex {
+  padding: 100px 0px;
+  .section-hex {
+    .nuestros-estampados-section-mobile {
+      padding: 0;
+    }
   }
 }
 
@@ -84,6 +87,11 @@
     &-welcome {
       display: block;
       padding: 48px 0;
+    }
+  }
+  .nosotros-cont-hex {
+    .home-titulos {
+      margin-bottom: 48px;
     }
   }
   .cont-text {

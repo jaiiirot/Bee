@@ -16,7 +16,7 @@ const Home = () => {
   };
 
   return (
-    <div className="section-home">
+    <div className="section-home background-hex">
       <section className="hero-section">
         <div className="hero-img-container">
           <div className="hero-titulo">
@@ -44,7 +44,7 @@ const Home = () => {
 
       <section className="personalizar-productos-section">
         <div className="home-titulos productos-personalizados-titulo">
-          <h2 className="font-title">PRODUCTOS PERSONALIZADOS</h2>
+          <h2 className="font-title">NUESTROS PRODUCTOS</h2>
         </div>
         <div className="personalizar-productos-container">
           <div className="indumentaria-escolar personalizar-productos-container-img">
@@ -77,7 +77,7 @@ const Home = () => {
               to="productos/objetos-personalizados"
               className="personalizar-productos-vacio objetos-personalizados-card"
             >
-              <button>OBJETOS PERSONALIZADOS</button>
+              <button>OBJETOS</button>
             </Link>
           </div>
         </div>

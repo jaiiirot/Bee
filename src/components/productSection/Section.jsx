@@ -80,7 +80,7 @@ const PAGINATION = [
 export default function Section() {
   const { section } = useParams();
   return (
-    <>
+    <section className="secciones-prod">
       <aside className="sectionhex-title">
         <h1 className="font-title">
           {PAGINATION.map((title) => {
@@ -156,6 +156,6 @@ export default function Section() {
           })}
         </aside>
       </section>
-    </>
+    </section>
   );
 }

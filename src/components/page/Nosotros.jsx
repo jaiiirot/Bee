@@ -3,7 +3,7 @@ import { infoNosotros } from "./../../data/dicionario";
 import Logo from "./../image/Logo";
 export default function Nosotros() {
   return (
-    <>
+    <section className="nosotros-page background-hex">
       <section className="options">
         <aside className="options-logo">
           <Logo />
@@ -24,7 +24,9 @@ export default function Nosotros() {
         ))}
       </section>
 
-      <HexagonosNuestrosEstampadosListContainer />
+      <aside className="nosotros-cont-hex">
+        <HexagonosNuestrosEstampadosListContainer />
+      </aside>
 
       <section className="info">
         <aside className="cont-text">
@@ -49,6 +51,6 @@ export default function Nosotros() {
           </h3>
         </aside>
       </section>
-    </>
+    </section>
   );
 }

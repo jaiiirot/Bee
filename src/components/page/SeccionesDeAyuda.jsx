@@ -24,7 +24,7 @@ export default function SeccionesDeAyuda() {
   }, [seccionAyuda]);
 
   return (
-    <div className="ayuda-section-container">
+    <div className="ayuda-section-container background-hex">
       <div className="titulo-container">
         <h1 className="font-title">{seccion.titleseccion}</h1>
       </div>
@@ -55,12 +55,8 @@ export default function SeccionesDeAyuda() {
           );
         })}
         {seccionAyuda === "terminos-condiciones" ? (
-          <li>
-            <br />
-            <h2
-              className="consultas-adicionales-texto"
-              style={{ fontWeight: "100" }}
-            >
+          <li className="consultas-adicionales-texto">
+            <h2 style={{ fontWeight: "100" }}>
               Para consultas adicionales sobre estos términos y condiciones,
               contáctanos a través de nuestro formulario de contacto.
             </h2>
@@ -69,7 +65,7 @@ export default function SeccionesDeAyuda() {
         ) : (
           <></>
         )}
-        <li>
+        <li className="consultas-adicionales-texto">
           <h2>¡Gracias por elegir Bee Mendoza!</h2>
         </li>
       </ul>

@@ -1,12 +1,19 @@
+.secciones-prod {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 160px auto;
+  gap: 104px;
+  @media (max-width: 768px) {
+    margin: 116px auto;
+    gap: 69px;
+  }
+}
 .sectionhex-title {
-  margin-top: 3.8rem;
-  margin-bottom: 1rem;
   width: 100%;
-  padding-bottom: 1rem;
   text-align: center;
 }
 .desktop-sectionhex {
-  padding: 0px 0px 2rem;
   .hexoArbol {
     display: flex;
     align-items: center;
@@ -14,7 +21,7 @@
     flex-direction: column;
     .rama {
       display: flex;
-      gap: 0.2rem;
+      gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -24,16 +31,16 @@
       }
     }
     .hexoArbol-rama2 {
-      transform: translateY($medidaDesktopDistanciaHexagonos);
+      margin-top: ($medidaDesktopDistanciaHexagonos);
     }
     .hexoArbol-rama3 {
-      transform: translateY($medidaDesktopDistanciaHexagonos * 2);
+      margin-top: ($medidaDesktopDistanciaHexagonos);
     }
     .hexoArbol-rama4 {
-      transform: translateY($medidaDesktopDistanciaHexagonos * 3);
+      margin-top: ($medidaDesktopDistanciaHexagonos);
     }
     .hexoArbol-rama5 {
-      transform: translateY($medidaDesktopDistanciaHexagonos * 4);
+      margin-top: ($medidaDesktopDistanciaHexagonos);
     }
   }
 }
@@ -55,28 +62,28 @@
       flex-direction: column;
       .rama {
         display: flex;
-        gap: 0.2rem;
+        gap: 7px;
         .heximg-cont {
           width: $medidaHexagonoDesktopWidth - 20px;
           height: $medidaHexagonoDesktopHeight - 20px;
         }
         .heximg-text {
           p {
-            font-size: 1rem;
+            font-size: 20px;
           }
         }
       }
       .hexoArbol-rama2 {
-        transform: translateY($medidaTabletDistanciaHexagonos);
+        margin-top: ($medidaTabletDistanciaHexagonos);
       }
       .hexoArbol-rama3 {
-        transform: translateY($medidaTabletDistanciaHexagonos * 2);
+        margin-top: ($medidaTabletDistanciaHexagonos);
       }
       .hexoArbol-rama4 {
-        transform: translateY($medidaTabletDistanciaHexagonos * 3);
+        margin-top: ($medidaTabletDistanciaHexagonos);
       }
       .hexoArbol-rama5 {
-        transform: translateY($medidaTabletDistanciaHexagonos * 4);
+        margin-top: ($medidaTabletDistanciaHexagonos);
       }
     }
   }
@@ -85,23 +92,22 @@
   .mobile-sectionhex {
     .hexoArbol {
       .rama {
-        gap: 0.2rem;
         .heximg-cont {
           width: $medidaHexagonoDesktopWidth - 150px;
           height: $medidaHexagonoDesktopHeight - 150px;
         }
       }
       .hexoArbol-rama2 {
-        transform: translateY($medidaMobileDistanciaHexagonos);
+        margin-top: ($medidaMobileDistanciaHexagonos);
       }
       .hexoArbol-rama3 {
-        transform: translateY($medidaMobileDistanciaHexagonos * 2);
+        margin-top: ($medidaMobileDistanciaHexagonos);
       }
       .hexoArbol-rama4 {
-        transform: translateY($medidaMobileDistanciaHexagonos * 3);
+        margin-top: ($medidaMobileDistanciaHexagonos);
       }
       .hexoArbol-rama5 {
-        transform: translateY($medidaMobileDistanciaHexagonos * 4);
+        margin-top: ($medidaMobileDistanciaHexagonos);
       }
     }
   }
