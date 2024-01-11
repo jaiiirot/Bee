@@ -7,7 +7,7 @@ export default function Checkout() {
 
   return (
     <>
-      <section className="checkout">
+      <section className="checkout background-hex">
         <div className="checkout-info">
           <h4>¡Gracias por contactarte con Bee Mendoza!</h4>
           <p>

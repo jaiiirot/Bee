@@ -6,29 +6,21 @@ footer {
 }
 .footer-container {
   display: flex;
-  width: 85%;
+  flex-direction: column;
+  width: 90%;
   margin: 0 auto;
   height: 100%;
   padding: 64px 0px;
-  gap: 90px;
-  h2 {
-    font-size: 14px;
-    font-weight: 600;
-  }
-  a,
-  p {
+  .footer-menu-division {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    text-decoration: none;
-    color: $negro;
-    margin: 0;
-    font-weight: normal;
-    padding: 5px 0;
-    font-size: 14px;
-    word-spacing: 2px;
-    cursor: pointer;
-    width: fit-content;
+    margin: 0 auto;
+    gap: 80px;
+    @media (max-width: 1000px) {
+      gap: 40px;
+    }
   }
+
   .footer-logo-container {
     display: flex;
     width: max-content;
@@ -41,19 +33,28 @@ footer {
       }
     }
   }
-  .footer-menu-division {
-    width: max-content;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-  }
 
   .footer-menu-container {
     display: flex;
-    gap: 90px;
-    @media (max-width: 1000px) {
-      gap: 30px;
+    width: 100%;
+    justify-content: space-between;
+    h2 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    a,
+    p {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: $negro;
+      margin: 0;
+      font-weight: normal;
+      padding: 5px 0;
+      font-size: 14px;
+      word-spacing: 2px;
+      cursor: pointer;
+      width: fit-content;
     }
     .footer-card {
       display: flex;
@@ -76,9 +77,11 @@ footer {
   }
   .footer-direccion {
     margin: auto 0;
-
+    text-align: end;
     p {
-      padding-top: 12px;
+      font-size: 14px;
+      font-weight: 200;
+      padding-top: 24px;
       cursor: auto;
     }
   }

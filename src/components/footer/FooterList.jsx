@@ -89,10 +89,10 @@ const FooterList = () => {
   return (
     <footer>
       <div className="footer-container">
-        <div className="footer-logo-container">
-          <img src={logo} alt="Logo" />
-        </div>
         <div className="footer-menu-division">
+          <div className="footer-logo-container">
+            <img src={logo} alt="Logo" />
+          </div>
           <div className="footer-menu-container">
             {NAVEGATION.map((option, index) => {
               if (option.title === "NOSOTROS") {
@@ -141,13 +141,13 @@ const FooterList = () => {
               );
             })}
           </div>
-          <div className="footer-direccion">
-            <p>
-              Fleming y Necochea. La Colonia, Junin, Mendoza. Teléfonos
-              263-432-8998/ 263-4590565. Horario de atención: Lunes a Viernes de
-              9 a 17:30, Sábados de 9 a 13.
-            </p>
-          </div>
+        </div>
+        <div className="footer-direccion">
+          <p>
+            Fleming y Necochea. La Colonia, Junin, Mendoza. Teléfonos
+            263-432-8998/ 263-4590565. Horario de atención: Lunes a Viernes de 9
+            a 17:30, Sábados de 9 a 13.
+          </p>
         </div>
       </div>
 
