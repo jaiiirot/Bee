@@ -2,22 +2,27 @@
   display: none;
 }
 .secciones-productos-container {
-  padding: 0 150px;
+  padding: 0;
   overflow-x: hidden;
 
   .secciones-productos-titulo {
     text-align: center;
     h1 {
-      padding-top: 50px;
+      padding: 80px 0;
       margin: 0;
+      color: #161314;
+      text-align: center;
+      font-family: Oswald;
+      font-size: 60px;
+      font-style: normal;
       font-weight: 600;
-      
+      line-height: normal;
+      text-transform: uppercase;
     }
   }
   .secciones-productos-imagenes {
     display: flex;
     justify-content: center;
-    padding: 50px 0;
 
     .secciones-productos-imagen {
       padding: 0 20px;
@@ -30,35 +35,49 @@
       }
       img {
         width: auto;
-        height: 300px;
-        padding: 0 10px;
+        height: 328px;
+        padding-left: 1.46vw;
       }
     }
   }
-  
+
   .secciones-productos-informacion {
     display: grid;
-    grid-template-columns: 70% 30%;
-
+    grid-template-columns: 50% 50%;
+    padding: 88px 0 0 18.96vw;
+    text-align: left;
+    
     .secciones-informacion-descripcion {
       grid-column: 1;
-      width: 90%;
+      width: 40vw;
       margin: auto;
 
       p {
-        font-weight: normal;
+        color: #161314;
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
       }
       span {
         font-weight: normal;
 
         a {
-          color: black;
+          color: #161314;
+          font-family: Rubik;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
         }
       }
     }
     .secciones-informacion-boton {
       grid-column: 2;
-
+      padding-left: 24px;
       button {
         @extend .botonEnviar;
         text-transform: uppercase;
@@ -109,13 +128,11 @@
           width: 100%;
           overflow-x: scroll;
           display: flex;
-          
 
           img {
             margin: 0 5px;
           }
         }
-        
 
         .product-cont {
           height: 200px;
@@ -137,12 +154,10 @@
             display: none; /* Ocultar scroll */
           }
         }
-
       }
     }
     .secciones-productos-imagenes-mobile-oculto {
       display: none;
-      
     }
     .secciones-productos-informacion {
       display: flex;
@@ -158,9 +173,8 @@
     .secciones-informacion-boton {
       margin: 30px 0;
       text-align: center;
-      
-      
-      button{
+
+      button {
         width: 100%;
       }
     }

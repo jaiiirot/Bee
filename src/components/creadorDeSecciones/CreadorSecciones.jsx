@@ -12,14 +12,20 @@ const CreadorSecciones = ({
 }) => {
   const scrollToPedidoCompraList = () => {
     // Calcula la posición del componente PedidoCompraList
-    const pedidoCompraListPosition =
-      document.getElementById("pedidoCompraList").offsetTop;
-
-    // Realiza el desplazamiento suave
-    window.scrollTo({
-      top: pedidoCompraListPosition,
-      behavior: "smooth",
-    });
+    const pedidoCompraListElement = document.getElementById("pedidoCompraList");
+  
+    if (pedidoCompraListElement) {
+      const pedidoCompraListPosition = pedidoCompraListElement.offsetTop;
+  
+      // Resta 10px al valor de top para desplazarte 10px más arriba
+      const scrollToPosition = pedidoCompraListPosition - 100;
+  
+      // Realiza el desplazamiento suave
+      window.scrollTo({
+        top: scrollToPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   /* Agregué una nueva condicion para que lleve a la seccion de remeras y chombas en laboral a un nuevo componente ya que son muchas imgenes, en el nuevo componente he agregado un left mas largo */
@@ -78,20 +84,23 @@ const CreadorSecciones = ({
       <div className="secciones-productos-informacion">
         <div className="secciones-informacion-descripcion">
           {descripcion.map((item, index) => (
-            <div className="secciones-productos-imagen" key={index}>
+            <div className="secciones-productos-parrafos" key={index}>
               {item.type === "p" && <p>{item.content}</p>}
               {item.type === "span" && (
-                <span key={index}>
-                  {item.content.map((element, i) =>
-                    element.type === "link" ? (
-                      <Link key={i} to={element.to}>
-                        {element.content}
-                      </Link>
-                    ) : (
-                      element
-                    )
-                  )}
-                </span>
+                <>
+                  <br />
+                  <span key={index}>
+                    {item.content.map((element, i) =>
+                      element.type === "link" ? (
+                        <Link key={i} to={element.to}>
+                          {element.content}
+                        </Link>
+                      ) : (
+                        element
+                      )
+                    )}
+                  </span>
+                </>
               )}
             </div>
           ))}

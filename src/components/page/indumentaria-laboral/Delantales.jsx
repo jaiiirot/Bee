@@ -52,8 +52,8 @@ const Delantales = () => {
           caruselMobile= ""
         />
   
-        <GuiaDeTalles />
-        <div id="pedidoCompraList">
+        
+        <div style={{paddingTop:"100px"}} id="pedidoCompraList">
           <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
         </div>
       </div>

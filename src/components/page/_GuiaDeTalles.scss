@@ -3,19 +3,28 @@
 }
 
 .guia-talles-contenedor {
-  padding: 70px 150px;
+  padding: 96px 0;
+  padding-bottom: 0;
   .guia-talles-titulo {
     h2 {
+      color: #161314;
       text-align: center;
-      padding-bottom: 70px;
+      font-family: Oswald;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
       text-transform: uppercase;
     }
   }
 
   .guia-talles-imagen {
     width: 100%;
+    text-align: center;
+    padding: 80px 0;
+    padding-bottom: 77px;
     img {
-      width: 100%;
+      width: 62.09vw;
       height: auto;
     }
   }
@@ -29,17 +38,17 @@
   .guia-talles-contenedor {
     padding: 0;
 
-    .guia-talles-titulo{
-      h2{
+    .guia-talles-titulo {
+      h2 {
         padding: 0;
         margin: 0;
       }
     }
-    .guia-talles-imagen-adulto-mobile{
+    .guia-talles-imagen-adulto-mobile {
       display: block;
       padding: 30px 20px;
 
-      img{
+      img {
         width: 100%;
         height: auto;
       }
