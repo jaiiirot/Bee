@@ -19,7 +19,7 @@ const Ayuda = () => {
           localUrl={"/ayuda/terminos-condiciones/"}
           className={"ayuda-hex"}
         >
-          TERMINOS Y CONDICIONES
+          TÉRMINOS Y CONDICIONES
         </HexagonVacio>
         <HexagonVacio
           localUrl={"/ayuda/como-comprar/"}

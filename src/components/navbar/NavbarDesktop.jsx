@@ -11,7 +11,7 @@ export default function NavbarDesktop({ pages }) {
 
   return (
     <header className="header">
-      <Logo className={"header-logo"} />
+      <Logo className={"header-logo"} type />
       <nav className="header-nav">
         <ul className="header-options">
           {page.map((p, e) => {
@@ -28,7 +28,7 @@ export default function NavbarDesktop({ pages }) {
               </li>
             );
           })}
-          <li onClick={toWhatsapp} style={{ cursor: "pointer" }}>
+          <li onClick={toWhatsapp} className="header-whatsapp">
             <Whatsapp />
           </li>
         </ul>
