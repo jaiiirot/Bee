@@ -53,6 +53,13 @@ $medidaMobileDistanciaHexagonos: -2rem;
     font-size: 32px;
   }
 }
+* .font-title-60 {
+  font-family: $font-family-project;
+  font-size: 60px;
+  @media (max-width: 576px) {
+    font-size: 32px;
+  }
+}
 
 * .font-p {
   font-family: $font-family-project;

@@ -6,7 +6,7 @@ const Ayuda = () => {
   return (
     <div className="ayuda-container">
       <div className="titulo-container">
-        <h1 className="font-title">AYUDA</h1>
+        <h1 className="font-title-60">AYUDA</h1>
       </div>
       <div className="info-tienda-hexagonosFila1">
         <HexagonVacio

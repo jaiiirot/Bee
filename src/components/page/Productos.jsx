@@ -31,7 +31,7 @@ export default function Productos() {
   return (
     <section className="product">
       <aside className="product-info">
-        <h1 className="font-title">PRODUCTOS PERSONALIZADOS</h1>
+        <h1 className="font-title-60">PRODUCTOS PERSONALIZADOS</h1>
       </aside>
       <aside className="product-cont">
         <div className="product-hexos">
