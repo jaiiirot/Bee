@@ -21,7 +21,7 @@ export default function SeccionesDeAyuda() {
     } else if (seccionAyuda === "como-comprar") {
       setSeccion({ titleseccion: "¿COMO COMPRAR?", content: pasosDeCompra });
     }
-  }, [seccionAyuda]);
+  }, []);
 
   return (
     <div className="ayuda-section-container background-hex">
@@ -29,7 +29,7 @@ export default function SeccionesDeAyuda() {
         <h1 className="font-title">{seccion.titleseccion}</h1>
       </div>
       <ul className="contenido-texto-container">
-        {seccion?.content?.map((paso, i) => {
+        {seccion?.content?.map((paso) => {
           if (seccionAyuda === "como-comprar" && paso.id === 3) {
             return (
               <li key={paso.id} className="cont-text">
