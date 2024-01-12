@@ -6,7 +6,7 @@ import img1EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos
 import img2EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos2.jpg";
 import img3EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos3.jpg";
 import img4EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos4.jpg";
-import img5EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos5.jpeg";
+import img5EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos5.jpg";
 import img6EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos6.jpg";
 
 const EgresadosEgresaditos = () => {
@@ -60,7 +60,7 @@ const EgresadosEgresaditos = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        caruselEnDesktop="si"
+        caruselEnDesktop="EgresadosYEgresaditos"
         caruselMobile= ""
       />
 

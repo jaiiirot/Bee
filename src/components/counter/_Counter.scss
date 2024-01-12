@@ -1,34 +1,42 @@
 .seccion-contador {
   display: flex;
   width: fit-content;
-  height: 50px;
+  height: 40px;
+  padding-top: 8px;
   .contador-titulo {
     display: flex;
     align-items: center;
+
     p {
-      font-size: 1.5rem;
+      color: #161314;
+      font-family: Rubik;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
       margin: 0;
-      font-weight: 100;
     }
   }
 
   .contador-container {
     display: grid;
-    grid-template-columns: 70% 30%;
-    width: 80px;
+    grid-template-columns: 40px 24px;
+    width: 64px;
     border-radius: 5px;
-    margin-left: 10px;
+    margin-left: 211.93px;
 
     .contador-container-numero {
       grid-column: 1;
-      height: 100%;
-      
+      width: 40px;
+
       input {
         background-color: transparent;
-        width: 100%;
-        height: 100%;
+        width: 40px;
+        height: 40px;
         text-align: center;
-        border-radius: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: solid black 0.5px;
       }
     }
 
@@ -36,20 +44,26 @@
       display: flex;
       flex-direction: column;
       grid-column: 2;
-      
+
       button {
         border: 1px solid black;
         background-color: $inputs-formulario-gris;
-        height: 25px;
+        height: 20px;
+        width: 24px;
         display: flex;
         align-items: center;
-        border-radius: 5px;
+      }
+      :nth-child(1) {
+        border-top-right-radius: 5px;
+      }
+      :nth-child(2) {
+        border-bottom-right-radius: 5px;
       }
 
       svg {
         margin: auto;
         cursor: pointer;
-        height: 15px;
+        height: 12.5px;
       }
     }
   }

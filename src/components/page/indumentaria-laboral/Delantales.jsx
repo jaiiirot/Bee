@@ -48,12 +48,12 @@ const Delantales = () => {
           titulo={informacionProducto[0].titulo}
           imagenes={imagenesArray}
           descripcion={informacionProducto[0].descripcion}
-          caruselEnDesktop="si"
+          caruselEnDesktop="Delantales"
           caruselMobile= ""
         />
   
         
-        <div style={{paddingTop:"100px"}} id="pedidoCompraList">
+        <div style={{paddingTop:"80px"}} id="pedidoCompraList">
           <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
         </div>
       </div>

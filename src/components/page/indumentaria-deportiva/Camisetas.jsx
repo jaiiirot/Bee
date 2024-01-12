@@ -54,7 +54,7 @@ const Camisetas = () => {
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
         descripcion={informacionProducto[0].descripcion}
-        caruselEnDesktop="si"
+        caruselEnDesktop="Camisetas"
         caruselMobile= ""
       />
 

@@ -4,12 +4,10 @@ import CaruselList from "../carusel-imagenes/CaruselList";
 import CaruselListRemerasChombasLaboral from "../carusel-imagenes/CaruselListRemerasChombasLaboral";
 import CaruselListEgresadosEgresaditos from "../carusel-imagenes/CaruselListEgresadosEgresaditos";
 import CaruselListCamisetas from "../carusel-imagenes/CaruselListCamisetas";
-import CaruselListDelantales from "../carusel-imagenes/CaruselListDelantales";
-import CaruselListGorros from "../carusel-imagenes/CaruselListGorros";
-import CaruselListTazas from "../carusel-imagenes/CaruselListTazas";
 
-const CreadorSecciones = ({
+const CreadorSecciones2Titulos = ({
   titulo,
+  subtitulo,
   imagenes,
   descripcion,
   caruselEnDesktop,
@@ -18,13 +16,13 @@ const CreadorSecciones = ({
   const scrollToPedidoCompraList = () => {
     // Calcula la posición del componente PedidoCompraList
     const pedidoCompraListElement = document.getElementById("pedidoCompraList");
-
+  
     if (pedidoCompraListElement) {
       const pedidoCompraListPosition = pedidoCompraListElement.offsetTop;
-
+  
       // Resta 10px al valor de top para desplazarte 10px más arriba
       const scrollToPosition = pedidoCompraListPosition - 100;
-
+  
       // Realiza el desplazamiento suave
       window.scrollTo({
         top: scrollToPosition,
@@ -37,32 +35,17 @@ const CreadorSecciones = ({
 
   return (
     <div className="secciones-productos-container">
-      <div className="secciones-productos-titulo">
+      <div className="secciones-productos-titulo-2lineas">
         <h1>{titulo}</h1>
+        <h2>{subtitulo} </h2>
       </div>
       <>
         {caruselEnDesktop === "si" ? (
           <CaruselList imagenes={imagenes} />
-        ) : caruselEnDesktop === "RemerasChombasLaboral" ? (
-          <CaruselListRemerasChombasLaboral imagenes={imagenes} />
-        ) : caruselEnDesktop === "EgresadosYEgresaditos" ? (
-          <CaruselListEgresadosEgresaditos imagenes={imagenes} />
-        ) : caruselEnDesktop === "Camisetas" ? (
-          <CaruselListCamisetas imagenes={imagenes} />
-        ) : caruselEnDesktop === "Delantales" ? (
-          <CaruselListDelantales imagenes={imagenes} />
-        ) : caruselEnDesktop === "Gorros" ? (
-          <CaruselListGorros imagenes={imagenes} />
-        ) : caruselEnDesktop === "Tazas" ? (
-          <CaruselListTazas imagenes={imagenes} />
-        ) : (
+        ) :(
           <div className="secciones-productos-imagenes">
             <div className="secciones-productos-imagen">
-              <div
-                className={
-                  imagenes.length > 1 ? "product-cont" : "product-cont-1imagen"
-                }
-              >
+              <div className="product-cont">
                 {imagenes.map((imagen, index) => (
                   <img key={index} src={imagen} alt={imagen} />
                 ))}
@@ -100,25 +83,15 @@ const CreadorSecciones = ({
         </div>
       </div>
 
-      <div
-        className={
-          imagenes.length > 0
-            ? "secciones-productos-informacion"
-            : "secciones-productos-informacion2"
-        }
-      >
-        <div className="secciones-informacion-descripcion">
+      <div className= {imagenes.length>0 ? "secciones-productos-informacion" : "secciones-productos-informacion2"}>
+        <div className=  "secciones-informacion-descripcion">
+
           {descripcion.map((item, index) => (
             <div className="secciones-productos-parrafos" key={index}>
-              {item.type === "p" && (
-                <>
-                  <p>{item.content}</p>
-                  <br />
-                </>
-              )}
+              {item.type === "p" && <p>{item.content}</p>}
               {item.type === "span" && (
                 <>
-                
+                  <br />
                   <span key={index}>
                     {item.content.map((element, i) =>
                       element.type === "link" ? (
@@ -145,7 +118,7 @@ const CreadorSecciones = ({
   );
 };
 
-export default CreadorSecciones;
+export default CreadorSecciones2Titulos;
 
 {
   /* <div className="secciones-productos-imagenes">

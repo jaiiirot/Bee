@@ -42,12 +42,12 @@ const Tazas = () => {
             titulo={informacionProducto[0].titulo}
             imagenes={imagenesArray}
             descripcion={informacionProducto[0].descripcion}
-            caruselEnDesktop="si"
+            caruselEnDesktop="Tazas"
             caruselMobile= ""
           />
     
           
-          <div id="pedidoCompraList">
+          <div className="section-presupuesto-objetos" id="pedidoCompraList">
             <ObjetosPedidosCompraList titulo= {informacionProducto[0].titulo} />
           </div>
         </div>

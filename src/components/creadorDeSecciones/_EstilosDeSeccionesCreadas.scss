@@ -19,32 +19,112 @@
       line-height: normal;
       text-transform: uppercase;
     }
+    
   }
+  .secciones-productos-titulo-2lineas{
+    text-align: center;
+    h1 {
+      padding-top: 80px;
+      margin: 0;
+      color: #161314;
+      text-align: center;
+      font-family: Oswald;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+
+    h2{
+      padding-bottom: 50px;
+      margin: 0;
+      color: #161314;
+      text-align: center;
+      font-family: Oswald;
+      font-size: 60px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+  }
+  
   .secciones-productos-imagenes {
     display: flex;
     justify-content: center;
 
     .secciones-productos-imagen {
-      padding: 0 20px;
-
+      
       .product-cont {
         height: auto;
-        width: 100%;
         overflow-y: visible;
         display: flex;
+
+        img {
+          height: 100%;
+          margin-left: 1.46vw;
+          
+        }
       }
-      img {
-        width: auto;
-        height: 328px;
-        padding-left: 1.46vw;
+
+      .product-cont-1imagen {
+        height: auto;
+        img {
+          height: 100%;
+        }
       }
+      
     }
   }
 
   .secciones-productos-informacion {
     display: grid;
-    grid-template-columns: 50% 50%;
-    padding: 88px 0 0 18.96vw;
+    grid-template-columns: 52% 48%;
+    padding: 72px 0 0 18.96vw;
+    text-align: left;
+    
+    .secciones-informacion-descripcion {
+      grid-column: 1;
+      width: 41vw;
+      margin: auto;
+
+      p {
+        color: #161314;
+        font-family: Rubik;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        width: 100%;
+      }
+      span {
+        font-weight: normal;
+
+        a {
+          color: #161314;
+          font-family: Rubik;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-decoration-line: underline;
+        }
+      }
+    }
+    .secciones-informacion-boton {
+      grid-column: 2;
+      padding-left: 33px;
+      button {
+        @extend .botonEnviar;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .secciones-productos-informacion2 {
+    display: grid;
+    grid-template-columns: 52% 48%;
+    padding: 0 0 0 18.96vw;
     text-align: left;
     
     .secciones-informacion-descripcion {
@@ -84,6 +164,9 @@
       }
     }
   }
+}
+.section-presupuesto-objetos{
+  padding-top: 80px;
 }
 
 @media (max-width: 576px) {

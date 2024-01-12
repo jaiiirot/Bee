@@ -11,7 +11,7 @@
     font-weight: 600;
     line-height: normal;
     text-transform: uppercase;
-    padding-bottom: 77px;
+    padding-bottom: 72px;
   }
 
   h2 {
@@ -250,10 +250,9 @@
   .boton-enviar {
     display: flex;
     justify-content: right;
-    padding-bottom: 40px;
+    padding-bottom: 70.80px;
     button {
-      width: 19.58vw;
-      height: 64px;
+      
       @extend .botonEnviar;
     }
   }

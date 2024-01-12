@@ -33,7 +33,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
   ];
 
   const incrementar = () => {
-    if (count < 10) {
+    if (count < 100) {
       setCount(count + 1);
     } else {
       setCount(count);
@@ -45,7 +45,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
     }
   };
   const actualizarContador = (nuevoValor) => {
-    if (!isNaN(nuevoValor) && nuevoValor >= 1 && nuevoValor <= 10) {
+    if (!isNaN(nuevoValor) && nuevoValor >= 1 && nuevoValor <= 100) {
       setCount(nuevoValor);
     }
   };
@@ -184,7 +184,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
 
       <section className="seccion-contador">
         {/* <CounterListContainer /> */}
-        <div className="seccion-contador">
+        <>
           <div className="contador-titulo">
             <p>Cantidad</p>
           </div>
@@ -209,7 +209,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
               </button>
             </div>
           </div>
-        </div>
+        </>
       </section>
 
       <section className="disenio">
@@ -263,7 +263,7 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
         </div>
       </section>
 
-      <section className="medios-pago">
+      <section style={{paddingTop:"0"}} className="medios-pago">
         <div>
           <h2>Medio de pago</h2>
         </div>

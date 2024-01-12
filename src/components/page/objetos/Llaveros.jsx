@@ -42,7 +42,7 @@ const Llaveros = () => {
         />
   
         
-        <div id="pedidoCompraList">
+        <div className="section-presupuesto-objetos" id="pedidoCompraList">
           <ObjetosPedidosCompraList titulo= {informacionProducto[0].titulo}  />
         </div>
       </div>

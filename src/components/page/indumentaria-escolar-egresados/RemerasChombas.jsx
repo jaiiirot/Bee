@@ -1,8 +1,8 @@
 import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpeg";
-import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpeg";
+import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpg";
+import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpg";
 import GuiaDeTalles from "../GuiaDeTalles";
 
 const RemerasChombas = () => {

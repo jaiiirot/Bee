@@ -1,7 +1,7 @@
 import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "../GuiaDeTalles";
+import GuiaDeTallesLaboral from "../GuiaDeTallesLaboral";
 import img1RemerasChombasLaboral from "../../../assets/img/remeras-chombas-laboral1.jpg";
 import img2RemerasChombasLaboral from "../../../assets/img/remeras-chombas-laboral2.jpg";
 import img3RemerasChombasLaboral from "../../../assets/img/remeras-chombas-laboral3.jpg";
@@ -55,7 +55,7 @@ const RemerasChombasLaboral = () => {
           caruselEnDesktop="RemerasChombasLaboral"
         />
   
-        <GuiaDeTalles />
+        <GuiaDeTallesLaboral />
         <div id="pedidoCompraList">
           <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
         </div>

@@ -1,14 +1,15 @@
 import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "../GuiaDeTalles";
+import CreadorSecciones2Titulos from "../../creadorDeSecciones/CreadorSecciones2Titulos";
+import GuiaDeTallesLaboral from "../GuiaDeTallesLaboral";
 import img1Chaquetas from "../../../assets/img/chaquetas-ambos-guardapolvos1.jpg";
 
 const ChaquetasAmbosGuardapolvos = () => {
     const opciones = [/* No hay telas */];
     const informacionProducto = [
       {
-        titulo: "CHAQUETAS: AMBOS Y GUARDAPOLVOS",
+        titulo: "CHAQUETAS:",
+        subtitulo: "AMBOS Y GUARDAPOLVOS",
         imagenes: {
           imagen1: img1Chaquetas,
         },
@@ -40,15 +41,16 @@ const ChaquetasAmbosGuardapolvos = () => {
   
     return (
       <div>
-        <CreadorSecciones
+        <CreadorSecciones2Titulos
           titulo={informacionProducto[0].titulo}
+          subtitulo= {informacionProducto[0].subtitulo}
           imagenes={imagenesArray}
           descripcion={informacionProducto[0].descripcion}
           caruselEnDesktop="no"
           caruselMobile= ""
         />
   
-        <GuiaDeTalles />
+        <GuiaDeTallesLaboral />
         <div id="pedidoCompraList">
           <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
         </div>

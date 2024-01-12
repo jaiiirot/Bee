@@ -1,7 +1,7 @@
 import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
-import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import GuiaDeTalles from "../GuiaDeTalles";
+import CreadorSecciones2Titulos from "../../creadorDeSecciones/CreadorSecciones2Titulos";
+import GuiaDeTallesLaboral from "../GuiaDeTallesLaboral";
 import img1Conjunto from "../../../assets/img/conjuntos-pantalones-remeras1.jpg";
 import img2Conjunto from "../../../assets/img/conjuntos-pantalones-remeras2.jpg";
 
@@ -9,7 +9,8 @@ const ConjuntosPantalonesRemeras = () => {
     const opciones = ["Piqué", "Piqué sublimable", "Spum", "Modal", "Jersey de algodón", "Jersey deportivo"];
     const informacionProducto = [
       {
-        titulo: "CONJUNTOS: PANTALONES Y REMERAS",
+        titulo: "CONJUNTOS:",
+        subtitulo: "PANTALONES Y REMERAS",
         imagenes: {
           imagen1: img1Conjunto,
           imagen2: img2Conjunto,
@@ -42,15 +43,16 @@ const ConjuntosPantalonesRemeras = () => {
   
     return (
       <div>
-        <CreadorSecciones
+        <CreadorSecciones2Titulos
           titulo={informacionProducto[0].titulo}
+          subtitulo= {informacionProducto[0].subtitulo}
           imagenes={imagenesArray}
           descripcion={informacionProducto[0].descripcion}
           caruselEnDesktop="no"
           caruselMobile= ""
         />
   
-        <GuiaDeTalles />
+        <GuiaDeTallesLaboral />
         <div id="pedidoCompraList">
           <PedidoCompraList titulo= {informacionProducto[0].titulo} opciones={opciones} />
         </div>

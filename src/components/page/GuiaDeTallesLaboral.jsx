@@ -1,8 +1,8 @@
 import React from "react";
-import imgTalles from "../../assets/img/talles-desktop.jpg";
-import imgTallesMobileAdulto from "../../assets/img/talles-mobile-adulto.jpg";
+import imgTalles from "../../assets/img/talles-remerasChombas-desktop.jpg";
+import imgTallesMobileAdulto from "../../assets/img/talles-remerasChombas-mobile.jpg";
 
-const GuiaDeTalles = () => {
+const GuiaDeTallesLaboral = () => {
   return (
     <div className="guia-talles-contenedor">
       <div className="guia-talles-titulo">
@@ -20,4 +20,4 @@ const GuiaDeTalles = () => {
   );
 };
 
-export default GuiaDeTalles;
+export default GuiaDeTallesLaboral;
