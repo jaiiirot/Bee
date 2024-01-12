@@ -28,7 +28,6 @@
     width: max-content;
     height: 100%;
     margin: 0px auto;
-    gap: 10px;
     .heximg {
       width: $medidaHexagonoDesktopWidth;
       height: $medidaHexagonoDesktopHeight;
@@ -55,11 +54,9 @@
       width: 90%;
     }
     &-hexos {
-      .heximg {
-        width: $medidaHexagonoDesktopWidth - 30px;
-        height: $medidaHexagonoDesktopHeight - 30px;
-      }
-      .heximg-cont {
+      .heximg,
+      .heximg-cont,
+      .heximg-image {
         width: $medidaHexagonoDesktopWidth - 30px;
         height: $medidaHexagonoDesktopHeight - 30px;
       }

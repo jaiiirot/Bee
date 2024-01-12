@@ -44,7 +44,7 @@ const Home = () => {
 
       <section className="personalizar-productos-section">
         <div className="home-titulos productos-personalizados-titulo">
-          <h2 className="font-title">PRODUCTOS PERSONALIZADOS</h2>
+          <h2 className="font-title">NUESTROS PRODUCTOS</h2>
         </div>
         <div className="personalizar-productos-container">
           <div className="indumentaria-escolar personalizar-productos-container-img">

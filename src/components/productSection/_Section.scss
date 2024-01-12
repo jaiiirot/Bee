@@ -63,7 +63,8 @@
       .rama {
         display: flex;
         gap: 7px;
-        .heximg-cont {
+        .heximg-cont,
+        .heximg-image {
           width: $medidaHexagonoDesktopWidth - 20px;
           height: $medidaHexagonoDesktopHeight - 20px;
         }
@@ -92,7 +93,8 @@
   .mobile-sectionhex {
     .hexoArbol {
       .rama {
-        .heximg-cont {
+        .heximg-cont,
+        .heximg-image {
           width: $medidaHexagonoDesktopWidth - 150px;
           height: $medidaHexagonoDesktopHeight - 150px;
         }

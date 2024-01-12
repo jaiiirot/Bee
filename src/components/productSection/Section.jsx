@@ -1,24 +1,28 @@
 import { useParams } from "react-router-dom";
 import HexagonImg from "../hexagon/HexagonImg";
-import Banderas from "../../assets/img/banderas.jpg";
-import BuzosCamperas from "../../assets/img/buzos-camperas.jpg";
-import BuzosCamperasDeportivo from "../../assets/img/buzos-y-camperas-deportivo.jpg";
-import Camisetas from "../../assets/img/camisetas.jpg";
-import Delantales from "../../assets/img/delantales.jpg";
-import Deportivo from "../../assets/img/deportivo.jpg";
-import EgresadosEgresaditos from "../../assets/img/egresados-egresaditos.jpg";
-import Gorros from "../../assets/img/gorros.jpg";
-import Laboral from "../../assets/img/laboral.jpg";
-import Lapiceras from "../../assets/img/lapiceras.jpg";
-import Llaveros from "../../assets/img/llaveros.jpg";
-import Pantalones from "../../assets/img/pantalones.jpg";
-import Pins from "../../assets/img/pins.jpg";
-import RemerasChombas from "../../assets/img/remeras-chombas.jpg";
-import RemerasChombasLaboral from "../../assets/img/remeras-chombas-laboral.jpg";
-import Shorts from "../../assets/img/shorts.jpg";
-import ShortsDeportivos from "../../assets/img/shorts-deportivos.jpg";
-import Tazas from "../../assets/img/tazas.jpg";
-import otrosObjetos from "../../assets/img/otros-objetos.jpg";
+import aa from "../../assets/img/11.png";
+import ab from "../../assets/img/12.png";
+import ac from "../../assets/img/13.png";
+import ad from "../../assets/img/14.png";
+import ae from "../../assets/img/15.png";
+import ba from "../../assets/img/21.png";
+import bb from "../../assets/img/22.png";
+import bc from "../../assets/img/23.png";
+import bd from "../../assets/img/24.png";
+import be from "../../assets/img/25.png";
+import bf from "../../assets/img/26.png";
+import ca from "../../assets/img/31.png";
+import cb from "../../assets/img/32.png";
+import cc from "../../assets/img/33.png";
+import cd from "../../assets/img/34.png";
+import da from "../../assets/img/41.png";
+import db from "../../assets/img/42.png";
+import dc from "../../assets/img/43.png";
+import dd from "../../assets/img/44.png";
+import de from "../../assets/img/45.png";
+import df from "../../assets/img/46.png";
+import dg from "../../assets/img/47.png";
+
 const PAGINATION = [
   {
     id: "escolar-egresados",
@@ -26,11 +30,11 @@ const PAGINATION = [
     desktop: [3, 2],
     mobile: [2, 1, 2],
     pages: [
-      { name: "remeras-y-chombas", img: RemerasChombas },
-      { name: "buzos-y-camperas", img: BuzosCamperas },
-      { name: "egresados-y-egresaditos", img: EgresadosEgresaditos },
-      { name: "pantalones", img: Pantalones },
-      { name: "shorts", img: Shorts },
+      { name: "remeras-y-chombas", img: aa },
+      { name: "buzos-y-camperas", img: ab },
+      { name: "egresados-y-egresaditos", img: ac },
+      { name: "pantalones", img: ad },
+      { name: "shorts", img: ae },
     ],
   },
   {
@@ -39,12 +43,12 @@ const PAGINATION = [
     desktop: [3, 2, 1],
     mobile: [2, 1, 2, 1],
     pages: [
-      { name: "Camisetas", img: Camisetas },
-      { name: "conjuntos-de-verano", img: Deportivo },
-      { name: "conjuntos-de-invierno", img: BuzosCamperasDeportivo },
-      { name: "buzos-y-camperas-deportivas", img: BuzosCamperasDeportivo },
-      { name: "shorts-deportivos", img: ShortsDeportivos },
-      { name: "pantalones-deportivos", img: Pantalones },
+      { name: "Camisetas", img: ba },
+      { name: "conjuntos-de-verano", img: bb },
+      { name: "conjuntos-de-invierno", img: bc },
+      { name: "buzos-y-camperas", img: bd },
+      { name: "shorts", img: be },
+      { name: "pantalones", img: bf },
     ],
   },
   {
@@ -53,10 +57,10 @@ const PAGINATION = [
     desktop: [4],
     mobile: [2, 1, 2],
     pages: [
-      { name: "remeras-y-chombas", img: RemerasChombasLaboral },
-      { name: "chaquetas-ambos-y-guardapolvos", img: BuzosCamperas },
-      { name: "delantales", img: Delantales },
-      { name: "conjuntos-pantalones-y-remeras", img: Laboral },
+      { name: "remeras-y-chombas", img: ca },
+      { name: "chaquetas-ambos-y-guardapolvos", img: cb },
+      { name: "delantales", img: cc },
+      { name: "conjuntos-pantalones-y-remeras", img: cd },
       { name: "", img: "" },
     ],
   },
@@ -66,13 +70,13 @@ const PAGINATION = [
     desktop: [4, 3],
     mobile: [2, 1, 2, 1, 2],
     pages: [
-      { name: "llaveros", img: Llaveros },
-      { name: "banderas-y-fly-banners", img: Banderas },
-      { name: "gorros", img: Gorros },
-      { name: "pins", img: Pins },
-      { name: "tazas", img: Tazas },
-      { name: "lapiceras", img: Lapiceras },
-      { name: "logos", img: otrosObjetos },
+      { name: "llaveros", img: da },
+      { name: "banderas-y-fly-banners", img: db },
+      { name: "gorros", img: dc },
+      { name: "pins", img: dd },
+      { name: "tazas", img: de },
+      { name: "lapiceras", img: df },
+      { name: "logos", img: dg },
       { name: "", img: "" },
     ],
   },

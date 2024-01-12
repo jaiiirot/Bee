@@ -1,30 +1,30 @@
 import React from "react";
 import HexagonImg from "../hexagon/HexagonImg";
-import imgEscolarEgresados from "./../../assets/img/egresados-egresaditos.jpg";
-import imgDeportivo from "./../../assets/img/deportivo.jpg";
-import imgLaboral from "./../../assets/img/laboral.jpg";
-import imgObjetosPersonalizados from "./../../assets/img/objetos-personalizados.jpg";
+import a from "../../assets/img/1a.png";
+import b from "../../assets/img/1b.png";
+import c from "../../assets/img/1c.png";
+import d from "../../assets/img/1d.png";
 
 const OPTIONS = [
   {
     url: "/productos/escolar-egresados",
     children: "INDUMENTARIA ESCOLAR Y EGRESADOS",
-    img: imgEscolarEgresados,
+    img: a,
   },
   {
     url: "/productos/deportiva",
     children: "INDUMENTARIA DEPORTIVA",
-    img: imgDeportivo,
+    img: b,
   },
   {
     url: "/productos/laboral",
     children: "INDUMENTARIA LABORAL",
-    img: imgLaboral,
+    img: c,
   },
   {
     url: "/productos/objetos-personalizados",
-    children: "OBJETOS PERSONALIZADOS",
-    img: imgObjetosPersonalizados,
+    children: "OBJETOS",
+    img: d,
   },
 ];
 export default function Productos() {
