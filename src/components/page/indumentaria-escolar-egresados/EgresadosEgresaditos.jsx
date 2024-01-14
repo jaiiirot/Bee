@@ -8,6 +8,12 @@ import img3EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos
 import img4EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos4.jpg";
 import img5EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos5.jpg";
 import img6EgresadosEgresaditos from "../../../assets/img/regresados-egresaditos6.jpg";
+import imagen1 from "../../../assets/img/egresados-egresaditos1-mobile.jpg";
+import imagen2 from "../../../assets/img/egresados-egresaditos2-mobile.jpg";
+import imagen3 from "../../../assets/img/egresados-egresaditos3-mobile.jpg";
+import imagen4 from "../../../assets/img/egresados-egresaditos4-mobile.jpg";
+import imagen5 from "../../../assets/img/egresados-egresaditos5-mobile.jpg";
+import imagen6 from "../../../assets/img/egresados-egresaditos6-mobile.jpg";
 
 const EgresadosEgresaditos = () => {
   const opciones = [
@@ -27,6 +33,14 @@ const EgresadosEgresaditos = () => {
         imagen4: img4EgresadosEgresaditos,
         imagen5: img5EgresadosEgresaditos,
         imagen6: img6EgresadosEgresaditos,
+      },
+      imagenesMobile: {
+        imagen1: imagen1,
+        imagen2: imagen2,
+        imagen3: imagen3,
+        imagen4: imagen4,
+        imagen5: imagen5,
+        imagen6: imagen6,
       },
       descripcion: [
         {
@@ -53,12 +67,14 @@ const EgresadosEgresaditos = () => {
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
 
   return (
     <div>
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="EgresadosYEgresaditos"
         caruselMobile= ""

@@ -20,7 +20,7 @@ const OverlayAnimation = React.forwardRef(({ children, message }, ref) => {
   return (
     <OverlayTrigger
       placement="bottom"
-      delay={{ show: 250, hide: 40 }}
+      delay={{ show: 250, hide: 300 }}
       overlay={renderTooltip}
     >
       {children}

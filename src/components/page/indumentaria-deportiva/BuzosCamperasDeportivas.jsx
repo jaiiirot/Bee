@@ -3,7 +3,7 @@ import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import GuiaDeTalles from "../GuiaDeTalles";
 import img1BuzosCamperas from "../../../assets/img/buzos-camperas-deportiva1.jpg";
-
+import imagen1 from "../../../assets/img/buzos-camperas-deportiva1-mobile.jpg";
 
 const BuzosCamperasDeportivas = () => {
     const opciones = [
@@ -19,6 +19,10 @@ const BuzosCamperasDeportivas = () => {
           titulo: "BUZOS Y CAMPERAS",
           imagenes: {
             imagen1: img1BuzosCamperas,
+          },
+          imagenesMobile: {
+            imagen1: imagen1,
+
           },
           descripcion: [
             {
@@ -45,15 +49,18 @@ const BuzosCamperasDeportivas = () => {
       // Convierte el objeto de imágenes en un array de valores
       const imagenesArray = Object.values(informacionProducto[0].imagenes);
       /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
-    
+      const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
+
       return (
         <div>
           <CreadorSecciones
             titulo={informacionProducto[0].titulo}
             imagenes={imagenesArray}
+            imagenesMobile={imagenesMobileArray}
             descripcion={informacionProducto[0].descripcion}
             caruselEnDesktop= "no"
             caruselMobile= ""
+            
           />
     
           <GuiaDeTalles />

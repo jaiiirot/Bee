@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const CaruselListDelantales = ({ imagenes }) => {
     return (
-        <motion.div style={{paddingLeft:"120px"}} className="slider-container">
+        <motion.div style={{paddingLeft:"8.33vw"}} className="slider-container">
           <motion.div
             className="slider"
             drag="x"

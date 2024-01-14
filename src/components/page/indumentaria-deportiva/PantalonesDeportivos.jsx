@@ -11,6 +11,9 @@ const PantalonesDeportivos = () => {
       imagenes: {
         /* No hay imagenes en esat seccion */
       },
+      imagenesMobile: {
+        
+      },
       descripcion: [
         {
           type: "p",
@@ -36,12 +39,14 @@ const PantalonesDeportivos = () => {
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
 
   return (
     <div>
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="no"
         caruselMobile= ""
