@@ -242,7 +242,7 @@
           display: flex;
 
           img {
-            margin: 0 5px;
+            margin-left: 1.46vw;
 
             &:nth-child(1) {
               margin-left: 0;
@@ -336,5 +336,8 @@
         }
       }
     }
+  }
+  .section-presupuesto-objetos {
+    padding-top: 0px;
   }
 }

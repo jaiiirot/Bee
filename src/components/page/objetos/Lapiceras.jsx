@@ -2,7 +2,7 @@ import React from "react";
 import ObjetosPedidosCompraList from "../../pedidoCompra/ObjetosPedidosCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import img1Lapiceras from "../../../assets/img/lapicera1.jpg";
-
+import imagen1 from "../../../assets/img/lapicera1-mobile.jpg";
 
 const Lapiceras = () => {
     const informacionProducto = [
@@ -11,6 +11,9 @@ const Lapiceras = () => {
           imagenes: {
             imagen1: img1Lapiceras,
             
+          },
+          imagenesMobile: {
+            imagen1: imagen1,
           },
           descripcion: [
             {
@@ -30,12 +33,16 @@ const Lapiceras = () => {
       // Convierte el objeto de imágenes en un array de valores
       const imagenesArray = Object.values(informacionProducto[0].imagenes);
       /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
-    
+      const imagenesMobileArray = Object.values(
+        informacionProducto[0].imagenesMobile
+      );
+
       return (
         <div>
           <CreadorSecciones
             titulo={informacionProducto[0].titulo}
             imagenes={imagenesArray}
+            imagenesMobile={imagenesMobileArray}
             descripcion={informacionProducto[0].descripcion}
             caruselEnDesktop="no"
             caruselMobile= ""

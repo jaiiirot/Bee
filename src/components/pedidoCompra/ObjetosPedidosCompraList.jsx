@@ -305,14 +305,14 @@ const ObjetosPedidosCompraList = ({ titulo }) => {
         </div>
       </section>
 
-      <section className="campos-obligatorios">
-        {showIconoExclamacion ? (
+      {showIconoExclamacion ? (
+        <section className="campos-obligatorios">
           <div className="icono-exclamacion">
             <FontAwesomeIcon icon={faCircleExclamation} />
             <p>Campos Obligatorios</p>
           </div>
-        ) : null}
-      </section>
+        </section>
+      ) : null}
 
       <section className="boton-enviar">
         {abrirWhatsapp ? (

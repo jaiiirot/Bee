@@ -68,3 +68,41 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .seccion-contador {
+    padding: 8px 26px 0;
+    height: fit-content;
+    width: fit-content;
+    .contador-titulo {
+      height: 54px;
+      p {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .contador-container {
+      margin-left: 9px;
+      width: 85px;
+
+      .contador-container-numero {
+       
+        width: 54px;
+        input {
+          width: 54px;
+          height: 48px;
+          font-size: 16px;
+        }
+      }
+      .contador-flechas-container {
+        width: fit-content;
+        height: fit-content;
+        margin-left: 12px;
+        button {
+          width: 31px;
+          height: 24px;
+        }
+      }
+    }
+  }
+}

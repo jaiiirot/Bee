@@ -13,8 +13,8 @@ const CaruselListRemerasChombasLaboral = ({ imagenes }) => {
             dragConstraints={{ right: 0, left: -1750 }}
             
           >
-            {imagenes.map((image) => (
-              <motion.div className="item">
+            {imagenes.map((image, index) => (
+              <motion.div key={index} className="item">
                 <img src={image} alt="" />
               </motion.div>
             ))}
