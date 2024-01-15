@@ -35,6 +35,7 @@ import ContextCheckout from "./components/context/ContextCheckout";
 import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
 import TerminosCondiciones from "./components/page/TerminosCondiciones";
 import ComoComprar from "./components/page/ComoComprar";
+import ScrollToTop from "./components/ScrollTop/ScrollToTop";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <HashRouter>
         {/* <BrowserRouter> */}
         <ContextCheckout>
+        <ScrollToTop /> {/* Para que se inicie en el top de la pagina */}
           <Routes>
             <Route path="/" element={<Body />}>
               <Route index element={<Home />} />
