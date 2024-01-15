@@ -36,7 +36,7 @@ export default function SeccionesDeAyuda() {
                 <h2 className="cont-text-titulo">{paso.titulo}</h2>
                 <p className="cont-text-parrafo">{paso.contenido}</p>
                 <ul className="cont-text-ul">
-                  {paso.subcontenido.map((subPaso, index) => {
+                  {paso?.subcontenido?.map((subPaso, index) => {
                     return (
                       <li key={index} className="cont-text-ul-li">
                         {subPaso.titulo}

@@ -276,9 +276,4 @@ continuo. Creciendo Juntos como BEE Agradecemos a nuestros clientes
 por confiar en nosotros y los invitamos a compartir con nosotros la
 magia de cada creación.`,
   },
-  {
-    titulo: "Creciendo Juntos como BEE",
-    texto: `Agredecemos a nuestros clientes por confiar en nosotros y los
-    invitamos a compartir con nosotros la magia de cada creacion.`,
-  },
 ];
