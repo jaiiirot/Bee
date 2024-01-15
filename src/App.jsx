@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from "react-router-dom";
 import Body from "./components/page/Body";
 import Contacto from "./components/page/Contacto";
 import Nosotros from "./components/page/Nosotros";
@@ -39,7 +39,8 @@ import ComoComprar from "./components/page/ComoComprar";
 function App() {
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
+        {/* <BrowserRouter> */}
         <ContextCheckout>
           <Routes>
             <Route path="/" element={<Body />}>
@@ -118,7 +119,6 @@ function App() {
                   element={<TerminosCondiciones />}
                 />
                 <Route path="como-comprar/" element={<ComoComprar />} />
-                {/* <Route path=":seccionAyuda/" element={<SeccionesDeAyuda />} /> */}
               </Route>
               <Route path="contacto/" element={<Contacto />} />
               <Route path="checkout/" element={<Checkout />} />
@@ -126,7 +126,8 @@ function App() {
             </Route>
           </Routes>
         </ContextCheckout>
-      </BrowserRouter>
+        {/* </BrowserRouter> */}
+      </HashRouter>
     </>
   );
 }
