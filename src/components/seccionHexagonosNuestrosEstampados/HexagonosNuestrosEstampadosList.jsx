@@ -9,7 +9,7 @@ const HexagonosNuestrosEstampadosList = ({
 }) => {
   return (
     <div>
-      <section className="nuestros-estampados-section">
+      <section  className="nuestros-estampados-section">
         <div className="info-tienda-hexagonosFila1">
           {dataSublimacionYTermovinilo.map((data, index) => (
             <OverlayAnimation key={index} message={data.message}>
@@ -64,9 +64,9 @@ const HexagonosNuestrosEstampadosList = ({
         </div>
       </section>
 
-      <section className="nuestros-estampados-section-mobile">
+      <section  className="nuestros-estampados-section-mobile">
         <div className="home-titulos">
-          <h2>NUESTROS ESTAMPADOS</h2>
+          <h2 style={{paddingBottom:"48px"}}>NUESTROS ESTAMPADOS</h2>
         </div>
         <div className="info-tienda-hexagonosFila1">
           {dataSublimacionYTermovinilo.map((data, index) => (

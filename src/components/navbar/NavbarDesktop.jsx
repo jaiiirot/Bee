@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import { useState } from "react";
 import Logo from "../image/Logo";
 import Whatsapp from "../image/Whatsapp";
@@ -11,7 +11,10 @@ export default function NavbarDesktop({ pages }) {
 
   return (
     <header className="header">
+      
       <Logo className={"header-logo"} type />
+      
+      
       <nav className="header-nav">
         <ul className="header-options">
           {page.map((p, e) => {

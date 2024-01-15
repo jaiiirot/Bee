@@ -64,7 +64,7 @@ export default function Nosotros() {
         <HexagonosNuestrosEstampadosListContainer />
       </aside>
 
-      <section className="info">
+      {/* <section className="info">
         <aside className="cont-text">
           <h3 className="cont-text-titulo">
             Personalización en Cada Punto y Tela
@@ -86,7 +86,7 @@ export default function Nosotros() {
             la calidad se encuentran en cada estampado!
           </h3>
         </aside>
-      </section>
+      </section> */}
     </section>
   );
 }
