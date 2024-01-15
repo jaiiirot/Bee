@@ -3,6 +3,8 @@ import ObjetosPedidosCompraList from "../../pedidoCompra/ObjetosPedidosCompraLis
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import img1Logos from "../../../assets/img/logos1.jpg";
 import img2Logos from "../../../assets/img/logos2.jpg";
+import imagen1 from "../../../assets/img/logos1-mobile.jpg";
+import imagen2 from "../../../assets/img/logos2-mobile.jpg";
 
 const Logos = () => {
     const informacionProducto = [
@@ -12,6 +14,10 @@ const Logos = () => {
             imagen1: img1Logos,
             imagen2: img2Logos,
             
+          },
+          imagenesMobile: {
+            imagen1: imagen1,
+            imagen2: imagen2,
           },
           descripcion: [
             {
@@ -31,19 +37,23 @@ const Logos = () => {
       // Convierte el objeto de imágenes en un array de valores
       const imagenesArray = Object.values(informacionProducto[0].imagenes);
       /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
-    
+      const imagenesMobileArray = Object.values(
+        informacionProducto[0].imagenesMobile
+      );
+
       return (
         <div>
           <CreadorSecciones
             titulo={informacionProducto[0].titulo}
             imagenes={imagenesArray}
+            imagenesMobile={imagenesMobileArray}
             descripcion={informacionProducto[0].descripcion}
             caruselEnDesktop="no"
             caruselMobile= ""
           />
     
           
-          <div id="pedidoCompraList">
+          <div className="section-presupuesto-objetos" id="pedidoCompraList">
             <ObjetosPedidosCompraList titulo= {informacionProducto[0].titulo} />
           </div>
         </div>

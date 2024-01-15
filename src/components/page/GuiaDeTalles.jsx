@@ -1,6 +1,6 @@
 import React from "react";
-import imgTalles from "../../assets/img/talles-desktop.png";
-import imgTallesMobileAdulto from "../../assets/img/talles-mobile-adulto.png";
+import imgTalles from "../../assets/img/talles-desktop.jpg";
+import imgTallesMobileAdulto from "../../assets/img/talles-mobile-adulto.jpg";
 
 const GuiaDeTalles = () => {
   return (

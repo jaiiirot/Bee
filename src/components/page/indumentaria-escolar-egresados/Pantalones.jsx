@@ -5,6 +5,9 @@ import GuiaDeTalles from "../GuiaDeTalles";
 import img1Pantalones from "../../../assets/img/pantalones1.jpg";
 import img2Pantalones from "../../../assets/img/pantalones2.jpg";
 import img3Pantalones from "../../../assets/img/pantalones3.jpg";
+import imagen1 from "../../../assets/img/pantalones1-mobile.jpg";
+import imagen2 from "../../../assets/img/pantalones2-mobile.jpg";
+import imagen3 from "../../../assets/img/pantalones3-mobile.jpg";
 
 const Pantalones = () => {
   const opciones = ["Frisa deportiva", "Deportivo sin frisa"];
@@ -15,6 +18,11 @@ const Pantalones = () => {
         imagen1: img1Pantalones,
         imagen2: img2Pantalones,
         imagen3: img3Pantalones,
+      },
+      imagenesMobile: {
+        imagen1: imagen1,
+        imagen2: imagen2,
+        imagen3: imagen3,
       },
       descripcion: [
         {
@@ -41,12 +49,14 @@ const Pantalones = () => {
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
 
   return (
     <div>
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="no"
         caruselMobile= ""

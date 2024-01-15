@@ -66,7 +66,7 @@ const HexagonosNuestrosEstampadosList = ({
 
       <section className="nuestros-estampados-section-mobile">
         <div className="home-titulos">
-          <h2 className="font-title">NUESTROS ESTAMPADOS</h2>
+          <h2>NUESTROS ESTAMPADOS</h2>
         </div>
         <div className="info-tienda-hexagonosFila1">
           {dataSublimacionYTermovinilo.map((data, index) => (

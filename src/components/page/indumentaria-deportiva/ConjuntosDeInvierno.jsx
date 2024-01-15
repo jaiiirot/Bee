@@ -3,6 +3,7 @@ import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import GuiaDeTalles from "../GuiaDeTalles";
 import img1ConjuntosInvierno from "../../../assets/img/conjuntos-de-invierno1.jpg";
+import imagen1 from "../../../assets/img/conjuntos-de-invierno1-mobile.jpg";
 
 const ConjuntosDeInvierno = () => {
   const opciones = [
@@ -17,6 +18,9 @@ const ConjuntosDeInvierno = () => {
       titulo: "CONJUNTOS DE INVIERNO",
       imagenes: {
         imagen1: img1ConjuntosInvierno,
+      },
+      imagenesMobile: {
+        imagen1: imagen1,
       },
       descripcion: [
         {
@@ -43,12 +47,14 @@ const ConjuntosDeInvierno = () => {
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
 
   return (
     <div>
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="no"
         caruselMobile= ""

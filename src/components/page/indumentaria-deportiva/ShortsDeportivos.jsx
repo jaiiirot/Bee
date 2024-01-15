@@ -4,6 +4,8 @@ import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
 import GuiaDeTalles from "../GuiaDeTalles";
 import img1Shorts from "../../../assets/img/shorts1.jpg";
 import img2Shorts from "../../../assets/img/shorts2.jpg";
+import imagen1 from "../../../assets/img/shorts1-mobile.jpg";
+import imagen2 from "../../../assets/img/shorts2-mobile.jpg";
 
 const ShortsDeportivos = () => {
   const opciones = [
@@ -18,6 +20,10 @@ const ShortsDeportivos = () => {
       imagenes: {
         imagen1: img1Shorts,
         imagen2: img2Shorts,
+      },
+      imagenesMobile: {
+        imagen1: imagen1,
+        imagen2: imagen2,
       },
       descripcion: [
         {
@@ -44,15 +50,17 @@ const ShortsDeportivos = () => {
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
 
   return (
     <div>
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop="no"
-        caruselMobile= "imagenesGrandes"
+        caruselMobile= ""
       />
 
       <GuiaDeTalles />

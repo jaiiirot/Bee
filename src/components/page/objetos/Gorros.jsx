@@ -5,6 +5,10 @@ import img1Gorros from "../../../assets/img/gorros1.jpg";
 import img2Gorros from "../../../assets/img/gorros2.jpg";
 import img3Gorros from "../../../assets/img/gorros3.jpg";
 import img4Gorros from "../../../assets/img/gorros4.jpg";
+import imagen1 from "../../../assets/img/gorros1-mobile.jpg";
+import imagen2 from "../../../assets/img/gorros2-mobile.jpg";
+import imagen3 from "../../../assets/img/gorros3-mobile.jpg";
+import imagen4 from "../../../assets/img/gorros4-mobile.jpg";
 
 const Gorros = () => {
     
@@ -17,6 +21,12 @@ const Gorros = () => {
           imagen3: img3Gorros,
           imagen4: img4Gorros,
           
+        },
+        imagenesMobile: {
+          imagen1: imagen1,
+          imagen2: imagen2,
+          imagen3: imagen3,
+          imagen4: imagen4,
         },
         descripcion: [
           {
@@ -36,19 +46,23 @@ const Gorros = () => {
     // Convierte el objeto de imágenes en un array de valores
     const imagenesArray = Object.values(informacionProducto[0].imagenes);
     /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
-  
+    const imagenesMobileArray = Object.values(
+      informacionProducto[0].imagenesMobile
+    );
+
     return (
       <div>
         <CreadorSecciones
           titulo={informacionProducto[0].titulo}
           imagenes={imagenesArray}
+          imagenesMobile={imagenesMobileArray}
           descripcion={informacionProducto[0].descripcion}
-          caruselEnDesktop="si"
+          caruselEnDesktop="Gorros"
           caruselMobile= ""
         />
   
         
-        <div id="pedidoCompraList">
+        <div className="section-presupuesto-objetos" id="pedidoCompraList">
           <ObjetosPedidosCompraList titulo= {informacionProducto[0].titulo} />
         </div>
       </div>

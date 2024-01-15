@@ -1,8 +1,10 @@
 import React from "react";
 import PedidoCompraList from "../../pedidoCompra/PedidoCompraList";
 import CreadorSecciones from "../../creadorDeSecciones/CreadorSecciones";
-import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpeg";
-import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpeg";
+import img1RemerasChombas from "../../../assets/img/remeras-y-chombas1.jpg";
+import img2RemerasChombas from "../../../assets/img/remeras-y-chombas2.jpg";
+import img1RemerasChombasMobile from "../../../assets/img/mobile-remeras-y-chombas1.jpg";
+import img2RemerasChombasMobile from "../../../assets/img/mobile-remeras-y-chombas2.jpg";
 import GuiaDeTalles from "../GuiaDeTalles";
 
 const RemerasChombas = () => {
@@ -22,6 +24,10 @@ const RemerasChombas = () => {
       imagenes: {
         imagen1: img1RemerasChombas,
         imagen2: img2RemerasChombas,
+      },
+      imagenesMobile: {
+        imagen1: img1RemerasChombasMobile,
+        imagen2: img2RemerasChombasMobile,
       },
       descripcion: [
         {
@@ -47,6 +53,7 @@ const RemerasChombas = () => {
 
   // Convierte el objeto de imágenes en un array de valores
   const imagenesArray = Object.values(informacionProducto[0].imagenes);
+  const imagenesMobileArray = Object.values(informacionProducto[0].imagenesMobile);
   /* const parrafosArray = Object.values(informacionProducto[0].descripcion); */
 
   return (
@@ -54,6 +61,7 @@ const RemerasChombas = () => {
       <CreadorSecciones
         titulo={informacionProducto[0].titulo}
         imagenes={imagenesArray}
+        imagenesMobile={imagenesMobileArray}
         descripcion={informacionProducto[0].descripcion}
         caruselEnDesktop= "no"
         caruselMobile= ""

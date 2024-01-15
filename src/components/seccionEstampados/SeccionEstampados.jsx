@@ -3,7 +3,7 @@ import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestro
 
 const SeccionEstampados = () => {
   return (
-    <div style={{paddingTop: "50px"}}>
+    <div className="section-estampados">
       <HexagonosNuestrosEstampadosListContainer />
 
       <div className="nuestros-estampados-informacion">
@@ -18,12 +18,12 @@ const SeccionEstampados = () => {
             amplio espectro de necesidades. Nuestra versatilidad nos permite
             adaptarnos a las tendencias y temporadas, creando desde
             merchandising hasta sets escolares y conjuntos deportivos.
-          </p>
+          </p> <br />
           <p>
             En BEE, cada prenda cuenta una historia única, tejida con la
             dedicación y calidad que nos caracterizan. Descubre la
             personalización en cada detalle.
-          </p>
+          </p> <br />
           <span>
             ¡Haz que tu ropa cuente tu historia con BEE, donde la creatividad y
             la calidad se encuentran en cada estampado!

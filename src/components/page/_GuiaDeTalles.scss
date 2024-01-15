@@ -3,7 +3,7 @@
 }
 
 .guia-talles-contenedor {
-  padding: 96px 0;
+  padding: 80px 0;
   padding-bottom: 0;
   .guia-talles-titulo {
     h2 {
@@ -19,13 +19,14 @@
   }
 
   .guia-talles-imagen {
-    width: 100%;
+    width: 62.083vw;
+    margin: auto;
     text-align: center;
-    padding: 80px 0;
-    padding-bottom: 77px;
+    padding: 72px 0;
+    padding-bottom: 80px;
     img {
-      width: 62.09vw;
-      height: auto;
+      height: 100%;
+      width: 100%;
     }
   }
 }
@@ -42,15 +43,15 @@
       h2 {
         padding: 0;
         margin: 0;
+        font-size: 32px;
       }
     }
     .guia-talles-imagen-adulto-mobile {
       display: block;
-      padding: 30px 20px;
-
+      padding: 48px 10.43vw;
+      text-align: center;
       img {
-        width: 100%;
-        height: auto;
+        height: 100%;
       }
     }
   }

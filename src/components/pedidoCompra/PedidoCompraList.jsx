@@ -21,24 +21,35 @@ const PedidoCompraList = ({ opciones, titulo }) => {
   const [showIconoExclamacion, setShowIconoExclamacion] = useState(false);
   const [abrirWhatsapp, setAbrirWhatsapp] = useState(false);
 
-
   const descripcionesTela = {
-    piqué: "Textura acolchada con apariencia sofisticada y refinada. Ideal para uso diario.",
-    piquésublimable: "textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
+    piqué:
+      "Textura acolchada con apariencia sofisticada y refinada. Ideal para uso diario.",
+    piquésublimable:
+      "textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
     spum: "Textura lisa y suave al tacto, elástica, cómoda y de fácil lavado. Transpirable.",
-    modal: "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
-    jerseydealgodón: "Textura suave, tela fresca y respirable. Cómoda, ideal para hacer ejercicio.",
-    jerseydeportivo: "Textura suave y liviana. Transpirable y de secado rápido. Ideal para prendas deportivas",
-    gabardina: "textura gruesa y aspecto rústico. Alta calidad, ideal para el entorno laboral.",
-    ketten: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
-    deportivosinfrisa: "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
-    frisadeportiva: "Textura blanda y cómoda. Abrigada. Durable y de fácil lavado.",
-    rústicodealgodón: "Textura suave y abrigada, grosor fino. Transpirable y resistente.",
+    modal:
+      "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    jerseydealgodón:
+      "Textura suave, tela fresca y respirable. Cómoda, ideal para hacer ejercicio.",
+    jerseydeportivo:
+      "Textura suave y liviana. Transpirable y de secado rápido. Ideal para prendas deportivas",
+    gabardina:
+      "textura gruesa y aspecto rústico. Alta calidad, ideal para el entorno laboral.",
+    ketten:
+      "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    deportivosinfrisa:
+      "Textura suave, con buena caida y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
+    frisadeportiva:
+      "Textura blanda y cómoda. Abrigada. Durable y de fácil lavado.",
+    rústicodealgodón:
+      "Textura suave y abrigada, grosor fino. Transpirable y resistente.",
     jean: "textura de algodón muy resistente, duradera con cuerpo y estabilidad. Ideal para ropa de trabajo.",
-    sarga: "Textura gruesa y aspecto rústico. Alta calidad, ideal pera el entorno laboral.",
-    trópical: "Textura ligera, suave y transpirable, de apariencia elegante, ideal para climas cálidos.",
-    lycra: "Textura elástica y resistente al sudor, de rápida absorción. Se adapta cómodamente al cuerpo.",
-
+    sarga:
+      "Textura gruesa y aspecto rústico. Alta calidad, ideal pera el entorno laboral.",
+    trópical:
+      "Textura ligera, suave y transpirable, de apariencia elegante, ideal para climas cálidos.",
+    lycra:
+      "Textura elástica y resistente al sudor, de rápida absorción. Se adapta cómodamente al cuerpo.",
   };
 
   const opcionesPago = [
@@ -214,7 +225,12 @@ const PedidoCompraList = ({ opciones, titulo }) => {
                   onClick={seleccionarTela}
                   required
                 />
-                <OverlayAnimationTela key={index} message={descripcionesTela[palabra.toLowerCase().replace(/\s/g, '')]}>
+                <OverlayAnimationTela
+                  key={index}
+                  message={
+                    descripcionesTela[palabra.toLowerCase().replace(/\s/g, "")]
+                  }
+                >
                   <label htmlFor={palabra}>{palabra} </label>
                 </OverlayAnimationTela>
               </div>
@@ -274,25 +290,27 @@ const PedidoCompraList = ({ opciones, titulo }) => {
         </div>
       </section>
 
-      <section className="cantidad-prendas-container">
-        <div>
-          <h2>Indica cantidad de prendas por talle</h2>
-        </div>
-        <div className="cantidad-prendas">
-          {showIconoExclamacion && prendas == "" ? (
-            <div className="icono-exclamacion">
-              <FontAwesomeIcon icon={faCircleExclamation} />
-            </div>
-          ) : null}
-          <textarea
-            name="mensaje"
-            id="mensaje"
-            placeholder="Por ejemplo: 2 talle S y 3 talle M."
-            onChange={cantidadPrendras}
-            required
-          ></textarea>
-        </div>
-      </section>
+      {titulo === "DELANTALES" ? null : (
+        <section className="cantidad-prendas-container">
+          <div>
+            <h2>Indica cantidad de prendas por talle</h2>
+          </div>
+          <div className="cantidad-prendas">
+            {showIconoExclamacion && prendas == "" ? (
+              <div className="icono-exclamacion">
+                <FontAwesomeIcon icon={faCircleExclamation} />
+              </div>
+            ) : null}
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              placeholder="Por ejemplo: 2 talle S y 3 talle M."
+              onChange={cantidadPrendras}
+              required
+            ></textarea>
+          </div>
+        </section>
+      )}
 
       <section className="medios-pago">
         <div>
@@ -335,15 +353,14 @@ const PedidoCompraList = ({ opciones, titulo }) => {
           ))}
         </div>
       </section>
-
-      <section className="campos-obligatorios">
-        {showIconoExclamacion ? (
+      {showIconoExclamacion ? (
+        <section className="campos-obligatorios">
           <div className="icono-exclamacion">
             <FontAwesomeIcon icon={faCircleExclamation} />
             <p>Campos Obligatorios</p>
           </div>
-        ) : null}
-      </section>
+        </section>
+      ) : null}
 
       <section className="boton-enviar">
         {abrirWhatsapp ? (

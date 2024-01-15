@@ -10,18 +10,20 @@ $botones-amarillo-dorado: #efb322;
 }
 
 .botonEnviar {
-  width: 282px;
+  width: 19.5839vw;
   height: 60px;
   background-color: $negro;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   font-family: $font-family-rubik;
-  font-size: 16px;
+  font-size: 1.115vw; /* 16px */
   letter-spacing: 0px;
   color: $botones-amarillo-dorado;
   font-weight: 500;
+  padding: 1.389vw 2.77vw;
   @media (max-width: 576px) {
     width: 100%;
+    font-size: 16px;
   }
 }
