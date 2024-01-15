@@ -225,13 +225,15 @@
       padding: 10px 0px;
       min-width: 14.44vw;
       display: flex;
+      flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
       &:nth-child(1) {
         padding-left: 0;
       }
       label {
-        padding-left: 8px;
+        /* padding-left: 8px; */
+        padding-left: 0.55vw;
         color: #161314;
         font-family: Rubik;
         font-size: 14px;
@@ -509,6 +511,21 @@
           color: #b3261e;
           font-size: 1rem;
         }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 577px) and (max-width: 1400px){
+
+  .section-presupuesto{
+
+    .opciones-menu{
+      display: flex;
+      flex-wrap: wrap;
+      .circulos-menu{
+        min-width: 30vw;
       }
     }
   }
