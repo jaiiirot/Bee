@@ -1,23 +1,24 @@
 import React from "react";
 import HexagonosNuestrosEstampadosList from "./HexagonosNuestrosEstampadosList";
-import imgSublimacion from "../../assets/img/nuestros-estampados-sublimacion.jpg";
-import imgTermovinilo from "../../assets/img/nuestros-estampados-termovinilo.jpg";
-import imgDtf from "../../assets/img/nuestros-estampados-dtf.jpg";
-import imgTermoviniloImpreso from "../../assets/img/nuestros-estampados-termovinilo-impreso.jpg";
-import imgSerigrafia from "../../assets/img/nuestros-estampados-serigrafia.jpg";
-import imgBordado from "../../assets/img/nuestros-estampados-bordado.jpg";
+import uno from "../../assets/img/1.png";
+import dos from "../../assets/img/2.png";
+import tres from "../../assets/img/3.png";
+import cuatro from "../../assets/img/4.png";
+import cinco from "../../assets/img/5.png";
+import seis from "../../assets/img/6.png";
+import siete from "../../assets/img/7.png";
 
 const HexagonosNuestrosEstampadosListContainer = () => {
   const dataSublimacionYTermovinilo = [
     {
-      imgFondo: imgSublimacion,
+      imgFondo: uno,
       titulo: "SUBLIMACIÓN",
       claseHexagono: "hexagono-con-imagen",
       message:
         'Proceso químico de tinta de sublimación en tela con al menos un 70% de poliéster. \n Ideal para telas blancas o colores claros. En colores más oscuros, se sublima en negro.\n Muy duradero y resistente a lavados y altas temperaturas.\n Ofrecemos "Full Print", sublimación en la totalidad o mayor parte de la prenda.',
     },
     {
-      imgFondo: imgTermovinilo,
+      imgFondo: dos,
       titulo: "TERMOVINILO",
       claseHexagono: "hexagono-con-imagen",
       message:
@@ -27,7 +28,7 @@ const HexagonosNuestrosEstampadosListContainer = () => {
 
   const dataDtf_titulo_TermoImpreso = [
     {
-      imgFondo: imgDtf,
+      imgFondo: tres,
       titulo: "D.T.F.",
       claseHexagono: "hexagono-con-imagen",
       shouldAnimate: true,
@@ -35,14 +36,14 @@ const HexagonosNuestrosEstampadosListContainer = () => {
         "Impresión directa sobre film para un transfer digital más ligero.\n Adecuado para cualquier tipo de tela; ideal para prendas de poco uso.\n Menos duradero en comparación con otras técnicas.",
     },
     {
-      imgFondo: "",
+      imgFondo: cuatro,
       titulo: "NUESTROS ESTAMPADOS",
-      claseHexagono: "hexagono-sin-imagen",
+      claseHexagono: "hexagono-con-imagen",
       message: "",
       shouldAnimate: false,
     },
     {
-      imgFondo: imgTermoviniloImpreso,
+      imgFondo: cinco,
       titulo: "TERMOVINILO IMPRESO",
       claseHexagono: "hexagono-con-imagen",
       shouldAnimate: true,
@@ -53,14 +54,14 @@ const HexagonosNuestrosEstampadosListContainer = () => {
 
   const dataSerigrafiaYBordado = [
     {
-      imgFondo: imgSerigrafia,
+      imgFondo: seis,
       titulo: "SERIGRAFÍA",
       claseHexagono: "hexagono-con-imagen",
       message:
         "Técnica realizada en serie mediante matriz y estampado con tinta y presión específica. \n Apta para todo tipo de telas; mínimo de 5 unidades del mismo diseño. \n Duradero, con posibles pequeños cuarteos que no afectan el diseño.",
     },
     {
-      imgFondo: imgBordado,
+      imgFondo: siete,
       titulo: "BORDADO",
       claseHexagono: "hexagono-con-imagen",
       message:

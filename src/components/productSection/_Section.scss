@@ -21,7 +21,7 @@
     flex-direction: column;
     .rama {
       display: flex;
-      gap: 10px;
+      // gap: 10px;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
@@ -62,16 +62,10 @@
       flex-direction: column;
       .rama {
         display: flex;
-        gap: 7px;
         .heximg-cont,
         .heximg-image {
           width: $medidaHexagonoDesktopWidth - 20px;
           height: $medidaHexagonoDesktopHeight - 20px;
-        }
-        .heximg-text {
-          p {
-            font-size: 20px;
-          }
         }
       }
       .hexoArbol-rama2 {
@@ -93,6 +87,7 @@
   .mobile-sectionhex {
     .hexoArbol {
       .rama {
+        gap: 7px;
         .heximg-cont,
         .heximg-image {
           width: $medidaHexagonoDesktopWidth - 150px;

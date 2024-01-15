@@ -11,7 +11,7 @@ export default function HexagonImg({ children, url, img }) {
           }}
         ></div>
         <span className="heximg-text">
-          <p className="font-p">{children}</p>
+          <p className="font-p-hex">{children}</p>
         </span>
       </div>
     </Link>
