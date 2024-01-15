@@ -1,6 +1,42 @@
 import HexagonosNuestrosEstampadosListContainer from "../seccionHexagonosNuestrosEstampados/HexagonosNuestrosEstampadosListContainer";
-import { infoNosotros } from "./../../data/dicionario";
 import Logo from "./../image/Logo";
+export const infoNosotros = [
+  {
+    titulo:
+      "Bienvenidos a BEE: Un Legado Familiar y Empresarial de Creatividad",
+    texto: `BEE es una empresa familiar que surgió en 2017 bajo el nombre "Alma
+Libre". Inicialmente, nos destacamos en bordados y costuras en una
+pequeña mercería. Sin embargo, el 2019 nos desafió con la llegada
+del COVID-19, llevándonos a cerrar puertas y reinventarnos. Bajo la
+influencia de la abeja, símbolo de esfuerzo colectivo, renacimos
+como BEE.`,
+  },
+  {
+    titulo: "Un Esfuerzo Colectivo, una Marca Renovada",
+    texto: `Frente a la adversidad, nuestra familia se unió aún más. Desde los
+hijos hasta los abuelos, cada miembro contribuyó al esfuerzo
+colectivo. Nos reinventamos con la confección de tapabocas, bordados
+y sublimación, utilizando máquinas de coser, planchas, impresoras y
+demostrando que la colaboración familiar puede resultar en una marca
+sólida y comprometida con la calidad.`,
+  },
+  {
+    titulo: "Del Pedido a la Creación: Nuestro Proceso Creativo",
+    texto: `Desde la recepción de un pedido hasta la confección final,
+mantenemos un estándar de excelencia. Cada máquina industrial que
+adquirimos representa nuestro compromiso con la innovación y la
+calidad, proporcionando una base sólida para nuestro crecimiento
+continuo. Creciendo Juntos como BEE Agradecemos a nuestros clientes
+por confiar en nosotros y los invitamos a compartir con nosotros la
+magia de cada creación.`,
+  },
+  {
+    titulo: "Creciendo Juntos como BEE",
+    texto: `Agredecemos a nuestros clientes por confiar en nosotros y los
+    invitamos a compartir con nosotros la magia de cada creacion.`,
+  },
+];
+
 export default function Nosotros() {
   return (
     <section className="nosotros-page background-hex">

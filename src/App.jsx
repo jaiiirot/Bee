@@ -32,7 +32,9 @@ import Lapiceras from "./components/page/objetos/Lapiceras";
 import Logos from "./components/page/objetos/Logos";
 import Checkout from "./components/page/Checkout";
 import ContextCheckout from "./components/context/ContextCheckout";
-import SeccionesDeAyuda from "./components/page/SeccionesDeAyuda";
+import PreguntasFrecuentes from "./components/page/PreguntasFrecuentes";
+import TerminosCondiciones from "./components/page/TerminosCondiciones";
+import ComoComprar from "./components/page/ComoComprar";
 
 function App() {
   return (
@@ -107,7 +109,16 @@ function App() {
               </Route>
               <Route path="ayuda/">
                 <Route index element={<Ayuda />} />
-                <Route path=":seccionAyuda/" element={<SeccionesDeAyuda />} />
+                <Route
+                  path="preguntas-frecuentes/"
+                  element={<PreguntasFrecuentes />}
+                />
+                <Route
+                  path="terminos-condiciones/"
+                  element={<TerminosCondiciones />}
+                />
+                <Route path="como-comprar/" element={<ComoComprar />} />
+                {/* <Route path=":seccionAyuda/" element={<SeccionesDeAyuda />} /> */}
               </Route>
               <Route path="contacto/" element={<Contacto />} />
               <Route path="checkout/" element={<Checkout />} />
