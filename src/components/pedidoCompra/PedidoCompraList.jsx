@@ -25,7 +25,7 @@ const PedidoCompraList = ({ opciones, titulo }) => {
     piqué:
       "Textura acolchada con apariencia sofisticada y refinada. Ideal para uso diario.",
     piquésublimable:
-      "textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
+      "Textura que simula ser pique, 100% sintética, se puede sublimar. Muy blanda y cómoda. Resistente al lavado, secado rápido.",
     spum: "Textura lisa y suave al tacto, elástica, cómoda y de fácil lavado. Transpirable.",
     modal:
       "Textura suave, con buena caída y ligera. Elástica y fresca.  Ideal para ropa de verano y prendas de primera piel.",
