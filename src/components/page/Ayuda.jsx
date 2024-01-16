@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import HexagonVacio from "../hexagon/HexagonVacio";
+import HexagonImg from "../hexagon/HexagonImg";
+import hexAyu from "../../assets/img/ayuda-hex.png";
 const Ayuda = () => {
   const params = useParams();
   return (
@@ -8,26 +9,31 @@ const Ayuda = () => {
       <div className="titulo-container">
         <h1 className="font-title-60">AYUDA</h1>
       </div>
-      <div className="info-tienda-hexagonosFila1">
-        <HexagonVacio
-          localUrl={"/ayuda/preguntas-frecuentes/"}
-          className={"ayuda-hex"}
-        >
+      <div className="info-ayuda-desktop">
+        <HexagonImg url={"/ayuda/preguntas-frecuentes/"} img={hexAyu}>
           PREGUNTAS FRECUENTES
-        </HexagonVacio>
-        <HexagonVacio
-          localUrl={"/ayuda/terminos-condiciones/"}
-          className={"ayuda-hex"}
-        >
+        </HexagonImg>
+        <HexagonImg url={"/ayuda/terminos-condiciones/"} img={hexAyu}>
           TÉRMINOS Y CONDICIONES
-        </HexagonVacio>
-        <HexagonVacio
-          localUrl={"/ayuda/como-comprar/"}
-          className={"ayuda-hex"}
-          subClass={"active"}
-        >
+        </HexagonImg>
+        <HexagonImg url={"/ayuda/como-comprar/"} img={hexAyu}>
           ¿CÓMO COMPRAR?
-        </HexagonVacio>
+        </HexagonImg>
+      </div>
+      <div className="info-ayuda-mobile">
+        <div className="info-ayuda-1">
+          <HexagonImg url={"/ayuda/preguntas-frecuentes/"} img={hexAyu}>
+            PREGUNTAS FRECUENTES
+          </HexagonImg>
+          <HexagonImg url={"/ayuda/terminos-condiciones/"} img={hexAyu}>
+            TÉRMINOS Y CONDICIONES
+          </HexagonImg>
+        </div>
+        <div className="info-ayuda-2">
+          <HexagonImg url={"/ayuda/como-comprar/"} img={hexAyu}>
+            ¿CÓMO COMPRAR?
+          </HexagonImg>
+        </div>
       </div>
     </div>
   );

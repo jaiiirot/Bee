@@ -3,6 +3,11 @@
   height: 56px;
   &-cont {
     background-color: #cecdbb;
+    * .btn-close {
+      opacity: 1;
+      width: 2rem;
+      height: 2rem;
+    }
   }
   &-nav {
     padding: 0.6rem 0px;
@@ -27,10 +32,11 @@
     align-items: end;
     flex-direction: column;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 30px;
     margin-bottom: 0px;
     padding-left: 0px;
     a {
+      font-size: 1rem;
       font-weight: 100;
       color: $color-secundary;
       text-decoration: none;
