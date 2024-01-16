@@ -51,6 +51,10 @@ function App() {
               <Route path="nosotros/" element={<Nosotros />} />
               <Route path="productos/">
                 <Route index element={<Productos />} />
+                <Route
+                    path="laboral/remeras-y-chombas"
+                    element={<RemerasChombasLaboral />}
+                  /> {/* Se coloca fuera del path=":section" ya que existen 2 categorias llamadas igual */}
                 <Route path=":section/">
                   <Route index element={<Section />} />
                   <Route
@@ -86,15 +90,15 @@ function App() {
                     element={<PantalonesDeportivos />}
                   />
                   <Route
-                    path="conjuntos-pantalones-y-remeras"
+                    path="conjuntos:-pantalones-y-remeras"
                     element={<ConjuntosPantalonesRemeras />}
                   />
-                  <Route
-                    path="laboral-remeras-y-chombas"
+                  {/* <Route
+                    path="remeras-y-chombas"
                     element={<RemerasChombasLaboral />}
-                  />
+                  /> */}
                   <Route
-                    path="chaquetas-ambos-y-guardapolvos"
+                    path="chaquetas:-ambos-y-guardapolvos"
                     element={<ChaquetasAmbosGuardapolvos />}
                   />
                   <Route path="delantales" element={<Delantales />} />

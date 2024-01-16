@@ -57,10 +57,10 @@ const PAGINATION = [
     desktop: [4],
     mobile: [2, 1, 2],
     pages: [
-      { name: "laboral-remeras-y-chombas", img: ca },
-      { name: "chaquetas-ambos-y-guardapolvos", img: cb },
+      { name: "remeras-y-chombas", img: ca },
+      { name: "chaquetas:-ambos-y-guardapolvos", img: cb },
       { name: "delantales", img: cc },
-      { name: "conjuntos-pantalones-y-remeras", img: cd },
+      { name: "conjuntos:-pantalones-y-remeras", img: cd },
       { name: "", img: "" },
     ],
   },

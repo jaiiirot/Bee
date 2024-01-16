@@ -33,13 +33,21 @@
 .cont-text {
   padding: 0;
   &-titulo {
+    color: #161314;
+    font-family: Rubik;
     font-size: 24px;
+    font-style: normal;
     font-weight: 900;
+    line-height: normal;
     margin-bottom: 40px;
   }
   &-parrafo {
+    color: #161314;
+    font-family: Rubik;
     font-size: 24px;
-    font-weight: 200;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
     margin-bottom: 40px;
   }
 }
