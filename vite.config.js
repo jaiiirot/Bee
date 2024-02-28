@@ -6,3 +6,4 @@ export default defineConfig({
   base: "http://beemendoza.com/#/",
   plugins: [react()],
 });
+// 
