@@ -41,15 +41,11 @@ export default function NavbarMobile({ pages }) {
         show={show}
         placement="start"
         onHide={handleClose}
-        style={{ height: "300px", width: "200px" }}
+        style={{ height: "352px", width: "255px" }}
         className="header-movil-cont"
       >
         <Offcanvas.Header closeButton style={{ padding: " 1rem 1rem" }}>
-          <Offcanvas.Title>
-            {/* <ul className="header-movil-logo">
-              <Logo />
-            </ul> */}
-          </Offcanvas.Title>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
           <ul className="header-movil-options">
