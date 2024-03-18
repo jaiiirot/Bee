@@ -41,7 +41,7 @@ const CreadorSecciones = ({
       <div className="secciones-productos-titulo">
         <h1>{titulo}</h1>
       </div>
-      <>
+      {/* <div>
         {caruselEnDesktop === "si" ? (
           <CaruselList imagenes={imagenes} />
         ) : caruselEnDesktop === "RemerasChombasLaboral" ? (
@@ -71,9 +71,9 @@ const CreadorSecciones = ({
             </div>
           </div>
         )}
-      </>
+      </div> */}
 
-      <div
+      {/* <div
         className={
           imagenes.length === 0
             ? "secciones-productos-imagenes-mobile-oculto"
@@ -83,13 +83,13 @@ const CreadorSecciones = ({
         <div className="secciones-productos-imagen">
           {caruselMobile === "" ? (
             <div
-            className={
-              imagenesMobile.length === 1
-                ? "product-cont-1imagen"
-                : imagenesMobile.length <= 2
-                ? "product-cont-mobile"
-                : "product-cont"
-            }
+              className={
+                imagenesMobile.length === 1
+                  ? "product-cont-1imagen"
+                  : imagenesMobile.length <= 2
+                  ? "product-cont-mobile"
+                  : "product-cont"
+              }
             >
               {imagenesMobile.map((imagen, index) => (
                 <img key={index} src={imagen} alt={imagen} />
@@ -103,7 +103,7 @@ const CreadorSecciones = ({
             </div>
           )}
         </div>
-      </div>
+      </div> */}
 
       <div
         className={
@@ -123,7 +123,6 @@ const CreadorSecciones = ({
               )}
               {item.type === "span" && (
                 <>
-                
                   <span key={index}>
                     {item.content.map((element, i) =>
                       element.type === "link" ? (
